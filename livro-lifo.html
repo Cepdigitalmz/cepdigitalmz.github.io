@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manual de Mecânica — LIFO XY49-10 | CEP Digital</title>
+
+  <meta name="description"
+        content="Manual prático de manutenção e reparação de motorizada LIFO XY49-10.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #17202a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #063b2a;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav {
+      background: #07543b;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 950px;
+      margin: 25px auto;
+    }
+
+    .cover {
+      background: white;
+      border-radius: 15px;
+      padding: 35px 20px;
+      text-align: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .cover-icon {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
+
+    .cover h2 {
+      color: #063b2a;
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .cover h3 {
+      color: #555;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8f3ee;
+      color: #063b2a;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .box h2 {
+      color: #063b2a;
+      margin-bottom: 15px;
+      font-size: 23px;
+    }
+
+    .box h3 {
+      color: #07543b;
+      margin: 15px 0 8px;
+    }
+
+    .box p {
+      margin-bottom: 10px;
+    }
+
+    .box ul,
+    .box ol {
+      padding-left: 25px;
+    }
+
+    .box li {
+      margin-bottom: 7px;
+    }
+
+    .procedure {
+      border: 1px solid #d9e5df;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 18px;
+      background: #fbfdfc;
+    }
+
+    .procedure-number {
+      display: inline-block;
+      background: #07543b;
+      color: white;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .illustration {
+      background: #eef3f0;
+      border: 2px dashed #9db5aa;
+      border-radius: 10px;
+      min-height: 210px;
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 25px;
+      color: #52665d;
+    }
+
+    .illustration strong {
+      display: block;
+      color: #063b2a;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .parts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .part {
+      background: white;
+      border: 1px solid #d9e5df;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .part-number {
+      font-size: 25px;
+      font-weight: bold;
+      color: #07543b;
+    }
+
+    .tool {
+      background: #fff8df;
+      border-left: 5px solid #d6a500;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .safety {
+      background: #fff0f0;
+      border-left: 5px solid #c62828;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .warning {
+      background: #fff8e1;
+      border-left: 5px solid #ef9b00;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .check {
+      background: #edf8f0;
+      border-left: 5px solid #27834a;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .toc a {
+      display: block;
+      color: #07543b;
+      text-decoration: none;
+      padding: 9px;
+      border-bottom: 1px solid #e4ebe7;
+    }
+
+    .toc a:hover {
+      background: #eef6f1;
+    }
+
+    .back {
+      display: inline-block;
+      background: #07543b;
+      color: white;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 7px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #063b2a;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      .cover h2 {
+        font-size: 23px;
+      }
+
+      .box {
+        padding: 18px;
+      }
+
+      .illustration {
+        min-height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<nav>
+  <a href="index.html">🏠 Início</a>
+  <a href="#indice">📚 Índice</a>
+  <a href="#ferramentas">🧰 Ferramentas</a>
+  <a href="#seguranca">⚠️ Segurança</a>
+</nav>
+
+<main class="container">
+
+  <a href="index.html" class="back">← Voltar ao CEP Digital</a>
+
+  <!-- CAPA -->
+
+  <section class="cover">
+
+    <div class="cover-icon">🏍️</div>
+
+    <h2>Manual Prático de Mecânica</h2>
+
+    <h3>Volume 2</h3>
+
+    <p><strong>Manutenção e reparação de motorizada</strong></p>
+
+    <p>
+      Modelo de referência:
+      <strong>LIFO XY49-10</strong>
+    </p>
+
+    <br>
+
+    <span class="badge">🔧 Passo a passo</span>
+    <span class="badge">🧩 Peças numeradas</span>
+    <span class="badge">🖼️ Ilustrações</span>
+    <span class="badge">⚠️ Segurança</span>
+
+  </section>
+
+
+  <!-- APRESENTAÇÃO -->
+
+  <section class="box">
+
+    <h2>📖 Apresentação</h2>
+
+    <p>
+      Este volume foi concebido como um guia prático para
+      compreender os procedimentos básicos de manutenção,
+      desmontagem, limpeza, substituição e montagem de
+      componentes de uma motorizada.
+    </p>
+
+    <p>
+      Cada procedimento será apresentado de forma visual,
+      identificando as peças, ferramentas utilizadas,
+      sequência de desmontagem, limpeza quando aplicável,
+      substituição, montagem e verificação final.
+    </p>
+
+    <div class="warning">
+      <strong>Nota importante:</strong>
+      Os valores técnicos como torque de aperto, folgas,
+      capacidades e especificações de componentes deverão
+      ser confirmados no manual ou documentação técnica
+      específica do fabricante antes de serem utilizados.
+    </div>
+
+  </section>
+
+
+  <!-- ÍNDICE -->
+
+  <section class="box toc" id="indice">
+
+    <h2>📚 Índice do Volume 2</h2>
+
+    <a href="#capitulo1">Capítulo 1 — Preparação da oficina</a>
+    <a href="#capitulo2">Capítulo 2 — Identificação das peças</a>
+    <a href="#capitulo3">Capítulo 3 — Limpeza e manutenção</a>
+    <a href="#capitulo4">Capítulo 4 — Desmontagem</a>
+    <a href="#capitulo5">Capítulo 5 — Substituição de componentes</a>
+    <a href="#capitulo6">Capítulo 6 — Montagem</a>
+    <a href="#capitulo7">Capítulo 7 — Verificação final</a>
+    <a href="#capitulo8">Capítulo 8 — Erros comuns</a>
+    <a href="#seguranca">Capítulo 9 — Segurança</a>
+
+  </section>
+
+
+  <!-- FERRAMENTAS -->
+
+  <section class="box" id="ferramentas">
+
+    <h2>🧰 Ferramentas e preparação</h2>
+
+    <p>
+      Antes de iniciar qualquer procedimento, organize
+      as ferramentas e prepare uma área de trabalho limpa,
+      iluminada e segura.
+    </p>
+
+    <div class="tool">
+
+      <strong>🛠️ Ferramentas:</strong>
+
+      <ul>
+        <li>Chaves adequadas ao componente.</li>
+        <li>Chaves de fenda apropriadas.</li>
+        <li>Alicate.</li>
+        <li>Recipiente para pequenas peças.</li>
+        <li>Pano limpo.</li>
+        <li>Produto de limpeza apropriado ao componente.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 1 -->
+
+  <section class="box" id="capitulo1">
+
+    <h2>🔧 Capítulo 1 — Preparação da oficina</h2>
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">1</span>
+        Preparar a área de trabalho
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ ILUSTRAÇÃO 3D — ETAPA 1</strong>
+
+          <p>
+            Aqui será colocada uma imagem mostrando
+            a motorizada posicionada de forma segura
+            e as ferramentas organizadas.
+          </p>
+        </div>
+
+      </div>
+
+      <ol>
+        <li>Estacione a motorizada numa superfície estável.</li>
+        <li>Desligue o motor.</li>
+        <li>Deixe os componentes quentes arrefecerem.</li>
+        <li>Organize as ferramentas.</li>
+        <li>Prepare recipientes para parafusos e peças pequenas.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 2 -->
+
+  <section class="box" id="capitulo2">
+
+    <h2>🧩 Capítulo 2 — Identificação das peças</h2>
+
+    <p>
+      Antes da desmontagem, cada peça deverá ser identificada
+      através de uma ilustração técnica.
+    </p>
+
+    <div class="illustration">
+
+      <div>
+        <strong>🖼️ VISTA EXPLODIDA 3D</strong>
+
+        <p>
+          Ilustração futura mostrando o conjunto desmontado,
+          com cada componente numerado.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="parts">
+
+      <div class="part">
+        <div class="part-number">01</div>
+        <strong>Peça 1</strong>
+        <p>Identificação</p>
+      </div>
+
+      <div class="part">
+        <div class="part-number">02</div>
+        <strong>Peça 2</strong>
+        <p>Identificação</p>
+      </div>
+
+      <div class="part">
+        <div class="part-number">03</div>
+        <strong>Peça 3</strong>
+        <p>Identificação</p>
+      </div>
+
+      <div class="part">
+        <div class="part-number">04</div>
+        <strong>Peça 4</strong>
+        <p>Identificação</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 3 -->
+
+  <section class="box" id="capitulo3">
+
+    <h2>🧼 Capítulo 3 — Limpeza e manutenção</h2>
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">1</span>
+        Limpeza do componente
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ ILUSTRAÇÃO 3D — LIMPEZA</strong>
+
+          <p>
+            Será mostrada a peça, o produto adequado,
+            a ferramenta e a posição correcta durante
+            a limpeza.
+          </p>
+        </div>
+
+      </div>
+
+      <p>
+        A limpeza deverá ser realizada de acordo com
+        o tipo de componente e com as recomendações
+        técnicas aplicáveis.
+      </p>
+
+      <div class="warning">
+        <strong>⚠️ Atenção:</strong>
+        Nem todos os componentes podem ser lavados
+        da mesma maneira. Componentes eléctricos,
+        electrónicos ou sensíveis exigem cuidados
+        específicos.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 4 -->
+
+  <section class="box" id="capitulo4">
+
+    <h2>🔩 Capítulo 4 — Desmontagem</h2>
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">1</span>
+        Preparar a desmontagem
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ ILUSTRAÇÃO 3D — FERRAMENTA</strong>
+
+          <p>
+            A imagem deverá indicar exactamente
+            onde posicionar a ferramenta.
+          </p>
+        </div>
+
+      </div>
+
+      <p>
+        Antes de remover qualquer peça, observe a sua
+        posição e, quando necessário, fotografe a montagem
+        original para facilitar a montagem posterior.
+      </p>
+
+    </div>
+
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">2</span>
+        Remover o componente
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ ILUSTRAÇÃO 3D — DESMONTAGEM</strong>
+
+          <p>
+            Sequência visual indicando o movimento
+            necessário para retirar a peça.
+          </p>
+        </div>
+
+      </div>
+
+      <ol>
+        <li>Identificar os pontos de fixação.</li>
+        <li>Seleccionar a ferramenta adequada.</li>
+        <li>Soltar a fixação de forma controlada.</li>
+        <li>Retirar a peça sem forçar componentes.</li>
+        <li>Organizar as peças removidas.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 5 -->
+
+  <section class="box" id="capitulo5">
+
+    <h2>🔄 Capítulo 5 — Substituição</h2>
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">1</span>
+        Comparar a peça nova
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ COMPARAÇÃO 3D</strong>
+
+          <p>
+            Peça antiga × peça nova.
+            A ilustração deverá identificar
+            diferenças e pontos de montagem.
+          </p>
+        </div>
+
+      </div>
+
+      <ul>
+        <li>Confirmar que a peça é compatível.</li>
+        <li>Verificar o estado da peça nova.</li>
+        <li>Comparar os pontos de fixação.</li>
+        <li>Substituir apenas quando a compatibilidade estiver confirmada.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 6 -->
+
+  <section class="box" id="capitulo6">
+
+    <h2>🔧 Capítulo 6 — Montagem</h2>
+
+    <div class="procedure">
+
+      <h3>
+        <span class="procedure-number">1</span>
+        Reinstalar o componente
+      </h3>
+
+      <div class="illustration">
+
+        <div>
+          <strong>🖼️ ILUSTRAÇÃO 3D — MONTAGEM</strong>
+
+          <p>
+            Imagem mostrando a posição correcta
+            da peça durante a montagem.
+          </p>
+        </div>
+
+      </div>
+
+      <ol>
+        <li>Posicionar correctamente a peça.</li>
+        <li>Instalar os elementos de fixação.</li>
+        <li>Verificar o alinhamento.</li>
+        <li>Realizar o aperto conforme a especificação técnica aplicável.</li>
+      </ol>
+
+      <div class="warning">
+        <strong>⚠️ Torque:</strong>
+        Nenhum valor de torque será colocado aqui
+        sem confirmação na documentação técnica
+        específica do fabricante.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 7 -->
+
+  <section class="box" id="capitulo7">
+
+    <h2>✅ Capítulo 7 — Verificação final</h2>
+
+    <div class="check">
+
+      <strong>Lista de verificação</strong>
+
+      <ul>
+        <li>☐ Todas as peças foram instaladas.</li>
+        <li>☐ Não ficaram ferramentas ou peças soltas.</li>
+        <li>☐ As ligações estão correctamente instaladas.</li>
+        <li>☐ Os componentes estão alinhados.</li>
+        <li>☐ Os elementos de fixação foram verificados.</li>
+        <li>☐ O funcionamento foi testado de forma segura.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <!-- CAPÍTULO 8 -->
+
+  <section class="box" id="capitulo8">
+
+    <h2>⚠️ Capítulo 8 — Erros comuns</h2>
+
+    <ul>
+      <li>Usar uma ferramenta inadequada.</li>
+      <li>Forçar uma peça durante a desmontagem.</li>
+      <li>Misturar parafusos de diferentes posições.</li>
+      <li>Montar uma peça na posição incorrecta.</li>
+      <li>Ignorar sinais de desgaste.</li>
+      <li>Utilizar produtos de limpeza inadequados.</li>
+      <li>Realizar testes sem verificar a segurança da montagem.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- SEGURANÇA -->
+
+  <section class="box" id="seguranca">
+
+    <h2>🛡️ Segurança</h2>
+
+    <div class="safety">
+
+      <strong>⚠️ ALERTA DE SEGURANÇA</strong>
+
+      <p>
+        Trabalhos mecânicos devem ser realizados com
+        ferramentas apropriadas e seguindo procedimentos
+        técnicos adequados.
+      </p>
+
+      <p>
+        Nunca realize uma intervenção se não compreender
+        completamente o procedimento ou se existir risco
+        de acidente.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- NOTA FINAL -->
+
+  <section class="box">
+
+    <h2>📌 Nota técnica</h2>
+
+    <p>
+      Este manual está a ser desenvolvido como uma colecção
+      visual. As ilustrações serão adicionadas procedimento
+      por procedimento.
+    </p>
+
+    <p>
+      Informações específicas de fábrica, incluindo torque,
+      folgas, capacidades, dimensões e procedimentos especiais,
+      serão inseridas somente quando houver documentação
+      técnica confiável correspondente ao modelo.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>© 2026 CEP Digital</p>
+  <p>Manual Prático de Mecânica — Volume 2</p>
+
+</footer>
+
+</body>
+</html>
