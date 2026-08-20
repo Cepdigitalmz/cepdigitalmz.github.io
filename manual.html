@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manual Prático de Mecânica — LIFO XY49-10</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    nav {
+      background: #086044;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background: #0b7957;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .capa {
+      background: white;
+      border-radius: 18px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .capa .moto {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .capa h2 {
+      color: #064d3b;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .capa h3 {
+      color: #555;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .modelo {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .seguranca {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .capitulo {
+      border: 1px solid #d9e2df;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 12px 0;
+      background: #fafcfc;
+    }
+
+    .capitulo strong {
+      color: #064d3b;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      .capa h2 {
+        font-size: 25px;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">🏠 Início</a>
+    <a href="#indice">📚 Índice</a>
+    <a href="#ferramentas">🧰 Ferramentas</a>
+    <a href="#seguranca">⚠️ Segurança</a>
+  </nav>
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao CEP Digital
+    </a>
+
+    <div class="capa" id="inicio">
+      <div class="moto">🏍️</div>
+
+      <h2>Manual Prático de Mecânica</h2>
+
+      <h3>Volume 2</h3>
+
+      <p>
+        <strong>Manutenção e reparação de motocicleta</strong>
+      </p>
+
+      <p class="modelo">
+        Modelo de referência: LIFO XY49-10
+      </p>
+    </div>
+
+    <section id="indice">
+      <h2>📚 Índice do Manual</h2>
+
+      <div class="capitulo">
+        <strong>Capítulo 1 — Introdução</strong>
+        <p>Conhecimento geral da motocicleta LIFO XY49-10.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 2 — Identificação da motocicleta</strong>
+        <p>Principais conjuntos, componentes e localização das peças.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 3 — Ferramentas e equipamentos</strong>
+        <p>Ferramentas necessárias para manutenção e reparação.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 4 — Segurança na oficina</strong>
+        <p>Procedimentos de segurança antes, durante e depois da intervenção.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 5 — Manutenção preventiva</strong>
+        <p>Inspeções, limpeza, lubrificação e verificações periódicas.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 6 — Motor</strong>
+        <p>Inspeção, desmontagem, limpeza, montagem e verificação.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 7 — Sistema de combustível</strong>
+        <p>Tanque, torneira, carburador e alimentação do motor.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 8 — Sistema elétrico</strong>
+        <p>Bateria, iluminação, ignição, cabos e componentes elétricos.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 9 — Travões</strong>
+        <p>Inspeção e manutenção dos sistemas de travagem.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 10 — Rodas e pneus</strong>
+        <p>Inspeção, desmontagem, montagem e verificação.</p>
+      </div>
+
+      <div class="capitulo">
+        <strong>Capítulo 11 — Transmiss
