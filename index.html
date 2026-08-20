@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CEP Digital</title>
+
+  <meta name="description"
+        content="Biblioteca digital de livros, manuais, aplicações, vídeos e áudios educativos">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+      color: #17202a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #063b2a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #07543b;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #0b7050;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    .hero h2 {
+      color: #063b2a;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #555;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .section-title {
+      color: #063b2a;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #063b2a;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #07543b;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 7px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #063b2a;
+    }
+
+    .featured {
+      background: #e8f3ee;
+      border-left: 5px solid #07543b;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+    .featured h3 {
+      color: #063b2a;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #063b2a;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+
+      nav a {
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Biblioteca digital de conhecimento</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#livros">📚 Livros</a>
+    <a href="#aplicacoes">📱 Aplicações</a>
+    <a href="#videos">🎬 Vídeos</a>
+    <a href="#audios">🎧 Áudios</a>
+    <a href="#sobre">ℹ️ Sobre</a>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <h2>Bem-vindo ao CEP Digital</h2>
+
+    <p>
+      Uma biblioteca digital de livros, manuais, aplicações,
+      vídeos e áudios educativos.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section id="livros">
+      <h2 class="section-title">📚 Livros e Manuais</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🏍️</div>
+
+          <h3>Manual de Mecânica</h3>
+
+          <p>
+            Volume 2 — Manutenção e reparação
+            de motorizada LIFO XY49-10.
+          </p>
+
+          <a href="#" class="button">
+            Ver livro
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚲</div>
+
+          <h3>Manual de Bicicleta</h3>
+
+          <p>
+            Guia prático para manutenção,
+            limpeza e reparação de bicicletas.
+          </p>
+
+          <a href="#" class="button">
+            Em preparação
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚗</div>
+
+          <h3>Manual de Automóvel</h3>
+
+          <p>
+            Guia de manutenção e diagnóstico
+            para automóveis.
+          </p>
+
+          <a href="#" class="button">
+            Em preparação
+          </a>
+        </div>
+
+      </div>
+
+      <div class="featured">
+
+        <h3>⭐ Destaque</h3>
+
+        <p>
+          Estamos a preparar uma colecção de manuais
+          práticos de mecânica com ilustrações,
+          identificação das peças e procedimentos
+          passo a passo.
+        </p>
+
+      </div>
+    </section>
+
+
+    <section id="aplicacoes" style="margin-top:45px;">
+
+      <h2 class="section-title">📱 Aplicações</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">👨‍👩‍👧‍👦</div>
+
+          <h3>Família Unida</h3>
+
+          <p>
+            Aplicação para organização e gestão
+            do fundo familiar.
+          </p>
+
+          <a href="#" class="button">
+            Abrir aplicação
+          </a>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">📲</div>
+
+          <h3>Novas aplicações</h3>
+
+          <p>
+            Outros projectos serão disponibilizados
+            nesta biblioteca.
+          </p>
+
+          <a href="#" class="button">
+            Em preparação
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="videos" style="margin-top:45px;">
+
+      <h2 class="section-title">🎬 Vídeos</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">🎥</div>
+
+          <h3>Vídeos educativos</h3>
+
+          <p>
+            Tutoriais e demonstrações práticas.
+          </p>
+
+          <a href="#" class="button">
+            Em breve
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="audios" style="margin-top:45px;">
+
+      <h2 class="section-title">🎧 Áudios</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">🎙️</div>
+
+          <h3>Áudios educativos</h3>
+
+          <p>
+            Aulas, explicações e outros conteúdos
+            em formato áudio.
+          </p>
+
+          <a href="#" class="button">
+            Em breve
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="sobre" style="margin-top:45px;">
+
+      <h2 class="section-title">ℹ️ Sobre o CEP Digital</h2>
+
+      <div class="card">
+
+        <p>
+          O CEP Digital é um projecto dedicado à
+          disponibilização de conhecimento através
+          de livros, manuais, aplicações, vídeos
+          e áudios educativos.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 CEP Digital — Todos os direitos reservados.
+    </p>
+
+    <p>
+      Biblioteca digital de conhecimento.
+    </p>
+
+  </footer>
+
+</body>
+</html>
