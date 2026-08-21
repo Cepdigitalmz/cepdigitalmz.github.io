@@ -45,7 +45,7 @@
       padding: 15px 10px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     nav a {
@@ -107,12 +107,21 @@
       font-weight: bold;
     }
 
+    .imagem-moto {
+      max-width: 100%;
+      width: 600px;
+      display: block;
+      margin: 25px auto;
+      border-radius: 12px;
+    }
+
     section {
       background: white;
       margin-bottom: 25px;
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      scroll-margin-top: 90px;
     }
 
     section h2 {
@@ -170,990 +179,25 @@
       background: #fafcfc;
     }
 
-    ..capitulo strong {
-  color: #064d3b;
-}
-
-.imagem-manual {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-}
-
-    .capitulo-link {
+    .capitulo a {
       text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .figura {
-      background: #f7faf9;
-      border: 2px dashed #b8ccc5;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .figura .icone {
-      font-size: 80px;
-      margin-bottom: 10px;
-    }
-
-    .figura p {
-      color: #607d75;
-      font-size: 14px;
-    }
-
-    .peca {
-      border-left: 4px solid #086044;
-      background: #f8fbfa;
-      padding: 15px;
-      margin: 12px 0;
-      border-radius: 8px;
-    }
-
-    .etapa {
-      background: #ffffff;
-      border: 1px solid #d9e2df;
-      border-radius: 10px;
-      padding: 18px;
-      margin: 15px 0;
-    }
-
-    .etapa h4 {
       color: #064d3b;
-      margin-bottom: 8px;
-    }
-
-    footer {
-      background: #064d3b;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
-
-      .capa h2 {
-        font-size: 25px;
-      }
-
-      section {
-        padding: 18px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>CEP Digital</h1>
-  <p>Manuais práticos de manutenção e reparação</p>
-</header>
-
-<nav>
-  <a href="#inicio">🏠 Início</a>
-  <a href="#indice">📚 Índice</a>
-  <a href="#ferramentas">🧰 Ferramentas</a>
-  <a href="#seguranca">⚠️ Segurança</a>
-</nav>
-
-<main class="container">
-
-  <a class="voltar" href="index.html">
-    ← Voltar ao CEP Digital
-  </a>
-
-  <!-- CAPA -->
-
-  <div class="capa" id="inicio">
-
-    <div class="moto">🏍️</div>
-
-    <h2>Manual Prático de Mecânica</h2>
-
-    <h3>Volume 2</h3>
-
-    <p>
-      <strong>Manutenção e reparação de motocicleta</strong>
-    </p>
-
-    <p class="modelo">
-      Modelo de referência: LIFO XY49-10
-    </p>
-
-  </div>
-
-
-  <!-- CAPÍTULO 1 -->
-
-  <section id="capitulo1">
-
-    <h2>📖 Capítulo 1 — Conhecendo a LIFO XY49-10</h2>
-
-    <h3>1.1 Apresentação</h3>
-
-    <p>
-      A LIFO XY49-10 é uma motocicleta de uso rodoviário encontrada
-      no mercado africano, incluindo Moçambique. Este manual foi
-      desenvolvido como material prático de apoio à aprendizagem
-      de manutenção, inspeção e reparação.
-    </p>
-
-    <div class="info">
-      <strong>Nota importante:</strong>
-      As especificações técnicas serão verificadas antes de serem
-      apresentadas como dados oficiais. Quando um valor não puder
-      ser confirmado, será indicado como "a confirmar".
-    </div>
-
-    <h3>1.2 Objetivo do manual</h3>
-
-    <p>
-      Ensinar, de forma progressiva, procedimentos de inspeção,
-      manutenção preventiva, diagnóstico e reparação.
-    </p>
-
-    <h3>1.3 Princípio de trabalho</h3>
-
-    <ol>
-      <li>Identificar o problema.</li>
-      <li>Preparar a motocicleta.</li>
-      <li>Preparar as ferramentas.</li>
-      <li>Desmontar somente o necessário.</li>
-      <li>Identificar e organizar as peças.</li>
-      <li>Limpar e inspecionar.</li>
-      <li>Substituir componentes danificados.</li>
-      <li>Montar corretamente.</li>
-      <li>Aplicar os valores técnicos confirmados.</li>
-      <li>Realizar a verificação final.</li>
-      <li>Testar de forma segura.</li>
-    </ol>
-
-    <h3>1.4 Principais conjuntos</h3>
-
-    <ul>
-      <li>Motor;</li>
-      <li>Sistema de alimentação;</li>
-      <li>Sistema de ignição;</li>
-      <li>Sistema elétrico;</li>
-      <li>Sistema de transmissão;</li>
-      <li>Sistema de travagem;</li>
-      <li>Suspensão;</li>
-      <li>Rodas e pneus;</li>
-      <li>Sistema de escape;</li>
-      <li>Direção e comandos.</li>
-    </ul>
-
-    <div class="alerta">
-      <strong>⚠️ Regra fundamental:</strong>
-      Nunca iniciar uma desmontagem sem identificar a peça,
-      a sua posição e a orientação de montagem.
-    </div>
-
-    <h3>1.5 Informação técnica</h3>
-
-    <p>
-      Diferentes fontes comerciais podem apresentar configurações
-      diferentes para modelos semelhantes. Por isso, valores de
-      torque, folga, capacidade ou dimensões deverão ser confirmados
-      para a versão específica.
-    </p>
-
-  </section>
-
-
-  <!-- ÍNDICE -->
-
-  <section id="indice">
-
-    <h2>📚 Índice do Manual</h2>
-
-    <a href="#capitulo1" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 1 — Conhecendo a LIFO XY49-10</strong>
-        <p>Introdução e princípios de trabalho.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo2" class="capitulo-link">
-      <div class="capitulo">
-        <strong>📖 Capítulo 2 — Identificação da motocicleta</strong>
-        <p>Principais conjuntos, componentes e localização das peças.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo3" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 3 — Ferramentas e equipamentos</strong>
-        <p>Ferramentas necessárias para manutenção e reparação.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo4" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 4 — Segurança na oficina</strong>
-        <p>Procedimentos de segurança.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo5" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 5 — Manutenção preventiva</strong>
-        <p>Inspeções, limpeza, lubrificação e verificações.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo6" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 6 — Motor</strong>
-        <p>Inspeção, desmontagem, limpeza e montagem.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo7" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 7 — Sistema de combustível</strong>
-        <p>Tanque, alimentação e carburador.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo8" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 8 — Sistema elétrico</strong>
-        <p>Bateria, iluminação, ignição e cablagem.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo9" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 9 — Travões</strong>
-        <p>Inspeção e manutenção dos sistemas de travagem.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo10" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 10 — Rodas e pneus</strong>
-        <p>Inspeção, desmontagem, montagem e verificação.</p>
-      </div>
-    </a>
-
-    <a href="#capitulo11" class="capitulo-link">
-      <div class="capitulo">
-        <strong>Capítulo 11 — Transmissão</strong>
-        <p>Corrente, pinhão, cremalheira e inspeção.</p>
-      </div>
-    </a>
-
-  </section>
-
-
-  <!-- CAPÍTULO 2 -->
-
-  <section id="capitulo2">
-
-    <h2>🏍️ Capítulo 2 — Identificação da motocicleta</h2>
-
-    <h3>2.1 Objetivo</h3>
-
-    <p>
-      Antes de realizar qualquer reparação, o mecânico deve identificar
-      corretamente os principais conjuntos da motocicleta.
-    </p>
-
-    <div class="info">
-      <strong>Nota técnica:</strong>
-      A configuração pode variar conforme versão, ano ou mercado.
-      A identificação visual deverá ser confirmada na motocicleta
-      que está sendo reparada.
-    </div>
-
-    <h3>2.2 Vista geral</h3>
-
-    <div class="figura">
-
-      <div class="icone">🏍️</div>
-
-      <<h3>2.2 Visão geral da motocicleta</h3>
-
-<p>
-  A ilustração abaixo apresenta uma identificação visual dos principais
-  componentes da motocicleta utilizada como referência neste manual.
-</p>
-
-<img
-  src="file_000000008bd481f49acf8199656fe3b6~2.png"
-  alt="Identificação dos principais componentes da motocicleta LIFO XY49-10"
-  class="imagem-manual">
-
-<h3>2.3 Principais componentes</h3>
-
-        <p>
-  A figura abaixo apresenta os principais componentes do motor e a sua
-  localização. A identificação serve como orientação para os procedimentos
-  de inspeção, manutenção e reparação descritos neste manual.
-</p>
-
-<div style="text-align:center; margin:20px 0;">
-
-  <img
-    src="figura-2-2-motor.png"
-    alt="Figura 2.2 — Motor e principais componentes da LIFO XY49-10"
-    style="width:100%; max-width:900px; height:auto; border-radius:12px;"
-  >
-
-  <p style="font-weight:bold; margin-top:10px;">
-    Figura 2.2 — Motor e principais componentes da LIFO XY49-10
-  </p>
-<h3>2.4 Número de identificação do veículo (VIN)</h3>
-
-<p>
-O número de identificação do veículo, conhecido como VIN, é um código
-individual utilizado para identificar a motocicleta. Antes de realizar
-qualquer reparação, é recomendável registar este número para facilitar
-a identificação do veículo e a consulta de documentação técnica.
-</p>
-
-<div class="info">
-  <strong>Procedimento:</strong>
-  <ol>
-    <li>Limpe cuidadosamente a área onde o número está gravado.</li>
-    <li>Localize e leia todos os caracteres do número.</li>
-    <li>Registe o número exatamente como aparece na motocicleta.</li>
-    <li>Compare o número com os documentos disponíveis do veículo.</li>
-  </ol>
-</div>
-
-<div class="alerta">
-  <strong>Importante:</strong>
-  Não altere, raspe, regrave ou tente modificar qualquer número de
-  identificação da motocicleta.
-</div>
-
-
-<h3>2.5 Número do motor</h3>
-
-<p>
-O motor possui uma identificação própria gravada no conjunto do motor.
-A localização exata pode variar conforme a versão da motocicleta.
-Por isso, o número deve ser localizado diretamente na unidade em
-manutenção.
-</p>
-
-<div class="info">
-  <strong>Procedimento:</strong>
-  <ol>
-    <li>Desligue o motor e aguarde até que esteja suficientemente frio.</li>
-    <li>Limpe cuidadosamente a superfície onde o número está gravado.</li>
-    <li>Localize o número do motor.</li>
-    <li>Registe todos os caracteres sem alterar a sequência.</li>
-    <li>Compare o número com a documentação disponível.</li>
-  </ol>
-</div>
-
-
-<h3>2.6 Identificação dos principais componentes</h3>
-
-<p>
-Antes de iniciar uma intervenção, o mecânico deve reconhecer os
-principais conjuntos da motocicleta e compreender a sua função básica.
-</p>
-
-<ul>
-  <li><strong>Motor:</strong> produz a potência necessária para movimentar a motocicleta.</li>
-  <li><strong>Carburador ou sistema de alimentação:</strong> fornece a mistura necessária ao funcionamento do motor, conforme a configuração da motocicleta.</li>
-  <li><strong>Sistema de ignição:</strong> produz a faísca necessária para a combustão.</li>
-  <li><strong>Sistema elétrico:</strong> alimenta e controla diversos equipamentos elétricos.</li>
-  <li><strong>Embraiagem:</strong> permite controlar a transmissão da potência do motor.</li>
-  <li><strong>Caixa de velocidades:</strong> permite selecionar diferentes relações de transmissão.</li>
-  <li><strong>Transmissão final:</strong> transmite o movimento para a roda traseira.</li>
-  <li><strong>Sistema de travagem:</strong> permite reduzir a velocidade e parar a motocicleta.</li>
-  <li><strong>Suspensão:</strong> ajuda a absorver irregularidades da estrada.</li>
-  <li><strong>Rodas e pneus:</strong> mantêm o contacto da motocicleta com a estrada.</li>
-  <li><strong>Sistema de escape:</strong> conduz os gases provenientes da combustão.</li>
-</ul>
-
-
-<h3>2.7 Recomendações antes da desmontagem</h3>
-
-<p>
-Uma desmontagem organizada reduz o risco de perder peças, inverter
-componentes ou cometer erros durante a montagem.
-</p>
-
-<ol>
-  <li>Estacione a motocicleta numa superfície firme e nivelada.</li>
-  <li>Desligue o motor e retire a chave.</li>
-  <li>Deixe os componentes quentes arrefecerem.</li>
-  <li>Prepare as ferramentas necessárias.</li>
-  <li>Limpe a área de trabalho.</li>
-  <li>Observe a posição dos componentes antes de desmontá-los.</li>
-  <li>Fotografe ligações e componentes quando necessário.</li>
-  <li>Organize parafusos e peças de acordo com a sequência de desmontagem.</li>
-  <li>Não force uma peça antes de compreender como ela está fixada.</li>
-</ol>
-
-<div class="alerta">
-  <strong>Boa prática:</strong>
-  Sempre que possível, coloque os parafusos e pequenas peças em recipientes
-  identificados. Isso facilita a montagem e evita a perda de componentes.
-</div>
-
-
-<h3>2.8 Segurança</h3>
-
-<div class="seguranca">
-
-  <strong>⚠️ Regras de segurança</strong>
-
-  <ul>
-    <li>Não trabalhe com o motor em funcionamento quando o procedimento não exigir.</li>
-    <li>Evite trabalhar com o motor ainda quente.</li>
-    <li>Utilize ferramentas adequadas ao serviço.</li>
-    <li>Use equipamento de proteção individual quando necessário.</li>
-    <li>Mantenha combustível e outros materiais inflamáveis afastados de fontes de ignição.</li>
-    <li>Não coloque as mãos em componentes móveis.</li>
-    <li>Antes de desmontar qualquer sistema, certifique-se de que não existe energia ou pressão armazenada que possa causar acidente.</li>
-  </ul>
-
-</div>
-
-<div class="info">
-  <strong>Nota técnica:</strong>
-  As informações deste capítulo servem como orientação geral.
-  Valores de torque, folgas, dimensões, capacidades e outros dados
-  técnicos específicos serão apresentados somente quando puderem ser
-  confirmados para a versão correspondente da LIFO XY49-10.
-</div>
-
-  </section>
-</div>
-
-<div class="info">
-  <strong>Nota técnica:</strong>
-  A aparência e a posição de alguns componentes podem variar conforme
-  a versão ou o ano de fabrico da motocicleta. Antes de utilizar qualquer
-  identificação como referência para uma reparação, confirme a configuração
-  da motocicleta em manutenção.
-</div>
-    <div class="peca">
-      <strong>01 — Motor</strong>
-      <p>
-        Conjunto responsável pela produção da força mecânica.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>02 — Depósito de combustível</strong>
-      <p>
-        Reservatório destinado ao armazenamento do combustível.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>03 — Sistema de alimentação</strong>
-      <p>
-        Conjunto responsável pela condução e preparação do combustível.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>04 — Sistema de escape</strong>
-      <p>
-        Conduz os gases de escape para fora do motor.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>05 — Sistema elétrico</strong>
-      <p>
-        Inclui bateria, cablagem, iluminação, comandos e ignição.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>06 — Sistema de transmissão</strong>
-      <p>
-        Transmite o movimento produzido pelo motor para a roda motriz.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>07 — Sistema de travagem</strong>
-      <p>
-        Permite reduzir a velocidade e parar a motocicleta.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>08 — Suspensão</strong>
-      <p>
-        Contribui para estabilidade e absorção das irregularidades.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>09 — Rodas e pneus</strong>
-      <p>
-        Fazem o contacto da motocicleta com o piso.
-      </p>
-    </div>
-
-    <div class="peca">
-      <strong>10 — Sistema de direção</strong>
-      <p>
-        Permite orientar a roda dianteira.
-      </p>
-    </div>
-
-    <h3>2.4 Identificação antes da desmontagem</h3>
-
-    <ol>
-      <li>Limpar a área do componente.</li>
-      <li>Observar a posição original.</li>
-      <li>Identificar pontos de fixação.</li>
-      <li>Observar cabos, tubos e conectores.</li>
-      <li>Fotografar a montagem quando necessário.</li>
-      <li>Separar parafusos por conjunto.</li>
-      <li>Registar a orientação das peças.</li>
-      <li>Verificar sinais de desgaste ou dano.</li>
-    </ol>
-
-    <h3>2.5 Como serão apresentadas as peças</h3>
-
-    <p>
-      Cada procedimento deste manual deverá utilizar uma ilustração
-      própria. As peças serão numeradas e identificadas através de
-      legendas.
-    </p>
-
-    <p>
-      Quando for necessário desmontar um conjunto, será utilizada uma
-      vista explodida para mostrar a ordem das peças.
-    </p>
-
-    <h3>2.6 Estrutura dos procedimentos</h3>
-
-    <ol>
-      <li>Identificação da peça.</li>
-      <li>Ferramentas necessárias.</li>
-      <li>Preparação.</li>
-      <li>Desmontagem.</li>
-      <li>Limpeza, quando aplicável.</li>
-      <li>Inspeção.</li>
-      <li>Substituição.</li>
-      <li>Montagem.</li>
-      <li>Torque ou folga, quando confirmado.</li>
-      <li>Verificação final.</li>
-      <li>Erros comuns.</li>
-      <li>Alertas de segurança.</li>
-    </ol>
-
-    <div class="seguranca">
-      <strong>⚠️ Segurança:</strong>
-      Não utilize valores de torque, folga ou capacidade sem confirmar
-      que pertencem à versão específica da motocicleta.
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 3 -->
-
-  <section id="capitulo3">
-
-    <h2>🧰 Capítulo 3 — Ferramentas e equipamentos</h2>
-
-    <h3>3.1 Ferramentas básicas</h3>
-
-    <ul>
-      <li>Jogo de chaves.</li>
-      <li>Chaves de fenda.</li>
-      <li>Alicate.</li>
-      <li>Chaves Allen.</li>
-      <li>Recipientes para organizar peças.</li>
-      <li>Escovas de limpeza.</li>
-      <li>Panos limpos.</li>
-    </ul>
-
-    <div class="info">
-      Ferramentas específicas serão apresentadas junto de cada
-      procedimento de reparação.
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 4 -->
-
-  <section id="capitulo4">
-
-    <h2>⚠️ Capítulo 4 — Segurança na oficina</h2>
-
-    <h3>4.1 Antes da intervenção</h3>
-
-    <ul>
-      <li>Desligar o motor.</li>
-      <li>Estacionar a motocicleta de forma estável.</li>
-      <li>Manter a área limpa.</li>
-      <li>Utilizar equipamento de proteção adequado.</li>
-      <li>Evitar fontes de ignição perto do combustível.</li>
-    </ul>
-
-    <div class="seguranca">
-      <strong>⚠️ Atenção:</strong>
-      Combustível, componentes quentes, eletricidade e peças móveis
-      podem causar ferimentos ou incêndio.
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 5 -->
-
-  <section id="capitulo5">
-
-    <h2>🔧 Capítulo 5 — Manutenção preventiva</h2>
-
-    <p>
-      A manutenção preventiva procura identificar problemas antes
-      que provoquem uma avaria maior.
-    </p>
-
-    <h3>5.1 Inspeções</h3>
-
-    <ul>
-      <li>Estado dos pneus.</li>
-      <li>Funcionamento dos travões.</li>
-      <li>Corrente de transmissão.</li>
-      <li>Iluminação.</li>
-      <li>Nível e condição dos fluidos aplicáveis.</li>
-      <li>Possíveis fugas.</li>
-      <li>Fixações e componentes visíveis.</li>
-    </ul>
-
-    <div class="alerta">
-      Os intervalos de manutenção devem ser confirmados na documentação
-      específica do fabricante para a versão da motocicleta.
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 6 -->
-
-  <section id="capitulo6">
-
-    <h2>⚙️ Capítulo 6 — Motor</h2>
-
-    <p>
-      Este capítulo será desenvolvido com procedimentos individuais
-      para inspeção, limpeza, desmontagem, substituição e montagem
-      dos componentes do motor.
-    </p>
-
-    <div class="figura">
-      <div class="icone">⚙️</div>
-      <h3>Vista explodida do motor</h3>
-      <p>
-        Ilustração técnica será adicionada antes dos procedimentos
-        específicos.
-      </p>
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 7 -->
-
-  <section id="capitulo7">
-
-    <h2>⛽ Capítulo 7 — Sistema de combustível</h2>
-
-    <p>
-      Serão apresentados os componentes do sistema de combustível,
-      sua identificação, limpeza, inspeção e substituição.
-    </p>
-
-  </section>
-
-
-  <!-- CAPÍTULO 8 -->
-
-  <section id="capitulo8">
-
-    <h2>🔌 Capítulo 8 — Sistema elétrico</h2>
-
-    <p>
-      Este capítulo abordará bateria, iluminação, cablagem, ignição,
-      conectores e diagnóstico elétrico.
-    </p>
-
-  </section>
-
-
-  <!-- CAPÍTULO 9 -->
-
-  <section id="capitulo9">
-
-    <h2>🛑 Capítulo 9 — Travões</h2>
-
-    <p>
-      Serão apresentados procedimentos de inspeção, limpeza,
-      substituição e verificação dos componentes de travagem.
-    </p>
-
-    <div class="seguranca">
-      <strong>⚠️ Segurança crítica:</strong>
-      O sistema de travagem é um componente essencial de segurança.
-      Qualquer reparação deve ser executada com extremo cuidado.
-    </div>
-
-  </section>
-
-
-  <!-- CAPÍTULO 10 -->
-
-  <section id="capitulo10">
-
-    <h2>🛞 Capítulo 10 — Rodas e pneus</h2>
-
-    <p>
-      Serão apresentados procedimentos de inspeção das rodas,
-      pneus e componentes associados.
-    </p>
-
-  </section>
-
-
-  <!-- CAPÍTULO 11 -->
-
-  <section id="capitulo11">
-
-    <h2>⛓️ Capítulo 11 — Transmissão</h2>
-
-    <p>
-      Este capítulo abordará a identificação e manutenção dos
-      componentes da transmissão final.
-    </p>
-
-    <h3>11.1 Componentes</h3>
-
-    <ul>
-      <li>Corrente.</li>
-      <li>Pinhão.</li>
-      <li>Cremalheira/coroa.</li>
-      <li>Elementos de fixação.</li>
-    </ul>
-
-    <h3>11.2 Inspeção</h3>
-
-    <p>
-      A corrente e os componentes associados deverão ser inspecionados
-      quanto a desgaste, danos, limpeza e condição geral.
-    </p>
-
-    <div class="alerta">
-      Qualquer valor específico de folga ou torque será apresentado
-      somente depois de confirmado na documentação correspondente.
-    </div>
-
-  </section>
-
-
-  <!-- FERRAMENTAS -->
-
-  <section id="ferramentas">
-
-    <h2>🧰 Ferramentas</h2>
-
-    <p>
-      As ferramentas serão apresentadas individualmente dentro de cada
-      procedimento, incluindo a ferramenta necessária e o ponto onde
-      deverá ser aplicada.
-    </p>
-
-  </section>
-
-
-  <!-- SEGURANÇA -->
-
-  <section id="seguranca">
-
-    <h2>⚠️ Segurança geral</h2>
-
-    <div class="seguranca">
-
-      <strong>Antes de qualquer reparação:</strong>
-
-      <ul>
-        <li>Trabalhe numa área bem ventilada.</li>
-        <li>Mantenha a motocicleta estável.</li>
-        <li>Utilize ferramentas adequadas.</li>
-        <li>Use proteção adequada.</li>
-        <li>Mantenha combustível longe de chamas.</li>
-        <li>Não trabalhe com componentes quentes sem proteção.</li>
-        <li>Confirme as especificações técnicas antes da montagem.</li>
-      </ul>
-
-    </div>
-
-  </section>
-
-</main>
-
-<footer>
-
-  <p>
-    © 2026 CEP Digital — Todos os direitos reservados.
-  </p>
-
-  <p>
-    Manual Prático de Mecânica — Volume 2
-  </p>
-
-</footer>
-
-</body>
-</html>      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      background: #0b7957;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 25px auto;
-      padding: 0 15px;
-    }
-
-    .voltar {
-      display: inline-block;
-      background: #086044;
-      color: white;
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    .capa {
-      background: white;
-      border-radius: 18px;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      margin-bottom: 30px;
-    }
-
-    .capa .moto {
-      font-size: 70px;
-      margin-bottom: 15px;
-    }
-
-    .capa h2 {
-      color: #064d3b;
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .capa h3 {
-      color: #555;
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .modelo {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    section {
-      background: white;
-      margin-bottom: 25px;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    section h2 {
-      color: #064d3b;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #d8e7e2;
-      padding-bottom: 8px;
-    }
-
-    section h3 {
-      color: #086044;
-      margin-top: 18px;
-      margin-bottom: 8px;
-    }
-
-    ul, ol {
-      margin-left: 25px;
-      margin-bottom: 15px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .alerta {
-      background: #fff4d6;
-      border-left: 5px solid #e0a400;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .seguranca {
-      background: #ffe8e8;
-      border-left: 5px solid #c62828;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .info {
-      background: #e8f4ff;
-      border-left: 5px solid #1976d2;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 15px 0;
-    }
-
-    .capitulo {
-      border: 1px solid #d9e2df;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 12px 0;
-      background: #fafcfc;
     }
 
     .capitulo strong {
       color: #064d3b;
     }
 
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
     footer {
       background: #064d3b;
       color: white;
@@ -1163,6 +207,7 @@ componentes ou cometer erros durante a montagem.
     }
 
     @media (max-width: 600px) {
+
       header h1 {
         font-size: 24px;
       }
@@ -1175,8 +220,13 @@ componentes ou cometer erros durante a montagem.
         padding: 18px;
       }
 
+      nav {
+        gap: 5px;
+      }
+
       nav a {
         font-size: 14px;
+        padding: 8px 10px;
       }
     }
   </style>
@@ -1184,10 +234,15 @@ componentes ou cometer erros durante a montagem.
 
 <body>
 
+  <!-- CABEÇALHO -->
+
   <header>
     <h1>CEP Digital</h1>
     <p>Manuais práticos de manutenção e reparação</p>
   </header>
+
+
+  <!-- MENU -->
 
   <nav>
     <a href="#inicio">🏠 Início</a>
@@ -1196,13 +251,20 @@ componentes ou cometer erros durante a montagem.
     <a href="#seguranca">⚠️ Segurança</a>
   </nav>
 
+
   <main class="container">
+
+    <!-- VOLTAR -->
 
     <a class="voltar" href="index.html">
       ← Voltar ao CEP Digital
     </a>
 
+
+    <!-- CAPA -->
+
     <div class="capa" id="inicio">
+
       <div class="moto">🏍️</div>
 
       <h2>Manual Prático de Mecânica</h2>
@@ -1216,175 +278,588 @@ componentes ou cometer erros durante a montagem.
       <p class="modelo">
         Modelo de referência: LIFO XY49-10
       </p>
-    </</div>
 
-<section id="capitulo1">
-  <h2>📖 Capítulo 1 — Conhecendo a LIFO XY49-10</h2>
-
-  <h3>1.1 Apresentação</h3>
-
-  <p>
-    A LIFO XY49-10 é uma motocicleta de uso rodoviário encontrada no
-    mercado africano, incluindo Moçambique. Este manual foi desenvolvido
-    como material prático de apoio à aprendizagem de manutenção,
-    inspeção e reparação da motocicleta.
-  </p>
-
-  <div class="info">
-    <strong>Nota importante:</strong>
-    As especificações técnicas apresentadas neste manual serão verificadas
-    sempre que possível através de documentação técnica do fabricante,
-    documentação do fornecedor ou outras fontes técnicas confiáveis.
-    Quando um dado não puder ser confirmado, ele será identificado como
-    "a confirmar" e não deverá ser tratado como especificação oficial.
-  </div>
-
-  <h3>1.2 Objetivo do manual</h3>
-
-  <p>
-    O objetivo deste manual é ensinar, de forma progressiva, como realizar
-    inspeções, manutenção preventiva, diagnóstico e determinados
-    procedimentos de reparação na LIFO XY49-10.
-  </p>
-
-  <p>
-    O conteúdo será organizado para que o leitor consiga acompanhar cada
-    procedimento desde a preparação da motocicleta até à verificação final.
-  </p>
-
-  <h3>1.3 Princípio de trabalho</h3>
-
-  <p>
-    Cada intervenção deverá seguir uma sequência lógica:
-  </p>
-
-  <ol>
-    <li>Identificar o problema ou realizar a inspeção;</li>
-    <li>Preparar a motocicleta;</li>
-    <li>Preparar as ferramentas;</li>
-    <li>Desmontar apenas os componentes necessários;</li>
-    <li>Identificar e organizar as peças;</li>
-    <li>Limpar e inspecionar os componentes;</li>
-    <li>Substituir componentes danificados ou fora da especificação;</li>
-    <li>Montar corretamente;</li>
-    <li>Aplicar os valores técnicos especificados;</li>
-    <li>Realizar a verificação final;</li>
-    <li>Testar a motocicleta de forma segura.</li>
-  </ol>
-
-  <h3>1.4 Identificação visual</h3>
-
-  <p>
-    Antes de iniciar uma reparação, o mecânico deve familiarizar-se com
-    os principais conjuntos da motocicleta:
-  </p>
-
-  <ul>
-    <li>Motor;</li>
-    <li>Sistema de alimentação;</li>
-    <li>Sistema de ignição;</li>
-    <li>Sistema elétrico;</li>
-    <li>Sistema de transmissão;</li>
-    <li>Sistema de travagem;</li>
-    <li>Suspensão dianteira e traseira;</li>
-    <li>Rodas e pneus;</li>
-    <li>Sistema de escape;</li>
-    <li>Comandos do guiador;</li>
-    <li>Estrutura e componentes da carroçaria.</li>
-  </ul>
-
-  <div class="alerta">
-    <strong>Regra fundamental:</strong>
-    Nunca iniciar a desmontagem sem antes identificar a peça, observar
-    a sua posição e, quando necessário, registar a orientação e a ordem
-    de montagem.
-  </div>
-
-  <h3>1.5 Identificação das peças</h3>
-
-  <p>
-    Nas próximas versões do manual, as peças serão apresentadas através
-    de ilustrações numeradas. O número indicado na ilustração corresponderá
-    à descrição da peça no texto.
-  </p>
-
-  <p>
-    Quando houver uma vista explodida, a sequência será utilizada para
-    explicar a desmontagem e a montagem de cada conjunto.
-  </p>
-
-  <h3>1.6 Informação técnica</h3>
-
-  <p>
-    Algumas fontes comerciais encontradas para o modelo XY49-10 apresentam
-    especificações diferentes. Por essa razão, este manual não assumirá
-    que todos os veículos identificados como XY49-10 possuem exatamente
-    a mesma configuração.
-  </p>
-
-  <div class="seguranca">
-    <strong>⚠️ Segurança:</strong>
-    Antes de utilizar qualquer valor de torque, folga, capacidade,
-    dimensão ou especificação elétrica, confirme se o valor corresponde
-    exatamente à versão da motocicleta em manutenção.
-  </div>
-  </section>
-    <section id="indice">
-  <h2>📚 Índice do Manual</h2>
-
-  <a href="#capitulo1" class="capitulo-link">
-    <div class="capitulo">
-      <strong>Capítulo 1 — Introdução</strong>
-      <p>Conhecimento geral da motocicleta LIFO XY49-10.</p>
     </div>
-  </a>
+
+
+    <!-- ÍNDICE -->
+
+    <section id="indice">
+
+      <h2>📚 Índice do Manual</h2>
 
       <div class="capitulo">
-  <a href="#capitulo2">
-    <strong>📖 Capítulo 2 — Identificação da motocicleta</strong>
-  </a>
-  <p>Principais conjuntos, componentes e localização das peças.</p>
-</div>
+
+        <a href="#capitulo1">
+          <strong>📖 Capítulo 1 — Conhecendo a LIFO XY49-10</strong>
+        </a>
+
+        <p>
+          Apresentação, objetivo do manual, identificação geral
+          e princípios de trabalho.
+        </p>
+
+      </div>
+
 
       <div class="capitulo">
+
+        <a href="#capitulo2">
+          <strong>📖 Capítulo 2 — Identificação da motocicleta</strong>
+        </a>
+
+        <p>
+          Principais conjuntos, componentes e localização das peças.
+        </p>
+
+      </div>
+
+
+      <div class="capitulo">
+
         <strong>Capítulo 3 — Ferramentas e equipamentos</strong>
-        <p>Ferramentas necessárias para manutenção e reparação.</p>
+
+        <p>
+          Ferramentas necessárias para manutenção e reparação.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 4 — Segurança na oficina</strong>
-        <p>Procedimentos de segurança antes, durante e depois da intervenção.</p>
+
+        <p>
+          Procedimentos de segurança antes, durante e depois
+          da intervenção.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 5 — Manutenção preventiva</strong>
-        <p>Inspeções, limpeza, lubrificação e verificações periódicas.</p>
+
+        <p>
+          Inspeções, limpeza, lubrificação e verificações periódicas.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 6 — Motor</strong>
-        <p>Inspeção, desmontagem, limpeza, montagem e verificação.</p>
+
+        <p>
+          Inspeção, desmontagem, limpeza, montagem e verificação.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 7 — Sistema de combustível</strong>
-        <p>Tanque, torneira, carburador e alimentação do motor.</p>
+
+        <p>
+          Tanque, torneira, carburador e alimentação do motor.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 8 — Sistema elétrico</strong>
-        <p>Bateria, iluminação, ignição, cabos e componentes elétricos.</p>
+
+        <p>
+          Bateria, iluminação, ignição, cabos e componentes elétricos.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 9 — Travões</strong>
-        <p>Inspeção e manutenção dos sistemas de travagem.</p>
+
+        <p>
+          Inspeção e manutenção dos sistemas de travagem.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
+
         <strong>Capítulo 10 — Rodas e pneus</strong>
-        <p>Inspeção, desmontagem, montagem e verificação.</p>
+
+        <p>
+          Inspeção, desmontagem, montagem e verificação.
+        </p>
+
       </div>
 
+
       <div class="capitulo">
-        <strong>Capítulo 11 — Transmiss
+
+        <strong>Capítulo 11 — Transmissão</strong>
+
+        <p>
+          Corrente, pinhão, cremalheira e sistema de transmissão.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CAPÍTULO 1 -->
+
+    <section id="capitulo1">
+
+      <h2>📖 Capítulo 1 — Conhecendo a LIFO XY49-10</h2>
+
+
+      <h3>1.1 Apresentação</h3>
+
+      <p>
+        A LIFO XY49-10 é uma motocicleta de uso rodoviário
+        encontrada no mercado africano, incluindo Moçambique.
+        Este manual foi desenvolvido como material prático
+        de apoio à aprendizagem de manutenção, inspeção
+        e reparação da motocicleta.
+      </p>
+
+
+      <div class="info">
+
+        <strong>Nota importante:</strong>
+
+        As especificações técnicas apresentadas neste manual
+        serão verificadas sempre que possível através de
+        documentação técnica do fabricante, documentação
+        do fornecedor ou outras fontes técnicas confiáveis.
+
+        Quando um dado não puder ser confirmado, ele será
+        identificado como "a confirmar" e não deverá ser tratado
+        como especificação oficial.
+
+      </div>
+
+
+      <h3>1.2 Objetivo do manual</h3>
+
+      <p>
+        O objetivo deste manual é ensinar, de forma progressiva,
+        como realizar inspeções, manutenção preventiva,
+        diagnóstico e determinados procedimentos de reparação
+        na LIFO XY49-10.
+      </p>
+
+      <p>
+        O conteúdo será organizado para que o leitor consiga
+        acompanhar cada procedimento desde a preparação da
+        motocicleta até à verificação final.
+      </p>
+
+
+      <h3>1.3 Princípio de trabalho</h3>
+
+      <p>
+        Cada intervenção deverá seguir uma sequência lógica:
+      </p>
+
+      <ol>
+
+        <li>Identificar o problema ou realizar a inspeção;</li>
+
+        <li>Preparar a motocicleta;</li>
+
+        <li>Preparar as ferramentas;</li>
+
+        <li>Desmontar apenas os componentes necessários;</li>
+
+        <li>Identificar e organizar as peças;</li>
+
+        <li>Limpar e inspecionar os componentes;</li>
+
+        <li>
+          Substituir componentes danificados ou fora
+          da especificação;
+        </li>
+
+        <li>Montar corretamente;</li>
+
+        <li>Aplicar os valores técnicos especificados;</li>
+
+        <li>Realizar a verificação final;</li>
+
+        <li>Testar a motocicleta de forma segura.</li>
+
+      </ol>
+
+
+      <h3>1.4 Identificação visual</h3>
+
+      <p>
+        Antes de iniciar uma reparação, o mecânico deve
+        familiarizar-se com os principais conjuntos da motocicleta:
+      </p>
+
+      <ul>
+
+        <li>Motor;</li>
+
+        <li>Sistema de alimentação;</li>
+
+        <li>Sistema de ignição;</li>
+
+        <li>Sistema elétrico;</li>
+
+        <li>Sistema de transmissão;</li>
+
+        <li>Sistema de travagem;</li>
+
+        <li>Suspensão dianteira e traseira;</li>
+
+        <li>Rodas e pneus;</li>
+
+        <li>Sistema de escape;</li>
+
+        <li>Comandos do guiador;</li>
+
+        <li>Estrutura e componentes da carroçaria.</li>
+
+      </ul>
+
+
+      <div class="alerta">
+
+        <strong>Regra fundamental:</strong>
+
+        Nunca iniciar a desmontagem sem antes identificar
+        a peça, observar a sua posição e, quando necessário,
+        registar a orientação e a ordem de montagem.
+
+      </div>
+
+
+      <h3>1.5 Identificação das peças</h3>
+
+      <p>
+        Nas próximas versões do manual, as peças serão
+        apresentadas através de ilustrações numeradas.
+        O número indicado na ilustração corresponderá
+        à descrição da peça no texto.
+      </p>
+
+      <p>
+        Quando houver uma vista explodida, a sequência será
+        utilizada para explicar a desmontagem e a montagem
+        de cada conjunto.
+      </p>
+
+
+      <h3>1.6 Informação técnica</h3>
+
+      <p>
+        Algumas fontes comerciais encontradas para o modelo
+        XY49-10 apresentam especificações diferentes.
+        Por essa razão, este manual não assumirá que todos
+        os veículos identificados como XY49-10 possuem
+        exatamente a mesma configuração.
+      </p>
+
+
+      <div class="seguranca">
+
+        <strong>⚠️ Segurança:</strong>
+
+        Antes de utilizar qualquer valor de torque, folga,
+        capacidade, dimensão ou especificação elétrica,
+        confirme se o valor corresponde exatamente à versão
+        da motocicleta em manutenção.
+
+      </div>
+
+
+      <a href="#indice" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+
+    <!-- CAPÍTULO 2 -->
+
+    <section id="capitulo2">
+
+      <h2>📖 Capítulo 2 — Identificação da motocicleta</h2>
+
+
+      <h3>2.1 Objetivo do capítulo</h3>
+
+      <p>
+        Este capítulo apresenta os principais conjuntos da
+        motocicleta e explica como localizar visualmente
+        os componentes antes de iniciar qualquer operação
+        de manutenção ou reparação.
+      </p>
+
+
+      <h3>2.2 Principais conjuntos</h3>
+
+      <p>
+        Para facilitar a aprendizagem, a motocicleta será
+        dividida nos seguintes conjuntos:
+      </p>
+
+
+      <ol>
+
+        <li>Motor;</li>
+
+        <li>Tanque e sistema de combustível;</li>
+
+        <li>Sistema de admissão;</li>
+
+        <li>Sistema de escape;</li>
+
+        <li>Sistema elétrico;</li>
+
+        <li>Sistema de transmissão;</li>
+
+        <li>Travão dianteiro;</li>
+
+        <li>Travão traseiro;</li>
+
+        <li>Roda dianteira;</li>
+
+        <li>Roda traseira;</li>
+
+        <li>Suspensão dianteira;</li>
+
+        <li>Suspensão traseira;</li>
+
+        <li>Guiador e comandos;</li>
+
+        <li>Quadro;</li>
+
+        <li>Banco e carenagens.</li>
+
+      </ol>
+
+
+      <h3>2.3 Localização das principais peças</h3>
+
+      <p>
+        Antes de desmontar qualquer componente, é importante
+        observar a sua posição na motocicleta e compreender
+        a relação entre os diferentes conjuntos.
+      </p>
+
+
+      <!-- LOCAL DA ILUSTRAÇÃO -->
+
+      <div class="info">
+
+        <strong>📷 Ilustração do capítulo:</strong>
+
+        Nesta área será apresentada a fotografia ou
+        ilustração da motocicleta com os principais
+        componentes numerados.
+
+      </div>
+
+
+      <h3>2.4 Identificação por posição</h3>
+
+      <p>
+        A identificação dos componentes será feita
+        considerando a posição normal de utilização
+        da motocicleta.
+      </p>
+
+
+      <ul>
+
+        <li>
+          <strong>Parte dianteira:</strong>
+          roda dianteira, suspensão, guiador e farol.
+        </li>
+
+        <li>
+          <strong>Parte central:</strong>
+          quadro, tanque, banco e motor.
+        </li>
+
+        <li>
+          <strong>Parte traseira:</strong>
+          transmissão, roda traseira, suspensão e escape.
+        </li>
+
+        <li>
+          <strong>Lado esquerdo:</strong>
+          componentes localizados no lado esquerdo
+          da motocicleta.
+        </li>
+
+        <li>
+          <strong>Lado direito:</strong>
+          componentes localizados no lado direito
+          da motocicleta.
+        </li>
+
+      </ul>
+
+
+      <h3>2.5 Identificação antes da desmontagem</h3>
+
+      <p>
+        Antes de remover qualquer peça, recomenda-se:
+      </p>
+
+
+      <ol>
+
+        <li>Observar a posição original;</li>
+
+        <li>Fotografar o conjunto quando necessário;</li>
+
+        <li>Identificar parafusos e fixadores;</li>
+
+        <li>Separar as peças por conjunto;</li>
+
+        <li>Registar a ordem de desmontagem;</li>
+
+        <li>Verificar se existem cabos, tubos ou conectores ligados;</li>
+
+        <li>
+          Só depois iniciar a desmontagem.
+        </li>
+
+      </ol>
+
+
+      <div class="alerta">
+
+        <strong>💡 Dica prática:</strong>
+
+        Quando houver dúvida sobre a posição de uma peça,
+        fotografe o conjunto antes de desmontá-lo. A fotografia
+        poderá ser utilizada posteriormente para confirmar
+        a posição durante a montagem.
+
+      </div>
+
+
+      <div class="seguranca">
+
+        <strong>⚠️ Segurança:</strong>
+
+        Nunca trabalhe numa motocicleta instável.
+        Utilize um apoio adequado e mantenha a motocicleta
+        numa posição segura antes de iniciar a desmontagem.
+
+      </div>
+
+
+      <a href="#indice" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+
+    <!-- FERRAMENTAS -->
+
+    <section id="ferramentas">
+
+      <h2>🧰 Ferramentas</h2>
+
+      <p>
+        Este capítulo será desenvolvido posteriormente
+        com a identificação das ferramentas utilizadas
+        nos procedimentos de manutenção e reparação.
+      </p>
+
+      <div class="info">
+
+        <strong>Próxima etapa:</strong>
+
+        As ferramentas serão apresentadas com imagens,
+        identificação, utilização e cuidados de segurança.
+
+      </div>
+
+    </section>
+
+
+    <!-- SEGURANÇA -->
+
+    <section id="seguranca">
+
+      <h2>⚠️ Segurança na oficina</h2>
+
+      <p>
+        A segurança deve ser observada antes, durante
+        e depois de qualquer intervenção mecânica.
+      </p>
+
+
+      <ul>
+
+        <li>Utilizar ferramentas adequadas;</li>
+
+        <li>Manter a área de trabalho limpa;</li>
+
+        <li>Evitar trabalhar com a motocicleta instável;</li>
+
+        <li>Utilizar equipamento de proteção adequado;</li>
+
+        <li>Desligar o motor antes da manutenção;</li>
+
+        <li>
+          Confirmar a montagem antes de colocar
+          a motocicleta em funcionamento.
+        </li>
+
+      </ul>
+
+
+      <div class="seguranca">
+
+        <strong>⚠️ Atenção:</strong>
+
+        Procedimentos que envolvam combustível,
+        eletricidade, partes móveis, calor ou produtos
+        químicos devem ser realizados com cuidados
+        específicos.
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      © 2026 CEP Digital — Todos os direitos reservados.
+    </p>
+
+    <p>
+      Manual Prático de Mecânica — Volume 2
+    </p>
+
+  </footer>
+
+</body>
+</html>
