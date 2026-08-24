@@ -1,1 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Capítulo 17 — Sistema de escape | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">💨</div>
+
+    <h2>Capítulo 17 — Sistema de escape</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Funcionamento, componentes, diagnóstico,
+      manutenção e segurança.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.1 Introdução</h2>
+
+    <p>
+      O sistema de escape conduz os gases produzidos pela combustão
+      para fora do motor e do habitáculo, contribuindo também para
+      o controlo do ruído e das emissões.
+    </p>
+
+    <p>
+      Nos veículos modernos, o sistema de escape trabalha em conjunto
+      com sensores e componentes de controlo de emissões.
+    </p>
+
+    <div class="info">
+      <strong>📌 Conceito fundamental:</strong>
+      <p>
+        Uma alteração no sistema de escape pode afectar o ruído,
+        as emissões, o desempenho do motor e, em determinadas
+        condições, o consumo de combustível.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.2 Funções do sistema de escape</h2>
+
+    <ul>
+      <li>Conduzir os gases de combustão para fora do motor;</li>
+      <li>Reduzir o ruído produzido pelo motor;</li>
+      <li>Contribuir para o controlo das emissões;</li>
+      <li>Conduzir os gases para uma zona segura do veículo;</li>
+      <li>Permitir o funcionamento dos sistemas de controlo de emissões.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.3 Principais componentes</h2>
+
+    <ul>
+      <li>Colector de escape;</li>
+      <li>Tubos de escape;</li>
+      <li>Catalisador;</li>
+      <li>Filtro de partículas, quando equipado;</li>
+      <li>Silenciador;</li>
+      <li>Ressonador, quando equipado;</li>
+      <li>Sensores de oxigénio;</li>
+      <li>Sensores de temperatura, quando existentes;</li>
+      <li>Sensores de pressão diferencial, quando aplicáveis;</li>
+      <li>Suportes e elementos de fixação;</li>
+      <li>Juntas e vedantes.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA DE ESCAPE</strong>
+      <p>
+        Mostrar posteriormente o conjunto completo:
+        motor → colector → catalisador → filtro de partículas
+        (quando equipado) → tubos → silenciador → saída.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.4 Colector de escape</h2>
+
+    <p>
+      O colector reúne os gases provenientes dos cilindros e
+      encaminha-os para o restante sistema de escape.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Fissuras;</li>
+      <li>Fugas;</li>
+      <li>Juntas;</li>
+      <li>Parafusos e porcas;</li>
+      <li>Deformações;</li>
+      <li>Ruído anormal.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Fugas próximas do motor podem permitir a entrada de gases
+        de escape em zonas onde não devem estar.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.5 Tubos de escape</h2>
+
+    <p>
+      Os tubos conduzem os gases entre os diferentes componentes
+      do sistema.
+    </p>
+
+    <h3>Inspeccionar:</h3>
+
+    <ul>
+      <li>Corrosão;</li>
+      <li>Furos;</li>
+      <li>Fissuras;</li>
+      <li>Amolgadelas;</li>
+      <li>Uniões;</li>
+      <li>Suportes;</li>
+      <li>Contacto com a carroçaria.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.6 Catalisador</h2>
+
+    <p>
+      O catalisador é um componente do sistema de controlo de
+      emissões que promove reacções químicas destinadas a reduzir
+      determinados poluentes presentes nos gases de escape.
+    </p>
+
+    <p>
+      O seu funcionamento depende das condições específicas do motor
+      e do sistema de controlo electrónico.
+    </p>
+
+    <h3>Possíveis problemas:</h3>
+
+    <ul>
+      <li>Obstrução;</li>
+      <li>Danos internos;</li>
+      <li>Contaminação;</li>
+      <li>Perda de eficiência;</li>
+      <li>Ruído interno.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.7 Filtro de partículas</h2>
+
+    <p>
+      Alguns motores, especialmente motores diesel, utilizam um
+      filtro de partículas para reduzir a quantidade de partículas
+      presentes nos gases de escape.
+    </p>
+
+    <p>
+      Dependendo do veículo, o sistema pode possuir sensores e
+      estratégias de regeneração controladas electronicamente.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Luz de aviso;</li>
+      <li>Códigos de diagnóstico;</li>
+      <li>Sensores;</li>
+      <li>Mangueiras de pressão, quando existentes;</li>
+      <li>Cablagem;</li>
+      <li>Conectores.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.8 Silenciador</h2>
+
+    <p>
+      O silenciador reduz o nível de ruído produzido pelos gases
+      de escape.
+    </p>
+
+    <h3>Problemas comuns:</h3>
+
+    <ul>
+      <li>Corrosão;</li>
+      <li>Furos;</li>
+      <li>Fissuras;</li>
+      <li>Ruído interno;</li>
+      <li>Suportes partidos.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.9 Sensores de oxigénio</h2>
+
+    <p>
+      Os sensores de oxigénio fornecem informações sobre a composição
+      dos gases de escape ao sistema de controlo do motor.
+    </p>
+
+    <p>
+      Essa informação pode ser utilizada pela unidade de controlo
+      para ajustar o funcionamento do motor.
+    </p>
+
+    <h3>Diagnóstico:</h3>
+
+    <ul>
+      <li>Verificar códigos de avaria;</li>
+      <li>Inspeccionar cablagem;</li>
+      <li>Verificar conectores;</li>
+      <li>Analisar dados através de equipamento de diagnóstico;</li>
+      <li>Comparar os valores com as especificações.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.10 Fugas no sistema de escape</h2>
+
+    <p>
+      Uma fuga pode produzir ruído anormal e permitir que os gases
+      saiam antes do ponto previsto pelo sistema.
+    </p>
+
+    <h3>Sinais possíveis:</h3>
+
+    <ul>
+      <li>Ruído semelhante a sopro;</li>
+      <li>Cheiro de gases;</li>
+      <li>Marcas de fuligem;</li>
+      <li>Ruído metálico;</li>
+      <li>Luz de avaria do motor, dependendo da localização da fuga.</li>
+    </ul>
+
+    <div class="perigo">
+      <strong>🚨 SEGURANÇA</strong>
+      <p>
+        Os gases de escape podem conter monóxido de carbono e outros
+        componentes perigosos. Nunca realizar testes de funcionamento
+        prolongados em locais fechados sem ventilação adequada.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.11 Suportes e fixações</h2>
+
+    <p>
+      Os suportes mantêm o sistema de escape na posição correcta e
+      ajudam a absorver movimentos e vibrações.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Suportes metálicos;</li>
+      <li>Elementos de borracha;</li>
+      <li>Parafusos;</li>
+      <li>Abraçadeiras;</li>
+      <li>Contacto com outras partes do veículo.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.12 Ruídos anormais</h2>
+
+    <p>
+      Diferentes tipos de ruído podem ajudar a localizar uma avaria.
+    </p>
+
+    <ul>
+      <li>Som de fuga: pode indicar junta ou tubo danificado;</li>
+      <li>Ruído metálico: pode indicar suporte ou componente solto;</li>
+      <li>Ruído interno: pode indicar danos num componente;</li>
+      <li>Som excessivamente alto: pode indicar falha no silenciador.</li>
+    </ul>
+
+    <p>
+      O diagnóstico deve confirmar fisicamente a origem antes da
+      substituição de qualquer componente.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.13 Diagnóstico geral</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Confirmar o sintoma relatado;</li>
+        <li>Realizar inspecção visual;</li>
+        <li>Verificar ruídos;</li>
+        <li>Procurar sinais de fuga;</li>
+        <li>Verificar suportes;</li>
+        <li>Verificar sensores;</li>
+        <li>Ler códigos de diagnóstico quando aplicável;</li>
+        <li>Analisar dados do sistema;</li>
+        <li>Comparar resultados com as especificações;</li>
+        <li>Identificar a causa antes de substituir componentes.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.14 Diagnóstico electrónico</h2>
+
+    <p>
+      Os veículos modernos podem utilizar várias unidades de controlo
+      e sensores relacionados com o sistema de escape e emissões.
+    </p>
+
+    <h3>O scanner pode ajudar a:</h3>
+
+    <ul>
+      <li>Ler códigos de avaria;</li>
+      <li>Consultar dados em tempo real;</li>
+      <li>Verificar sensores;</li>
+      <li>Observar parâmetros do sistema;</li>
+      <li>Confirmar a reparação após o serviço.</li>
+    </ul>
+
+    <div class="info">
+      <strong>📌 Importante:</strong>
+      <p>
+        Um código de avaria não significa automaticamente que o
+        componente indicado pelo código esteja avariado. É necessário
+        realizar o diagnóstico da causa.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.15 Inspecção visual</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Deixar os componentes atingirem uma condição segura;</li>
+        <li>Elevar o veículo utilizando equipamento adequado;</li>
+        <li>Inspeccionar tubos;</li>
+        <li>Inspeccionar catalisador;</li>
+        <li>Inspeccionar filtro de partículas quando existente;</li>
+        <li>Inspeccionar silenciador;</li>
+        <li>Verificar suportes;</li>
+        <li>Procurar fugas;</li>
+        <li>Verificar contacto com a carroçaria;</li>
+        <li>Registar as anomalias.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.16 Substituição de componentes</h2>
+
+    <p>
+      A substituição deve seguir o procedimento específico do
+      fabricante.
+    </p>
+
+    <ol>
+      <li>Identificar correctamente o componente;</li>
+      <li>Consultar o manual de serviço;</li>
+      <li>Deixar o sistema arrefecer;</li>
+      <li>Desmontar os elementos de fixação;</li>
+      <li>Substituir juntas ou vedantes quando especificado;</li>
+      <li>Instalar o componente novo;</li>
+      <li>Aplicar os torques especificados;</li>
+      <li>Verificar os sensores e conectores;</li>
+      <li>Verificar fugas;</li>
+      <li>Realizar teste final.</li>
+    </ol>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Torques, sequências de aperto e procedimentos de montagem
+        variam entre veículos. Nunca utilizar valores genéricos quando
+        o fabricante fornece uma especificação.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.17 Segurança</h2>
+
+    <div class="perigo">
+      <strong>🚨 REGRAS IMPORTANTES</strong>
+      <ul>
+        <li>Não trabalhar num escape quente;</li>
+        <li>Utilizar cavaletes ou elevador adequado;</li>
+        <li>Não trabalhar apenas com o macaco;</li>
+        <li>Utilizar protecção ocular;</li>
+        <li>Garantir ventilação adequada;</li>
+        <li>Evitar contacto com gases de escape;</li>
+        <li>Confirmar que o sistema ficou correctamente fixado.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.18 Erros comuns</h2>
+
+    <ul>
+      <li>Ignorar pequenas fugas;</li>
+      <li>Substituir sensores sem diagnóstico;</li>
+      <li>Confundir código de avaria com diagnóstico final;</li>
+      <li>Utilizar componentes inadequados;</li>
+      <li>Não substituir juntas quando necessário;</li>
+      <li>Não verificar suportes;</li>
+      <li>Utilizar torques incorrectos;</li>
+      <li>Testar o motor em local fechado;</li>
+      <li>Ignorar sinais de gases dentro do habitáculo.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.19 Checklist do sistema de escape</h2>
+
+    <ul>
+      <li>☐ Colector inspeccionado;</li>
+      <li>☐ Juntas verificadas;</li>
+      <li>☐ Tubos inspeccionados;</li>
+      <li>☐ Catalisador verificado;</li>
+      <li>☐ Filtro de partículas verificado quando equipado;</li>
+      <li>☐ Silenciador inspeccionado;</li>
+      <li>☐ Sensores verificados;</li>
+      <li>☐ Cablagem inspeccionada;</li>
+      <li>☐ Suportes verificados;</li>
+      <li>☐ Fugas verificadas;</li>
+      <li>☐ Códigos de diagnóstico verificados quando necessário;</li>
+      <li>☐ Reparação confirmada;</li>
+      <li>☐ Teste final realizado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>17.20 Conclusão</h2>
+
+    <p>
+      O sistema de escape desempenha funções importantes na condução
+      dos gases, controlo do ruído e redução de determinadas emissões.
+      O seu diagnóstico deve combinar inspecção mecânica e, nos
+      veículos modernos, diagnóstico electrónico.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas de escape,
+        sensores e controlo de emissões.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — referências e normas técnicas relacionadas
+        com veículos e sistemas automóveis.
+      </p>
+
+      <p>
+        Para limites de emissões, temperaturas, torques, procedimentos
+        de diagnóstico e especificações dos componentes, consultar
+        sempre o manual de serviço oficial do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+  </html>
