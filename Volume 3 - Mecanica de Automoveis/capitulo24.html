@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 24 — Plano de manutenção e verificação final | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccd8d4;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #e8f1ee;
+      color: #064d3b;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🔧🚗✅</div>
+
+    <h2>Capítulo 24 — Plano de manutenção e verificação final</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Organização da manutenção, verificação dos principais sistemas
+      e confirmação das condições de funcionamento do automóvel.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.1 Introdução</h2>
+
+    <p>
+      A manutenção automóvel deve ser realizada de forma organizada,
+      respeitando os intervalos e procedimentos estabelecidos para
+      cada veículo.
+    </p>
+
+    <p>
+      Um plano de manutenção permite acompanhar os serviços realizados,
+      identificar necessidades futuras e reduzir o risco de falhas
+      evitáveis.
+    </p>
+
+    <div class="info">
+      <strong>📌 Regra fundamental:</strong>
+      <p>
+        Os intervalos, fluidos, capacidades, folgas, binários de aperto
+        e procedimentos devem ser confirmados na documentação técnica
+        específica do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.2 Objectivos da manutenção</h2>
+
+    <ul>
+      <li>Manter o veículo em condições adequadas de funcionamento;</li>
+      <li>Detectar problemas numa fase inicial;</li>
+      <li>Reduzir o risco de avarias;</li>
+      <li>Preservar a segurança;</li>
+      <li>Prolongar a vida útil dos componentes;</li>
+      <li>Manter o desempenho previsto pelo fabricante;</li>
+      <li>Registar os trabalhos realizados.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.3 Tipos de manutenção</h2>
+
+    <h3>Manutenção preventiva</h3>
+
+    <p>
+      É realizada de acordo com intervalos ou condições previamente
+      estabelecidos, antes de ocorrer uma falha.
+    </p>
+
+    <h3>Manutenção correctiva</h3>
+
+    <p>
+      É realizada para corrigir uma falha ou anomalia já identificada.
+    </p>
+
+    <h3>Manutenção baseada na condição</h3>
+
+    <p>
+      Utiliza informações obtidas através de inspecção, medições,
+      diagnóstico ou monitorização para determinar a necessidade
+      de intervenção.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.4 Plano básico de manutenção</h2>
+
+    <table>
+
+      <tr>
+        <th>Sistema</th>
+        <th>Verificação</th>
+        <th>Acção</th>
+      </tr>
+
+      <tr>
+        <td>Motor</td>
+        <td>Óleo, fugas e funcionamento</td>
+        <td>Conforme especificação</td>
+      </tr>
+
+      <tr>
+        <td>Arrefecimento</td>
+        <td>Nível, fugas e componentes</td>
+        <td>Inspeccionar/reparar</td>
+      </tr>
+
+      <tr>
+        <td>Travões</td>
+        <td>Pastilhas, discos e fluido</td>
+        <td>Inspeccionar/substituir</td>
+      </tr>
+
+      <tr>
+        <td>Pneus</td>
+        <td>Pressão, desgaste e danos</td>
+        <td>Corrigir/substituir</td>
+      </tr>
+
+      <tr>
+        <td>Bateria</td>
+        <td>Estado e ligações</td>
+        <td>Testar/manter</td>
+      </tr>
+
+      <tr>
+        <td>Suspensão</td>
+        <td>Folgas, fugas e amortecimento</td>
+        <td>Inspeccionar/reparar</td>
+      </tr>
+
+      <tr>
+        <td>Direcção</td>
+        <td>Folgas e funcionamento</td>
+        <td>Inspeccionar/reparar</td>
+      </tr>
+
+      <tr>
+        <td>Iluminação</td>
+        <td>Lâmpadas e funcionamento</td>
+        <td>Substituir quando necessário</td>
+      </tr>
+
+    </table>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.5 Inspecção do motor</h2>
+
+    <div class="procedimento">
+
+      <ol>
+        <li>Verificar visualmente o compartimento do motor;</li>
+        <li>Procurar fugas de óleo;</li>
+        <li>Verificar fugas de líquido de arrefecimento;</li>
+        <li>Verificar mangueiras;</li>
+        <li>Verificar correias quando aplicável;</li>
+        <li>Verificar nível e condição dos fluidos;</li>
+        <li>Observar ruídos anormais;</li>
+        <li>Verificar luzes de advertência;</li>
+        <li>Realizar diagnóstico quando necessário.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.6 Verificação do sistema de lubrificação</h2>
+
+    <ul>
+      <li>Verificar o nível do óleo;</li>
+      <li>Utilizar o lubrificante especificado;</li>
+      <li>Verificar possíveis fugas;</li>
+      <li>Inspeccionar o filtro;</li>
+      <li>Respeitar o intervalo de substituição definido pelo fabricante.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Não escolher a viscosidade ou especificação do óleo apenas pela
+        aparência. Consultar a especificação indicada para o motor.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.7 Sistema de arrefecimento</h2>
+
+    <ol>
+      <li>Verificar o nível do líquido;</li>
+      <li>Procurar fugas;</li>
+      <li>Inspeccionar mangueiras;</li>
+      <li>Verificar radiador;</li>
+      <li>Verificar ventilador;</li>
+      <li>Observar a temperatura de funcionamento;</li>
+      <li>Verificar sinais de sobreaquecimento.</li>
+    </ol>
+
+    <div class="perigo">
+      <strong>🚨 PERIGO:</strong>
+      <p>
+        Não abrir o sistema de arrefecimento quando estiver quente
+        e sob pressão. Existe risco de queimaduras graves.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.8 Sistema de travagem</h2>
+
+    <ul>
+      <li>Verificar nível do fluido;</li>
+      <li>Inspeccionar pastilhas;</li>
+      <li>Inspeccionar discos ou tambores;</li>
+      <li>Procurar fugas;</li>
+      <li>Verificar mangueiras e tubos;</li>
+      <li>Verificar travão de estacionamento;</li>
+      <li>Verificar luzes de advertência;</li>
+      <li>Realizar teste de travagem adequado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.9 Pneus e rodas</h2>
+
+    <ol>
+      <li>Verificar pressão;</li>
+      <li>Verificar desgaste;</li>
+      <li>Procurar cortes ou deformações;</li>
+      <li>Verificar válvulas;</li>
+      <li>Verificar aperto das rodas;</li>
+      <li>Verificar roda sobressalente quando existente;</li>
+      <li>Confirmar alinhamento quando houver sintomas.</li>
+    </ol>
+
+    <div class="info">
+      <strong>📌 Importante:</strong>
+      <p>
+        A pressão correcta deve ser obtida através da informação
+        especificada pelo fabricante do veículo.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.10 Sistema de suspensão</h2>
+
+    <ul>
+      <li>Verificar amortecedores;</li>
+      <li>Verificar molas;</li>
+      <li>Verificar casquilhos;</li>
+      <li>Verificar rótulas;</li>
+      <li>Verificar folgas;</li>
+      <li>Procurar fugas;</li>
+      <li>Observar desgaste irregular dos pneus.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.11 Sistema de direcção</h2>
+
+    <ol>
+      <li>Verificar folgas;</li>
+      <li>Verificar terminais;</li>
+      <li>Verificar componentes da direcção;</li>
+      <li>Verificar assistência da direcção;</li>
+      <li>Procurar fugas quando aplicável;</li>
+      <li>Verificar alinhamento quando necessário.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.12 Sistema eléctrico</h2>
+
+    <ul>
+      <li>Verificar bateria;</li>
+      <li>Verificar terminais;</li>
+      <li>Verificar sistema de carregamento;</li>
+      <li>Verificar motor de arranque;</li>
+      <li>Verificar iluminação;</li>
+      <li>Verificar fusíveis;</li>
+      <li>Verificar sinais de corrosão;</li>
+      <li>Realizar diagnóstico electrónico quando necessário.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.13 Iluminação e sinalização</h2>
+
+    <ul>
+      <li>Faróis;</li>
+      <li>Luzes de presença;</li>
+      <li>Luzes de travagem;</li>
+      <li>Indicadores de mudança de direcção;</li>
+      <li>Luzes de marcha-atrás;</li>
+      <li>Luzes de nevoeiro quando existentes;</li>
+      <li>Luzes da matrícula quando aplicável.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.14 Verificação do habitáculo</h2>
+
+    <ul>
+      <li>Cintos de segurança;</li>
+      <li>Bancos;</li>
+      <li>Fechos das portas;</li>
+      <li>Retrovisores;</li>
+      <li>Vidros;</li>
+      <li>Comandos;</li>
+      <li>Luzes de advertência;</li>
+      <li>Limpa-pára-brisas;</li>
+      <li>Equipamentos de segurança.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.15 Diagnóstico electrónico final</h2>
+
+    <p>
+      Quando o veículo possui sistemas electrónicos de diagnóstico,
+      uma verificação final pode incluir a leitura dos módulos
+      disponíveis e a confirmação de eventuais códigos de avaria.
+    </p>
+
+    <div class="procedimento">
+
+      <ol>
+        <li>Identificar correctamente o veículo;</li>
+        <li>Conectar o equipamento adequado;</li>
+        <li>Realizar a leitura dos sistemas suportados;</li>
+        <li>Registar eventuais códigos;</li>
+        <li>Confirmar se as reparações foram efectuadas;</li>
+        <li>Realizar teste de funcionamento;</li>
+        <li>Documentar os resultados.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.16 Teste de funcionamento</h2>
+
+    <p>
+      Depois da manutenção ou reparação, o veículo deve ser submetido
+      aos testes necessários para confirmar o correcto funcionamento.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Arranque;</li>
+      <li>Marcha lenta;</li>
+      <li>Aceleração;</li>
+      <li>Travagem;</li>
+      <li>Direcção;</li>
+      <li>Suspensão;</li>
+      <li>Iluminação;</li>
+      <li>Sistemas de segurança;</li>
+      <li>Ausência de fugas;</li>
+      <li>Ausência de ruídos anormais.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.17 Teste de estrada</h2>
+
+    <p>
+      Quando apropriado e seguro, pode ser realizado um teste de estrada
+      para confirmar o comportamento do veículo após a intervenção.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 Segurança:</strong>
+      <p>
+        O teste deve ser realizado em local adequado, respeitando as
+        regras de trânsito e apenas quando o veículo estiver em condições
+        seguras para circular.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.18 Verificação de fugas</h2>
+
+    <p>
+      Após trabalhos de manutenção deve ser verificado se existem fugas
+      de fluidos.
+    </p>
+
+    <ul>
+      <li>Óleo do motor;</li>
+      <li>Líquido de arrefecimento;</li>
+      <li>Fluido de travões;</li>
+      <li>Fluido da direcção quando aplicável;</li>
+      <li>Fluido da transmissão;</li>
+      <li>Combustível;</li>
+      <li>Outros fluidos específicos do veículo.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.19 Registo da manutenção</h2>
+
+    <p>
+      Cada intervenção deve ser registada para facilitar o acompanhamento
+      da manutenção do veículo.
+    </p>
+
+    <table>
+
+      <tr>
+        <th>Data</th>
+        <th>Quilometragem</th>
+        <th>Serviço realizado</th>
+        <th>Observações</th>
+      </tr>
+
+      <tr>
+        <td>____/____/______</td>
+        <td>____________</td>
+        <td>________________</td>
+        <td>________________</td>
+      </tr>
+
+      <tr>
+        <td>____/____/______</td>
+        <td>____________</td>
+        <td>________________</td>
+        <td>________________</td>
+      </tr>
+
+      <tr>
+        <td>____/____/______</td>
+        <td>____________</td>
+        <td>________________</td>
+        <td>________________</td>
+      </tr>
+
+    </table>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.20 Checklist de manutenção geral</h2>
+
+    <div class="procedimento">
+
+      <ul>
+        <li>☐ Óleo verificado;</li>
+        <li>☐ Filtro de óleo verificado/substituído;</li>
+        <li>☐ Sistema de arrefecimento verificado;</li>
+        <li>☐ Travões verificados;</li>
+        <li>☐ Pneus verificados;</li>
+        <li>☐ Suspensão verificada;</li>
+        <li>☐ Direcção verificada;</li>
+        <li>☐ Bateria verificada;</li>
+        <li>☐ Sistema de carregamento verificado;</li>
+        <li>☐ Iluminação verificada;</li>
+        <li>☐ Limpa-pára-brisas verificado;</li>
+        <li>☐ Cintos de segurança verificados;</li>
+        <li>☐ Sistemas electrónicos verificados;</li>
+        <li>☐ Fugas verificadas;</li>
+        <li>☐ Ruídos anormais verificados;</li>
+        <li>☐ Teste de funcionamento realizado;</li>
+        <li>☐ Teste de estrada realizado quando apropriado;</li>
+        <li>☐ Manutenção registada.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.21 Verificação final antes de entregar o veículo</h2>
+
+    <ol>
+      <li>Confirmar que todas as ferramentas foram retiradas;</li>
+      <li>Confirmar que todas as peças foram correctamente instaladas;</li>
+      <li>Confirmar níveis de fluidos;</li>
+      <li>Confirmar que tampas e tampões estão correctamente instalados;</li>
+      <li>Confirmar que os componentes desmontados foram montados;</li>
+      <li>Confirmar ausência de fugas;</li>
+      <li>Confirmar funcionamento dos sistemas intervenientes;</li>
+      <li>Confirmar luzes de advertência;</li>
+      <li>Limpar a área de trabalho;</li>
+      <li>Registar o serviço realizado.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.22 Erros comuns na manutenção</h2>
+
+    <ul>
+      <li>Não consultar o manual do fabricante;</li>
+      <li>Utilizar peças inadequadas;</li>
+      <li>Utilizar fluidos incorrectos;</li>
+      <li>Não respeitar binários de aperto;</li>
+      <li>Não substituir elementos que exigem substituição;</li>
+      <li>Não verificar fugas;</li>
+      <li>Não realizar teste final;</li>
+      <li>Não registar a manutenção.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.23 Importância das especificações do fabricante</h2>
+
+    <p>
+      Os valores técnicos utilizados durante a manutenção não devem
+      ser inventados ou generalizados para todos os automóveis.
+    </p>
+
+    <p>
+      Binários de aperto, folgas, capacidades, tipos de óleo, pressões,
+      procedimentos de sincronização e outros parâmetros devem ser
+      obtidos através da documentação específica do fabricante.
+    </p>
+
+    <div class="alerta">
+      <strong>⚠️ Regra do CEP Digital:</strong>
+      <p>
+        Quando um procedimento exigir um valor técnico específico,
+        indicar o modelo, ano, motor e versão do veículo antes de
+        apresentar o valor.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.24 Conclusão do Volume 3</h2>
+
+    <p>
+      A manutenção automóvel exige organização, conhecimento técnico,
+      ferramentas adequadas e respeito pelas especificações do fabricante.
+    </p>
+
+    <p>
+      O diagnóstico deve ser baseado em evidências e testes, evitando
+      a substituição desnecessária de componentes. A verificação final
+      é igualmente importante para garantir que o serviço foi concluído
+      correctamente.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO FINAL — VEÍCULO COMPLETO</strong>
+      <p>
+        Ilustração 3D de um automóvel com os principais sistemas
+        identificados: motor, transmissão, travões, suspensão,
+        direcção, sistema eléctrico, combustível, arrefecimento,
+        escape e sistemas electrónicos.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>24.25 Referências técnicas</h2>
+
+    <div class="fonte">
+
+      <p>
+        Bosch Mobility. Documentação técnica sobre sistemas automóveis,
+        diagnóstico, electrónica e manutenção.
+      </p>
+
+      <p>
+        SAE International. Normas e publicações técnicas relacionadas
+        com engenharia e tecnologia automóvel.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE). Materiais técnicos de
+        formação e preparação para manutenção e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Para especificações, procedimentos de reparação, capacidades,
+        folgas e binários de aperto, consultar sempre o manual de serviço
+        oficial do fabricante correspondente ao veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice do Volume 3
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>CEP Digital — Manuais práticos de manutenção e reparação</p>
+  <p>Volume 3 — Mecânica de Automóveis</p>
+  <p>Capítulo 24 — Plano de manutenção e verificação final</p>
+
+</footer>
+
+</body>
+</html>
