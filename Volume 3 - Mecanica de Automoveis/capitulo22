@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 22 — Sistemas de segurança e equipamentos auxiliares | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🛡️🚗</div>
+
+    <h2>Capítulo 22 — Sistemas de segurança e equipamentos auxiliares</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Identificação, funcionamento, inspecção e manutenção
+      dos principais sistemas de segurança e equipamentos auxiliares.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.1 Introdução</h2>
+
+    <p>
+      Os sistemas de segurança e equipamentos auxiliares contribuem
+      para proteger os ocupantes, facilitar a condução e melhorar
+      o controlo do veículo.
+    </p>
+
+    <p>
+      Os veículos modernos podem combinar sistemas mecânicos,
+      eléctricos e electrónicos para aumentar a segurança activa
+      e passiva.
+    </p>
+
+    <div class="info">
+      <strong>📌 Importante:</strong>
+      <p>
+        Os componentes de segurança devem ser inspeccionados e reparados
+        de acordo com os procedimentos específicos do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.2 Segurança activa e passiva</h2>
+
+    <h3>Segurança activa</h3>
+
+    <p>
+      Inclui sistemas destinados a ajudar o condutor a evitar ou
+      controlar situações perigosas.
+    </p>
+
+    <ul>
+      <li>Sistema de travagem;</li>
+      <li>ABS;</li>
+      <li>Controlo de estabilidade;</li>
+      <li>Controlo de tracção;</li>
+      <li>Direcção;</li>
+      <li>Iluminação;</li>
+      <li>Pneus e suspensão.</li>
+    </ul>
+
+    <h3>Segurança passiva</h3>
+
+    <p>
+      Destina-se principalmente a reduzir as consequências de uma
+      colisão quando esta ocorre.
+    </p>
+
+    <ul>
+      <li>Cintos de segurança;</li>
+      <li>Airbags;</li>
+      <li>Estrutura de segurança da carroçaria;</li>
+      <li>Apoios de cabeça;</li>
+      <li>Sistemas de retenção infantil.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.3 Cintos de segurança</h2>
+
+    <p>
+      Os cintos de segurança são dispositivos fundamentais de retenção
+      dos ocupantes.
+    </p>
+
+    <h3>Inspecção:</h3>
+
+    <ul>
+      <li>Estado da correia;</li>
+      <li>Fecho;</li>
+      <li>Enrolador;</li>
+      <li>Pontos de fixação;</li>
+      <li>Funcionamento do mecanismo;</li>
+      <li>Sinais de danos ou desgaste.</li>
+    </ul>
+
+    <div class="perigo">
+      <strong>🚨 Atenção:</strong>
+      <p>
+        Um cinto de segurança que tenha sofrido esforços durante uma
+        colisão pode exigir substituição conforme as instruções do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.4 Airbags</h2>
+
+    <p>
+      O sistema de airbags utiliza dispositivos de retenção suplementar
+      para ajudar a proteger os ocupantes em determinadas colisões.
+    </p>
+
+    <h3>O sistema pode incluir:</h3>
+
+    <ul>
+      <li>Unidade de controlo;</li>
+      <li>Sensores;</li>
+      <li>Geradores de gás;</li>
+      <li>Módulos de airbag;</li>
+      <li>Cablagem;</li>
+      <li>Conectores específicos.</li>
+    </ul>
+
+    <div class="perigo">
+      <strong>🚨 PERIGO — AIRBAG</strong>
+      <p>
+        Não desmontar, medir ou testar directamente um módulo de airbag
+        sem seguir o procedimento oficial do fabricante. O sistema pode
+        activar-se de forma inesperada.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.5 ABS — Sistema de travagem antibloqueio</h2>
+
+    <p>
+      O ABS foi concebido para ajudar a evitar o bloqueio das rodas
+      durante determinadas travagens, permitindo ao sistema controlar
+      a pressão de travagem em cada roda.
+    </p>
+
+    <h3>Componentes principais:</h3>
+
+    <ul>
+      <li>Sensores de velocidade das rodas;</li>
+      <li>Unidade hidráulica;</li>
+      <li>Módulo de controlo;</li>
+      <li>Cablagem;</li>
+      <li>Elementos hidráulicos.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA ABS</strong>
+      <p>
+        Mostrar sensor de roda, roda fónica ou elemento de leitura,
+        unidade hidráulica e módulo electrónico.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.6 Controlo electrónico de estabilidade</h2>
+
+    <p>
+      Sistemas de controlo de estabilidade utilizam informações de
+      vários sensores para ajudar a manter o comportamento previsto
+      do veículo em determinadas condições.
+    </p>
+
+    <p>
+      A nomenclatura varia conforme o fabricante, podendo existir
+      designações diferentes para sistemas com funções semelhantes.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.7 Controlo de tracção</h2>
+
+    <p>
+      O controlo de tracção pode reduzir a perda de aderência das
+      rodas motrizes através da gestão da força disponível.
+    </p>
+
+    <p>
+      Pode trabalhar em conjunto com sistemas de travagem e controlo
+      electrónico do motor, dependendo do veículo.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.8 Sensores de segurança</h2>
+
+    <p>
+      Os sistemas electrónicos de segurança dependem de sensores
+      para determinar condições de funcionamento.
+    </p>
+
+    <h3>Exemplos:</h3>
+
+    <ul>
+      <li>Sensores de velocidade das rodas;</li>
+      <li>Sensores de aceleração;</li>
+      <li>Sensores de rotação;</li>
+      <li>Sensores de posição;</li>
+      <li>Sensores de impacto;</li>
+      <li>Outros sensores específicos.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.9 Equipamentos auxiliares</h2>
+
+    <p>
+      Além dos sistemas directamente relacionados com segurança,
+      os automóveis possuem equipamentos auxiliares que contribuem
+      para o conforto e funcionamento do veículo.
+    </p>
+
+    <ul>
+      <li>Ventilação;</li>
+      <li>Aquecimento;</li>
+      <li>Ar condicionado;</li>
+      <li>Limpa-pára-brisas;</li>
+      <li>Lavadores dos vidros;</li>
+      <li>Vidros eléctricos;</li>
+      <li>Fecho central;</li>
+      <li>Retrovisores eléctricos;</li>
+      <li>Buzina;</li>
+      <li>Iluminação auxiliar.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.10 Sistema limpa-pára-brisas</h2>
+
+    <h3>Principais componentes:</h3>
+
+    <ul>
+      <li>Motor eléctrico;</li>
+      <li>Braços;</li>
+      <li>Palhetas;</li>
+      <li>Mecanismo de transmissão;</li>
+      <li>Interruptor;</li>
+      <li>Fusível;</li>
+      <li>Relé ou módulo de controlo, quando aplicável.</li>
+    </ul>
+
+    <h3>Inspecção:</h3>
+
+    <ol>
+      <li>Verificar as palhetas;</li>
+      <li>Verificar o reservatório;</li>
+      <li>Verificar os esguichos;</li>
+      <li>Verificar o funcionamento do motor;</li>
+      <li>Verificar fusível e alimentação quando necessário.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.11 Sistema de lavagem do pára-brisas</h2>
+
+    <p>
+      O sistema utiliza uma bomba eléctrica para enviar líquido para
+      os esguichos do pára-brisas.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Nível do líquido;</li>
+      <li>Funcionamento da bomba;</li>
+      <li>Mangueiras;</li>
+      <li>Esguichos;</li>
+      <li>Fusível;</li>
+      <li>Cablagem.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.12 Buzina</h2>
+
+    <p>
+      A buzina é um equipamento de sinalização sonora utilizado
+      para alertar outros utilizadores da via.
+    </p>
+
+    <h3>Diagnóstico básico:</h3>
+
+    <ol>
+      <li>Verificar fusível;</li>
+      <li>Verificar relé quando existente;</li>
+      <li>Verificar alimentação;</li>
+      <li>Verificar massa;</li>
+      <li>Verificar interruptor ou comando;</li>
+      <li>Testar a buzina.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.13 Vidros eléctricos</h2>
+
+    <p>
+      Os vidros eléctricos utilizam motores e mecanismos de accionamento
+      controlados por interruptores e, em determinados veículos, por
+      módulos electrónicos.
+    </p>
+
+    <h3>Falhas possíveis:</h3>
+
+    <ul>
+      <li>Vidro não sobe;</li>
+      <li>Vidro não desce;</li>
+      <li>Movimento lento;</li>
+      <li>Ruído anormal;</li>
+      <li>Interruptor sem resposta;</li>
+      <li>Falha eléctrica.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.14 Fecho central</h2>
+
+    <p>
+      O fecho central permite bloquear ou desbloquear várias portas
+      através de um comando centralizado.
+    </p>
+
+    <h3>Componentes possíveis:</h3>
+
+    <ul>
+      <li>Actuadores;</li>
+      <li>Interruptores;</li>
+      <li>Comando remoto;</li>
+      <li>Módulo electrónico;</li>
+      <li>Cablagem;</li>
+      <li>Fusíveis.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.15 Ar condicionado</h2>
+
+    <p>
+      O sistema de climatização pode incluir componentes mecânicos,
+      eléctricos e electrónicos.
+    </p>
+
+    <h3>Componentes principais:</h3>
+
+    <ul>
+      <li>Compressor;</li>
+      <li>Condensador;</li>
+      <li>Evaporador;</li>
+      <li>Válvula de expansão ou dispositivo equivalente;</li>
+      <li>Ventiladores;</li>
+      <li>Sensores;</li>
+      <li>Controlos electrónicos.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        O circuito de ar condicionado pode trabalhar com refrigerante
+        sob pressão. A recuperação, carga e reparação devem ser realizadas
+        com equipamento e procedimentos adequados.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.16 Equipamentos de segurança do veículo</h2>
+
+    <ul>
+      <li>Triângulo de sinalização;</li>
+      <li>Macaco adequado ao veículo;</li>
+      <li>Chave de rodas;</li>
+      <li>Kit de primeiros socorros quando previsto;</li>
+      <li>Extintor quando exigido pela legislação aplicável;</li>
+      <li>Lanterna;</li>
+      <li>Equipamentos de emergência apropriados.</li>
+    </ul>
+
+    <p>
+      Os equipamentos obrigatórios podem variar conforme a legislação
+      do país e o tipo de veículo.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.17 Inspecção geral de segurança</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Verificar cintos de segurança;</li>
+        <li>Verificar luzes de aviso;</li>
+        <li>Verificar iluminação;</li>
+        <li>Verificar pneus;</li>
+        <li>Verificar travões;</li>
+        <li>Verificar limpa-pára-brisas;</li>
+        <li>Verificar buzina;</li>
+        <li>Verificar sistemas electrónicos de segurança;</li>
+        <li>Verificar equipamentos auxiliares;</li>
+        <li>Registar qualquer anomalia encontrada.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.18 Diagnóstico de uma falha de segurança electrónica</h2>
+
+    <ol>
+      <li>Confirmar a luz ou mensagem de aviso;</li>
+      <li>Consultar o manual do veículo;</li>
+      <li>Realizar diagnóstico electrónico quando apropriado;</li>
+      <li>Ler códigos de avaria;</li>
+      <li>Consultar os dados técnicos;</li>
+      <li>Inspeccionar sensores e cablagem;</li>
+      <li>Realizar os testes especificados;</li>
+      <li>Reparar a causa;</li>
+      <li>Apagar códigos apenas quando apropriado;</li>
+      <li>Realizar teste final.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.19 Erros comuns</h2>
+
+    <ul>
+      <li>Ignorar luzes de advertência;</li>
+      <li>Apagar códigos sem reparar a causa;</li>
+      <li>Desmontar airbags sem procedimento adequado;</li>
+      <li>Substituir sensores sem diagnóstico;</li>
+      <li>Utilizar fusíveis incorrectos;</li>
+      <li>Ignorar problemas de massa;</li>
+      <li>Utilizar peças incompatíveis;</li>
+      <li>Não realizar teste final.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.20 Segurança durante a manutenção</h2>
+
+    <div class="perigo">
+      <strong>🚨 ATENÇÃO</strong>
+
+      <ul>
+        <li>Seguir sempre o manual de serviço;</li>
+        <li>Desactivar sistemas quando o procedimento exigir;</li>
+        <li>Não trabalhar em airbags de forma improvisada;</li>
+        <li>Utilizar equipamento de protecção;</li>
+        <li>Desligar a bateria quando especificado;</li>
+        <li>Ter atenção a veículos híbridos e eléctricos;</li>
+        <li>Não efectuar trabalhos de alta tensão sem formação adequada.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.21 Checklist</h2>
+
+    <ul>
+      <li>☐ Cintos inspeccionados;</li>
+      <li>☐ Airbag e luz de aviso verificados;</li>
+      <li>☐ ABS verificado;</li>
+      <li>☐ Sistemas de estabilidade verificados;</li>
+      <li>☐ Iluminação verificada;</li>
+      <li>☐ Buzina verificada;</li>
+      <li>☐ Limpa-pára-brisas verificado;</li>
+      <li>☐ Lavadores verificados;</li>
+      <li>☐ Vidros eléctricos verificados;</li>
+      <li>☐ Fecho central verificado;</li>
+      <li>☐ Equipamentos auxiliares inspeccionados;</li>
+      <li>☐ Anomalias registadas;</li>
+      <li>☐ Reparações confirmadas;</li>
+      <li>☐ Teste final realizado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>22.22 Conclusão</h2>
+
+    <p>
+      Os sistemas de segurança e equipamentos auxiliares desempenham
+      funções importantes na protecção dos ocupantes, no controlo do
+      veículo e no conforto durante a condução.
+    </p>
+
+    <p>
+      A manutenção deve ser realizada com método e seguindo as
+      especificações do fabricante, principalmente nos sistemas de
+      segurança como airbags, cintos, ABS e controlo electrónico
+      de estabilidade.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas de segurança,
+        electrónica e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — referências técnicas relacionadas com
+        sistemas automóveis e segurança.
+      </p>
+
+      <p>
+        Para procedimentos específicos, consultar sempre o manual de
+        serviço oficial do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>CEP Digital — Manuais práticos de manutenção e reparação</p>
+  <p>Volume 3 — Mecânica de Automóveis</p>
+
+</footer>
+
+</body>
+</html>
