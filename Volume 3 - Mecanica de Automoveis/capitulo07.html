@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 7 — Sistema de combustível | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .combustivel-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="combustivel-icon">
+        ⛽
+      </div>
+
+      <h2>
+        Capítulo 7 — Sistema de combustível
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Funcionamento, componentes, manutenção e diagnóstico.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.1 Introdução</h2>
+
+      <p>
+        O sistema de combustível é responsável por armazenar,
+        transportar, filtrar e fornecer combustível ao motor nas
+        condições necessárias ao seu funcionamento.
+      </p>
+
+      <p>
+        Nos veículos modernos, o sistema trabalha em conjunto com
+        sensores, actuadores e a unidade electrónica de controlo
+        do motor.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Atenção:</strong>
+
+        <p>
+          A construção do sistema varia de acordo com o tipo de
+          motor, combustível, fabricante, modelo e ano do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.2 Funções do sistema de combustível</h2>
+
+      <ul>
+
+        <li>Armazenar o combustível;</li>
+
+        <li>Transportar o combustível;</li>
+
+        <li>Filtrar impurezas;</li>
+
+        <li>Fornecer combustível ao motor;</li>
+
+        <li>Controlar a quantidade de combustível injectada;</li>
+
+        <li>Manter as condições de alimentação exigidas pelo sistema;</li>
+
+        <li>Reduzir perdas e emissões através do controlo adequado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.3 Principais componentes</h2>
+
+      <p>
+        Dependendo do veículo, o sistema pode incluir:
+      </p>
+
+      <ul>
+
+        <li>Depósito de combustível;</li>
+
+        <li>Bomba de combustível;</li>
+
+        <li>Filtro de combustível;</li>
+
+        <li>Linhas e tubagens;</li>
+
+        <li>Injectores;</li>
+
+        <li>Regulador de pressão;</li>
+
+        <li>Rampa de combustível;</li>
+
+        <li>Sensores;</li>
+
+        <li>Válvulas;</li>
+
+        <li>Unidade electrónica de controlo.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — SISTEMA DE COMBUSTÍVEL</strong>
+
+        <p>
+          Inserir posteriormente uma ilustração 3D mostrando
+          depósito → bomba → filtro → linha → rampa → injectores
+          → motor.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.4 Depósito de combustível</h2>
+
+      <p>
+        O depósito armazena o combustível utilizado pelo veículo.
+        Deve permanecer devidamente fixado e protegido contra danos.
+      </p>
+
+      <h3>Durante a inspecção verificar:</h3>
+
+      <ul>
+
+        <li>Sinais de fuga;</li>
+
+        <li>Danos externos;</li>
+
+        <li>Fixação;</li>
+
+        <li>Tubagens ligadas ao depósito;</li>
+
+        <li>Tampa de abastecimento;</li>
+
+        <li>Sistema de ventilação, quando aplicável.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.5 Bomba de combustível</h2>
+
+      <p>
+        A bomba fornece o combustível ao sistema de alimentação.
+        Em muitos veículos modernos encontra-se instalada no
+        interior ou junto ao depósito.
+      </p>
+
+      <h3>Possíveis sintomas de problemas:</h3>
+
+      <ul>
+
+        <li>Dificuldade no arranque;</li>
+
+        <li>Motor que não arranca;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Falhas durante a aceleração;</li>
+
+        <li>Ruído anormal da bomba;</li>
+
+        <li>Pressão de combustível inadequada.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Diagnóstico:</strong>
+
+        <p>
+          A pressão e o caudal correctos devem ser comparados com
+          os valores especificados pelo fabricante do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.6 Filtro de combustível</h2>
+
+      <p>
+        O filtro retém contaminantes presentes no combustível,
+        ajudando a proteger os componentes do sistema.
+      </p>
+
+      <p>
+        Um filtro obstruído pode restringir o fornecimento de
+        combustível e afectar o funcionamento do motor.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Estado do filtro;</li>
+
+        <li>Fugas nas ligações;</li>
+
+        <li>Fixação;</li>
+
+        <li>Intervalo de substituição recomendado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.7 Linhas e tubagens de combustível</h2>
+
+      <p>
+        As linhas transportam o combustível entre o depósito e
+        os componentes de alimentação do motor.
+      </p>
+
+      <h3>Procurar:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Rachaduras;</li>
+
+        <li>Amolgadelas;</li>
+
+        <li>Corrosão;</li>
+
+        <li>Fixações danificadas;</li>
+
+        <li>Contacto inadequado com componentes móveis ou quentes.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🔥 PERIGO — COMBUSTÍVEL INFLAMÁVEL</strong>
+
+        <p>
+          Nunca trabalhar próximo de chamas, faíscas ou fontes
+          de ignição quando houver combustível exposto.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.8 Injectores</h2>
+
+      <p>
+        Os injectores controlam a introdução de combustível no
+        sistema de admissão ou directamente na câmara de combustão,
+        dependendo da arquitectura do motor.
+      </p>
+
+      <h3>Possíveis problemas:</h3>
+
+      <ul>
+
+        <li>Entupimento;</li>
+
+        <li>Fuga;</li>
+
+        <li>Atomização inadequada;</li>
+
+        <li>Falha eléctrica;</li>
+
+        <li>Quantidade de combustível incorrecta.</li>
+
+      </ul>
+
+      <p>
+        O diagnóstico deve utilizar testes adequados ao sistema
+        específico do veículo.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.9 Rampa de combustível</h2>
+
+      <p>
+        A rampa de combustível, quando existente, distribui o
+        combustível pelos injectores e pode integrar componentes
+        de controlo ou medição da pressão.
+      </p>
+
+      <p>
+        A sua configuração varia entre sistemas de injecção.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.10 Regulador e controlo da pressão</h2>
+
+      <p>
+        Alguns sistemas utilizam dispositivos específicos para
+        controlar a pressão do combustível.
+      </p>
+
+      <p>
+        Em sistemas modernos, o controlo pode envolver a bomba,
+        sensores, reguladores e a unidade electrónica do veículo.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          Não existe um único valor de pressão aplicável a todos
+          os automóveis. O valor correcto deve ser obtido na
+          documentação técnica do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.11 Sistema de combustível em motores Diesel</h2>
+
+      <p>
+        Os motores Diesel utilizam sistemas de injecção próprios,
+        que podem trabalhar com pressões elevadas.
+      </p>
+
+      <p>
+        Dependendo da arquitectura, podem existir bomba de alta
+        pressão, common rail, injectores electrónicos e outros
+        componentes específicos.
+      </p>
+
+      <div class="perigo">
+
+        <strong>⚠️ PERIGO — ALTA PRESSÃO</strong>
+
+        <p>
+          Sistemas Diesel de alta pressão podem causar ferimentos
+          graves. Nunca soltar tubagens ou componentes de alta pressão
+          sem seguir o procedimento de serviço específico do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.12 Sistema de vapores do combustível</h2>
+
+      <p>
+        Alguns veículos possuem sistemas destinados a controlar
+        os vapores provenientes do combustível e evitar a sua
+        libertação directa para a atmosfera.
+      </p>
+
+      <p>
+        O sistema pode incluir depósito de carvão activado,
+        válvulas, tubagens e sensores.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.13 Relação entre combustível e ar</h2>
+
+      <p>
+        O motor necessita de uma quantidade adequada de ar e
+        combustível para realizar a combustão correctamente.
+      </p>
+
+      <p>
+        Uma quantidade incorrecta de combustível pode provocar
+        alterações no funcionamento do motor, consumo elevado,
+        perda de potência ou aumento das emissões.
+      </p>
+
+      <div class="procedimento">
+
+        <strong>Diagnóstico:</strong>
+
+        <p>
+          Quando existe um problema de mistura, não se deve assumir
+          imediatamente que o injector ou a bomba está defeituoso.
+          Devem ser avaliados também admissão de ar, sensores,
+          pressão, ignição e controlo electrónico.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.14 Sintomas de falha do sistema</h2>
+
+      <ul>
+
+        <li>Dificuldade no arranque;</li>
+
+        <li>Motor não arranca;</li>
+
+        <li>Falhas durante a aceleração;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Funcionamento irregular;</li>
+
+        <li>Consumo elevado de combustível;</li>
+
+        <li>Cheiro anormal de combustível;</li>
+
+        <li>Fugas;</li>
+
+        <li>Luz de avaria do motor;</li>
+
+        <li>Ruído anormal da bomba.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.15 Diagnóstico básico</h2>
+
+      <p>
+        O diagnóstico deve ser realizado de forma sistemática.
+      </p>
+
+      <ol>
+
+        <li>Confirmar o sintoma;</li>
+
+        <li>Verificar o histórico do veículo;</li>
+
+        <li>Realizar inspecção visual;</li>
+
+        <li>Verificar possíveis fugas;</li>
+
+        <li>Verificar alimentação eléctrica;</li>
+
+        <li>Consultar os códigos de diagnóstico quando aplicável;</li>
+
+        <li>Verificar a pressão de combustível conforme especificação;</li>
+
+        <li>Verificar o funcionamento da bomba;</li>
+
+        <li>Verificar o filtro;</li>
+
+        <li>Avaliar os injectores;</li>
+
+        <li>Comparar os resultados com a documentação técnica;</li>
+
+        <li>Realizar o teste final após a intervenção.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.16 Verificação de fugas</h2>
+
+      <p>
+        A presença de combustível fora do circuito normal constitui
+        uma condição que deve ser investigada imediatamente.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Depósito;</li>
+
+        <li>Linhas;</li>
+
+        <li>Conectores;</li>
+
+        <li>Filtro;</li>
+
+        <li>Bomba;</li>
+
+        <li>Injectores;</li>
+
+        <li>Rampa de combustível.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🚨 NUNCA IGNORAR UMA FUGA DE COMBUSTÍVEL</strong>
+
+        <p>
+          Uma fuga pode provocar incêndio ou outros riscos graves.
+          O veículo deve ser colocado numa condição segura antes
+          de continuar o diagnóstico.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.17 Manutenção preventiva</h2>
+
+      <p>
+        A manutenção preventiva do sistema depende do veículo e
+        das recomendações do fabricante.
+      </p>
+
+      <ul>
+
+        <li>Substituição do filtro quando especificado;</li>
+
+        <li>Inspecção das linhas;</li>
+
+        <li>Inspecção das ligações;</li>
+
+        <li>Verificação de fugas;</li>
+
+        <li>Inspecção do depósito;</li>
+
+        <li>Verificação do sistema de vapores, quando aplicável;</li>
+
+        <li>Diagnóstico de sintomas anormais.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.18 Segurança durante o trabalho</h2>
+
+      <p>
+        O combustível apresenta riscos de incêndio, explosão,
+        intoxicação e contacto com a pele ou olhos.
+      </p>
+
+      <h3>Regras fundamentais:</h3>
+
+      <ul>
+
+        <li>Trabalhar em local bem ventilado;</li>
+
+        <li>Eliminar fontes de ignição;</li>
+
+        <li>Não fumar;</li>
+
+        <li>Utilizar equipamento de protecção adequado;</li>
+
+        <li>Evitar derrames;</li>
+
+        <li>Manter recipientes adequados para o combustível;</li>
+
+        <li>Seguir o procedimento de despressurização indicado pelo fabricante;</li>
+
+        <li>Ter meios adequados de combate a incêndio disponíveis;</li>
+
+        <li>Não utilizar ferramentas ou procedimentos inadequados.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.19 Erros comuns</h2>
+
+      <ul>
+
+        <li>Substituir a bomba sem testar o circuito;</li>
+
+        <li>Confundir falha de alimentação eléctrica com falha da bomba;</li>
+
+        <li>Ignorar um filtro obstruído;</li>
+
+        <li>Não procurar fugas;</li>
+
+        <li>Usar pressão genérica em vez da especificação do fabricante;</li>
+
+        <li>Trabalhar próximo de fontes de ignição;</li>
+
+        <li>Ignorar códigos de diagnóstico;</li>
+
+        <li>Não efectuar teste final.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.20 Checklist</h2>
+
+      <ul>
+
+        <li>☐ Veículo identificado;</li>
+
+        <li>☐ Manual técnico consultado;</li>
+
+        <li>☐ Histórico verificado;</li>
+
+        <li>☐ Depósito inspeccionado;</li>
+
+        <li>☐ Bomba avaliada;</li>
+
+        <li>☐ Filtro verificado;</li>
+
+        <li>☐ Linhas inspeccionadas;</li>
+
+        <li>☐ Ligações verificadas;</li>
+
+        <li>☐ Fugas verificadas;</li>
+
+        <li>☐ Pressão comparada com a especificação;</li>
+
+        <li>☐ Injectores avaliados quando necessário;</li>
+
+        <li>☐ Sistema electrónico diagnosticado quando aplicável;</li>
+
+        <li>☐ Reparação realizada;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>7.21 Conclusão</h2>
+
+      <p>
+        O sistema de combustível é essencial para o funcionamento
+        correcto do motor. A manutenção e o diagnóstico devem ser
+        realizados de forma sistemática, respeitando as características
+        específicas de cada veículo.
+      </p>
+
+      <p>
+        A segurança deve ser prioridade durante qualquer intervenção,
+        especialmente quando existem combustíveis inflamáveis ou
+        sistemas de injecção de alta pressão.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Automotive Service Excellence (ASE).
+          <em>ASE Automobile Study Guide</em>.
+        </p>
+
+        <p>
+          Health and Safety Executive (HSE).
+          <em>Health and safety in motor vehicle repair and associated
+          industries</em>.
+        </p>
+
+        <p>
+          Bosch Mobility.
+          Documentação técnica sobre sistemas de injecção e
+          componentes automóveis.
+        </p>
+
+        <p>
+          Para valores de pressão, caudal, torque, procedimentos de
+          despressurização e especificações de componentes, consultar
+          sempre o manual de serviço oficial do fabricante do veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+  </html>
