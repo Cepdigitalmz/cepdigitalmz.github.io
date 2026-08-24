@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 4 — Segurança na manutenção automóvel | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .seguranca-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>CEP Digital</h1>
+
+    <p>
+      Manuais práticos de manutenção e reparação
+    </p>
+
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="seguranca-icon">
+        ⚠️
+      </div>
+
+      <h2>
+        Capítulo 4 — Segurança na manutenção automóvel
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.1 Objectivo do capítulo</h2>
+
+      <p>
+        A manutenção automóvel envolve riscos mecânicos, eléctricos,
+        térmicos, químicos, de incêndio, de queda e de movimentação
+        de veículos.
+      </p>
+
+      <p>
+        O objectivo deste capítulo é apresentar princípios básicos
+        para reduzir esses riscos antes, durante e depois de uma
+        intervenção de manutenção ou reparação.
+      </p>
+
+      <div class="perigo">
+
+        <strong>⚠️ REGRA FUNDAMENTAL</strong>
+
+        <p>
+          Nenhum procedimento de reparação deve ser iniciado sem
+          primeiro identificar os perigos envolvidos e estabelecer
+          medidas adequadas de controlo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.2 Organização do local de trabalho</h2>
+
+      <p>
+        Uma oficina organizada reduz a possibilidade de acidentes
+        relacionados com quedas, escorregamentos, ferramentas
+        espalhadas e obstáculos nas zonas de circulação.
+      </p>
+
+      <p>
+        O HSE identifica escorregões e tropeções como uma das causas
+        mais comuns de acidentes na reparação automóvel e recomenda
+        manter pisos e zonas de circulação em boas condições e
+        livres de perigos. 
+      </p>
+
+      <ul>
+
+        <li>Manter o piso limpo;</li>
+
+        <li>Remover óleo e outros derrames rapidamente;</li>
+
+        <li>Guardar ferramentas depois da utilização;</li>
+
+        <li>Manter mangueiras e cabos organizados;</li>
+
+        <li>Manter as passagens livres;</li>
+
+        <li>Garantir iluminação adequada;</li>
+
+        <li>Evitar acumulação desnecessária de materiais.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.3 Equipamento de protecção individual</h2>
+
+      <p>
+        O equipamento de protecção deve ser escolhido de acordo com
+        os riscos existentes durante cada trabalho.
+      </p>
+
+      <ul>
+
+        <li>Óculos de protecção;</li>
+
+        <li>Luvas apropriadas;</li>
+
+        <li>Calçado de segurança;</li>
+
+        <li>Protecção auditiva quando necessária;</li>
+
+        <li>Protecção respiratória quando aplicável;</li>
+
+        <li>Roupa de trabalho adequada.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          O equipamento de protecção não substitui medidas de
+          prevenção. Deve ser utilizado juntamente com procedimentos
+          seguros e equipamentos adequados.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.4 Segurança antes de iniciar o trabalho</h2>
+
+      <p>
+        Antes de iniciar uma reparação, deve ser feita uma avaliação
+        básica da situação.
+      </p>
+
+      <ol>
+
+        <li>Identificar o veículo;</li>
+
+        <li>Confirmar o trabalho a realizar;</li>
+
+        <li>Consultar a documentação técnica;</li>
+
+        <li>Identificar os riscos;</li>
+
+        <li>Preparar as ferramentas;</li>
+
+        <li>Preparar o equipamento de protecção;</li>
+
+        <li>Estabilizar o veículo;</li>
+
+        <li>Desligar ou isolar fontes de energia quando necessário;</li>
+
+        <li>Confirmar que a área está segura.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.5 Imobilização do veículo</h2>
+
+      <p>
+        Antes de realizar trabalhos, o veículo deve estar correctamente
+        imobilizado para evitar movimentos inesperados.
+      </p>
+
+      <ul>
+
+        <li>Aplicar o travão de estacionamento conforme o procedimento;</li>
+
+        <li>Seleccionar a posição adequada da transmissão;</li>
+
+        <li>Utilizar calços de rodas quando necessários;</li>
+
+        <li>Confirmar que o veículo está estável;</li>
+
+        <li>Evitar trabalhar em superfícies inadequadas.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>⚠️ Atenção:</strong>
+
+        <p>
+          As medidas exactas de imobilização devem considerar o tipo
+          de veículo e o procedimento de manutenção.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.6 Segurança ao elevar o veículo</h2>
+
+      <p>
+        Trabalhar debaixo de um veículo elevado é uma das situações
+        de maior risco numa oficina.
+      </p>
+
+      <p>
+        O HSE relata acidentes graves e fatais relacionados com
+        veículos que caíram de equipamentos de elevação e recomenda
+        que equipamentos de elevação sejam adequados ao veículo,
+        correctamente mantidos e utilizados por pessoas treinadas
+        e autorizadas. 
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 NUNCA:</strong>
+
+        <ul>
+
+          <li>
+            Trabalhar debaixo de um veículo sustentado apenas por
+            um macaco.
+          </li>
+
+          <li>
+            Utilizar equipamento de elevação inadequado.
+          </li>
+
+          <li>
+            Exceder a capacidade do equipamento.
+          </li>
+
+          <li>
+            Utilizar cavaletes ou apoios danificados.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="ilustracao">
+
+        <strong>
+          🖼️ ILUSTRAÇÃO — ELEVAÇÃO SEGURA DO VEÍCULO
+        </strong>
+
+        <p>
+          Inserir posteriormente uma ilustração mostrando pontos
+          de elevação, apoios e zonas proibidas, conforme o veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.7 Macaco e cavaletes de apoio</h2>
+
+      <p>
+        O macaco pode ser utilizado para elevar o veículo quando
+        apropriado, mas não deve ser considerado automaticamente
+        como suporte permanente para trabalhos por baixo do veículo.
+      </p>
+
+      <p>
+        Os cavaletes ou outros sistemas de apoio devem ser adequados
+        à carga e correctamente posicionados.
+      </p>
+
+      <p>
+        O HSE recomenda que macacos e cavaletes sejam mantidos em
+        boas condições e que os equipamentos de elevação sejam
+        regularmente inspeccionados. 
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.8 Elevadores automóveis</h2>
+
+      <p>
+        Elevadores devem ser utilizados de acordo com as instruções
+        do fabricante e dentro da sua capacidade.
+      </p>
+
+      <p>
+        O veículo deve ser correctamente posicionado antes da
+        elevação e deve permanecer estável durante todo o trabalho.
+      </p>
+
+      <p>
+        O HSE recomenda inspecção e manutenção dos equipamentos
+        de elevação e destaca que falhas nesses equipamentos podem
+        provocar a queda do veículo. 
+      </p>
+
+      <div class="alerta">
+
+        <strong>📌 Regra CEP Digital:</strong>
+
+        <p>
+          Antes de utilizar um elevador, conhecer o seu funcionamento,
+          capacidade, pontos de apoio e sistema de segurança.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.9 Segurança durante o arranque do motor</h2>
+
+      <p>
+        O arranque do motor deve ser realizado somente quando
+        necessário e em condições controladas.
+      </p>
+
+      <p>
+        O HSE recomenda que o motor seja iniciado por uma pessoa
+        sentada no lugar do condutor, com o travão de estacionamento
+        accionado e a transmissão na posição adequada. 
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 Nunca:</strong>
+
+        <p>
+          Fazer o motor arrancar à distância ou de forma improvisada
+          quando houver pessoas próximas de componentes móveis ou
+          debaixo do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.10 Segurança eléctrica</h2>
+
+      <p>
+        Os sistemas eléctricos podem apresentar riscos de curto-circuito,
+        faíscas, aquecimento e outros perigos.
+      </p>
+
+      <ul>
+
+        <li>Utilizar ferramentas adequadas;</li>
+
+        <li>Inspeccionar cabos e conectores;</li>
+
+        <li>Evitar curto-circuitos acidentais;</li>
+
+        <li>Desligar a alimentação quando o procedimento exigir;</li>
+
+        <li>Seguir as instruções técnicas do fabricante.</li>
+
+      </ul>
+
+      <p>
+        A OSHA reconhece a necessidade de controlar fontes de energia
+        durante determinadas operações de manutenção quando existe
+        risco de energização inesperada ou libertação de energia.
+        
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.11 Chave de ignição e isolamento</h2>
+
+      <p>
+        Em determinadas operações de manutenção, desligar o motor,
+        retirar a chave e controlar o acesso à chave pode ajudar a
+        impedir um arranque inesperado.
+      </p>
+
+      <p>
+        A OSHA explica que, em determinadas situações de manutenção
+        de veículos, retirar a chave de ignição e mantê-la sob
+        controlo do trabalhador pode contribuir para evitar
+        energização inesperada. 
+      </p>
+
+      <div class="alerta">
+
+        <strong>⚠️ Importante:</strong>
+
+        <p>
+          Alguns veículos possuem sistemas eléctricos e electrónicos
+          que podem manter energia armazenada mesmo depois de o
+          motor ser desligado. O procedimento específico deve ser
+          seguido conforme a documentação do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.12 Segurança com combustível</h2>
+
+      <p>
+        Combustíveis podem apresentar risco de incêndio e exposição
+        a substâncias perigosas.
+      </p>
+
+      <ul>
+
+        <li>Manter fontes de ignição afastadas;</li>
+
+        <li>Não fumar durante operações de combustível;</li>
+
+        <li>Evitar derrames;</li>
+
+        <li>Armazenar produtos de forma adequada;</li>
+
+        <li>Utilizar recipientes apropriados;</li>
+
+        <li>Garantir ventilação adequada.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🔥 PERIGO DE INCÊNDIO</strong>
+
+        <p>
+          Nunca trabalhar com combustível próximo de chamas,
+          faíscas ou outras fontes de ignição.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.13 Componentes quentes</h2>
+
+      <p>
+        Motor, escape, radiador e outros componentes podem atingir
+        temperaturas elevadas durante ou depois do funcionamento.
+      </p>
+
+      <p>
+        Antes de tocar ou desmontar componentes quentes, verificar
+        se a temperatura permite realizar o trabalho com segurança
+        e utilizar protecção adequada.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.14 Óleo, líquidos e produtos químicos</h2>
+
+      <p>
+        Óleo de motor, líquido de arrefecimento, combustível,
+        fluido de travões e outros produtos podem apresentar
+        riscos diferentes.
+      </p>
+
+      <ul>
+
+        <li>Evitar contacto desnecessário com a pele;</li>
+
+        <li>Utilizar luvas apropriadas;</li>
+
+        <li>Evitar contacto com os olhos;</li>
+
+        <li>Guardar os produtos correctamente;</li>
+
+        <li>Limpar derrames imediatamente;</li>
+
+        <li>Consultar as informações de segurança do produto.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.15 Segurança com ferramentas</h2>
+
+      <p>
+        As ferramentas devem ser utilizadas somente para a finalidade
+        para a qual foram concebidas.
+      </p>
+
+      <ul>
+
+        <li>Inspeccionar antes da utilização;</li>
+
+        <li>Não utilizar ferramentas danificadas;</li>
+
+        <li>Utilizar o tamanho correcto;</li>
+
+        <li>Utilizar equipamento de protecção adequado;</li>
+
+        <li>Guardar depois da utilização.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.16 Segurança durante o teste do veículo</h2>
+
+      <p>
+        O teste do veículo deve ser realizado somente quando necessário
+        e em condições controladas.
+      </p>
+
+      <p>
+        O HSE recomenda que a movimentação e os testes sejam realizados
+        por pessoas autorizadas e treinadas, com atenção especial
+        a espaços reduzidos, zonas com pouca visibilidade e manobras
+        de marcha-atrás. 
+      </p>
+
+      <ul>
+
+        <li>Verificar se a área está livre;</li>
+
+        <li>Confirmar que ninguém está em zona de perigo;</li>
+
+        <li>Controlar a movimentação do veículo;</li>
+
+        <li>Utilizar apenas condutor autorizado;</li>
+
+        <li>Manter as chaves sob controlo quando o veículo não estiver em uso.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.17 Incêndio e emergência</h2>
+
+      <p>
+        Uma oficina deve estar preparada para responder rapidamente
+        a situações de incêndio ou outros acidentes.
+      </p>
+
+      <ul>
+
+        <li>Conhecer as saídas de emergência;</li>
+
+        <li>Manter as vias de saída livres;</li>
+
+        <li>Conhecer a localização dos equipamentos de combate a incêndio;</li>
+
+        <li>Manter materiais inflamáveis controlados;</li>
+
+        <li>Conhecer os procedimentos de emergência.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.18 O que fazer em caso de acidente</h2>
+
+      <ol>
+
+        <li>Interromper o trabalho quando for seguro fazê-lo;</li>
+
+        <li>Eliminar ou controlar o perigo, quando possível;</li>
+
+        <li>Procurar assistência adequada;</li>
+
+        <li>Não movimentar uma pessoa ferida desnecessariamente;</li>
+
+        <li>Comunicar o acidente conforme as regras do local;</li>
+
+        <li>Registar e investigar as causas.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.19 Checklist de segurança antes da manutenção</h2>
+
+      <ul>
+
+        <li>☐ Veículo correctamente identificado;</li>
+
+        <li>☐ Área de trabalho organizada;</li>
+
+        <li>☐ Piso limpo e sem derrames;</li>
+
+        <li>☐ Ferramentas adequadas preparadas;</li>
+
+        <li>☐ Equipamento de protecção disponível;</li>
+
+        <li>☐ Veículo correctamente imobilizado;</li>
+
+        <li>☐ Calços utilizados quando necessários;</li>
+
+        <li>☐ Equipamento de elevação adequado;</li>
+
+        <li>☐ Cavaletes ou apoios adequados;</li>
+
+        <li>☐ Capacidade do equipamento confirmada;</li>
+
+        <li>☐ Fontes de energia controladas quando necessário;</li>
+
+        <li>☐ Combustível e fontes de ignição controlados;</li>
+
+        <li>☐ Componentes quentes identificados;</li>
+
+        <li>☐ Procedimento técnico consultado;</li>
+
+        <li>☐ Área segura para o trabalho.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>4.20 Conclusão</h2>
+
+      <p>
+        A segurança deve fazer parte de todas as etapas da manutenção
+        automóvel. A correcta preparação do local, a utilização de
+        equipamentos adequados, a imobilização do veículo e o controlo
+        das fontes de energia são medidas fundamentais para reduzir
+        acidentes.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas consultadas</strong>
+
+        <p>
+          Health and Safety Executive (HSE). (2009).
+          <em>Health and safety in motor vehicle repair and
+          associated industries (HSG261)</em>.
+        </p>
+
+        <p>
+          Health and Safety Executive (HSE).
+          <em>Working safely under motor vehicles being repaired
+          (INDG434)</em>.
+        </p>
+
+        <p>
+          Health and Safety Executive (HSE).
+          <em>Reducing ill health and accidents in motor vehicle
+          repair (INDG356)</em>.
+        </p>
+
+        <p>
+          Occupational Safety and Health Administration (OSHA).
+          Guidance on energy control and lockout/tagout during
+          vehicle servicing and maintenance.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
