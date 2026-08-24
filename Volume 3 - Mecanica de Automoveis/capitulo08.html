@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 8 — Sistema de admissão de ar | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .ar-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="ar-icon">
+        🌬️
+      </div>
+
+      <h2>
+        Capítulo 8 — Sistema de admissão de ar
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Funcionamento, componentes, manutenção e diagnóstico.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.1 Introdução</h2>
+
+      <p>
+        O sistema de admissão de ar fornece ao motor o ar necessário
+        para o processo de combustão.
+      </p>
+
+      <p>
+        Para que o motor funcione correctamente, o ar deve entrar
+        através de um percurso controlado, limpo e sem restrições
+        anormais.
+      </p>
+
+      <p>
+        Nos veículos modernos, o sistema de admissão trabalha em
+        conjunto com sensores, actuadores e a unidade electrónica
+        de controlo do motor.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          Uma entrada de ar inadequada pode afectar a potência,
+          o consumo de combustível, as emissões e a estabilidade
+          do funcionamento do motor.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.2 Funções do sistema de admissão</h2>
+
+      <ul>
+
+        <li>Captar o ar exterior;</li>
+
+        <li>Filtrar partículas e impurezas;</li>
+
+        <li>Conduzir o ar até ao motor;</li>
+
+        <li>Controlar o fluxo de ar;</li>
+
+        <li>Medir determinadas características do ar;</li>
+
+        <li>Distribuir o ar pelos cilindros;</li>
+
+        <li>Fornecer ar adequado ao processo de combustão.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.3 Principais componentes</h2>
+
+      <p>
+        Dependendo do veículo, o sistema pode incluir:
+      </p>
+
+      <ul>
+
+        <li>Entrada de ar;</li>
+
+        <li>Caixa do filtro de ar;</li>
+
+        <li>Filtro de ar;</li>
+
+        <li>Condutas de admissão;</li>
+
+        <li>Sensor de fluxo de ar;</li>
+
+        <li>Sensor de pressão;</li>
+
+        <li>Corpo de borboleta;</li>
+
+        <li>Colector de admissão;</li>
+
+        <li>Válvulas de controlo;</li>
+
+        <li>Turboalimentador, quando equipado;</li>
+
+        <li>Intercooler, quando equipado.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — PERCURSO DO AR</strong>
+
+        <p>
+          Inserir posteriormente uma ilustração 3D mostrando:
+        </p>
+
+        <p>
+          Entrada de ar → filtro → sensor → conduta →
+          corpo de borboleta → colector → cilindros.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.4 Entrada de ar</h2>
+
+      <p>
+        A entrada de ar conduz o ar exterior para o sistema de
+        admissão.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Obstruções;</li>
+
+        <li>Folhas, poeira ou outros detritos;</li>
+
+        <li>Peças soltas;</li>
+
+        <li>Danos na conduta;</li>
+
+        <li>Fixação correcta.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.5 Filtro de ar</h2>
+
+      <p>
+        O filtro de ar impede que partículas presentes no ar entrem
+        no motor.
+      </p>
+
+      <p>
+        Um filtro excessivamente sujo pode aumentar a restrição
+        ao fluxo de ar e prejudicar o funcionamento do motor.
+      </p>
+
+      <h3>Durante a manutenção:</h3>
+
+      <ol>
+
+        <li>Desligar o motor;</li>
+
+        <li>Localizar a caixa do filtro;</li>
+
+        <li>Abrir a caixa conforme o procedimento do fabricante;</li>
+
+        <li>Retirar o elemento filtrante;</li>
+
+        <li>Inspeccionar o filtro;</li>
+
+        <li>Verificar a caixa e a vedação;</li>
+
+        <li>Substituir o filtro quando necessário;</li>
+
+        <li>Montar correctamente;</li>
+
+        <li>Confirmar que não existem entradas de ar não filtrado.</li>
+
+      </ol>
+
+      <div class="alerta">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          O intervalo de substituição deve seguir o plano de
+          manutenção do fabricante e as condições de utilização
+          do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.6 Condutas de admissão</h2>
+
+      <p>
+        As condutas transportam o ar entre os diferentes componentes
+        do sistema.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Rachaduras;</li>
+
+        <li>Furos;</li>
+
+        <li>Abraçadeiras;</li>
+
+        <li>Conectores;</li>
+
+        <li>Vedação;</li>
+
+        <li>Deformações;</li>
+
+        <li>Fixação.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>💡 Diagnóstico:</strong>
+
+        <p>
+          Uma entrada de ar não medida ou uma fuga numa conduta pode
+          alterar o funcionamento do motor, dependendo da arquitectura
+          do sistema.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.7 Sensor de fluxo de ar</h2>
+
+      <p>
+        Alguns veículos utilizam sensores para medir a quantidade
+        ou o fluxo de ar que entra no motor.
+      </p>
+
+      <p>
+        A informação fornecida pelo sensor pode ser utilizada pelo
+        sistema electrónico para calcular e controlar a alimentação
+        do motor.
+      </p>
+
+      <h3>Sintomas possíveis de problemas:</h3>
+
+      <ul>
+
+        <li>Funcionamento irregular;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Consumo elevado;</li>
+
+        <li>Dificuldade de aceleração;</li>
+
+        <li>Luz de avaria do motor.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.8 Sensor de pressão</h2>
+
+      <p>
+        Dependendo do sistema, pode existir um sensor que mede a
+        pressão no colector ou em determinada parte do circuito
+        de admissão.
+      </p>
+
+      <p>
+        A unidade de controlo utiliza esses dados juntamente com
+        outras informações para determinar as condições de
+        funcionamento do motor.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.9 Corpo de borboleta</h2>
+
+      <p>
+        Em muitos motores de ignição por faísca, o corpo de borboleta
+        controla a quantidade de ar que entra no motor.
+      </p>
+
+      <p>
+        Em veículos modernos, a borboleta pode ser accionada
+        electronicamente.
+      </p>
+
+      <h3>Possíveis sintomas de problemas:</h3>
+
+      <ul>
+
+        <li>Marcha lenta irregular;</li>
+
+        <li>Dificuldade de aceleração;</li>
+
+        <li>Resposta irregular do acelerador;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Luz de avaria.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.10 Colector de admissão</h2>
+
+      <p>
+        O colector de admissão distribui o ar pelos cilindros de
+        acordo com a arquitectura do motor.
+      </p>
+
+      <p>
+        Alguns motores possuem sistemas de controlo da geometria
+        ou do fluxo do colector para melhorar o desempenho em
+        determinadas condições.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Juntas;</li>
+
+        <li>Fixações;</li>
+
+        <li>Depósitos de contaminantes;</li>
+
+        <li>Actuadores e válvulas, quando existentes.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.11 Turboalimentador</h2>
+
+      <p>
+        Alguns motores utilizam um turboalimentador para aumentar
+        a quantidade de ar fornecida ao motor.
+      </p>
+
+      <p>
+        O turbo utiliza a energia dos gases de escape para accionar
+        uma turbina ligada a um compressor.
+      </p>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — TURBOALIMENTADOR</strong>
+
+        <p>
+          Inserir posteriormente uma vista 3D com:
+          turbina, compressor, eixo, entrada de ar,
+          saída de ar e ligação ao escape.
+        </p>
+
+      </div>
+
+      <div class="perigo">
+
+        <strong>⚠️ ATENÇÃO</strong>
+
+        <p>
+          O turboalimentador pode trabalhar a temperaturas elevadas
+          e em rotações muito altas. Não tocar nem desmontar o
+          conjunto sem seguir o procedimento de serviço adequado.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.12 Intercooler</h2>
+
+      <p>
+        Nos sistemas sobrealimentados, um intercooler pode ser
+        utilizado para arrefecer o ar comprimido antes de este
+        entrar no motor.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Danos externos;</li>
+
+        <li>Fugas;</li>
+
+        <li>Condutas;</li>
+
+        <li>Abraçadeiras;</li>
+
+        <li>Obstruções.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.13 Sistema de ventilação do cárter</h2>
+
+      <p>
+        Muitos motores possuem um sistema de ventilação do cárter
+        que controla os gases provenientes do interior do motor e
+        os encaminha para o sistema de admissão de acordo com o
+        projecto do fabricante.
+      </p>
+
+      <p>
+        Válvulas, mangueiras e separadores podem fazer parte deste
+        sistema.
+      </p>
+
+      <h3>Problemas possíveis:</h3>
+
+      <ul>
+
+        <li>Mangueiras obstruídas;</li>
+
+        <li>Fugas;</li>
+
+        <li>Válvula defeituosa;</li>
+
+        <li>Pressão anormal no cárter;</li>
+
+        <li>Consumo ou presença anormal de óleo.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.14 Diagnóstico do sistema de admissão</h2>
+
+      <p>
+        O diagnóstico deve começar pela confirmação do sintoma e
+        por uma inspecção visual.
+      </p>
+
+      <ol>
+
+        <li>Identificar correctamente o veículo;</li>
+
+        <li>Consultar a documentação técnica;</li>
+
+        <li>Confirmar o sintoma;</li>
+
+        <li>Inspeccionar o filtro;</li>
+
+        <li>Inspeccionar as condutas;</li>
+
+        <li>Verificar conectores;</li>
+
+        <li>Procurar fugas;</li>
+
+        <li>Verificar sensores;</li>
+
+        <li>Consultar códigos de diagnóstico;</li>
+
+        <li>Realizar testes apropriados;</li>
+
+        <li>Comparar os resultados com a especificação;</li>
+
+        <li>Reparar a causa encontrada;</li>
+
+        <li>Realizar teste final.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.15 Sintomas comuns</h2>
+
+      <ul>
+
+        <li>Perda de potência;</li>
+
+        <li>Marcha lenta irregular;</li>
+
+        <li>Falhas durante a aceleração;</li>
+
+        <li>Consumo elevado de combustível;</li>
+
+        <li>Dificuldade de arranque;</li>
+
+        <li>Ruídos de sucção ou assobio;</li>
+
+        <li>Luz de avaria do motor;</li>
+
+        <li>Resposta lenta do acelerador.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Atenção:</strong>
+
+        <p>
+          Estes sintomas não significam automaticamente que o
+          problema esteja no sistema de admissão. Sistemas de
+          combustível, ignição, sensores ou problemas mecânicos
+          também podem produzir sintomas semelhantes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.16 Manutenção preventiva</h2>
+
+      <ul>
+
+        <li>Inspeccionar o filtro de ar;</li>
+
+        <li>Substituir o filtro conforme o plano de manutenção;</li>
+
+        <li>Verificar condutas;</li>
+
+        <li>Verificar abraçadeiras;</li>
+
+        <li>Inspeccionar juntas;</li>
+
+        <li>Verificar sensores e conectores;</li>
+
+        <li>Inspeccionar o corpo de borboleta quando aplicável;</li>
+
+        <li>Verificar o sistema de ventilação do cárter;</li>
+
+        <li>Inspeccionar o turbo e intercooler quando equipados.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.17 Erros comuns</h2>
+
+      <ul>
+
+        <li>Trocar sensores sem realizar testes;</li>
+
+        <li>Ignorar uma conduta rachada;</li>
+
+        <li>Montar incorrectamente a caixa do filtro;</li>
+
+        <li>Deixar uma entrada de ar não filtrado;</li>
+
+        <li>Ignorar fugas no sistema;</li>
+
+        <li>Limpar componentes electrónicos sem seguir o procedimento;</li>
+
+        <li>Não consultar a informação técnica;</li>
+
+        <li>Confundir um sintoma de admissão com uma falha de combustível.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.18 Segurança</h2>
+
+      <ul>
+
+        <li>Desligar o motor antes da intervenção;</li>
+
+        <li>Manter roupa e ferramentas afastadas de componentes móveis;</li>
+
+        <li>Ter cuidado com ventoinhas accionadas automaticamente;</li>
+
+        <li>Não tocar em componentes quentes;</li>
+
+        <li>Utilizar ferramentas adequadas;</li>
+
+        <li>Seguir as instruções do fabricante;</li>
+
+        <li>Não utilizar produtos de limpeza inadequados em sensores.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO À VENTOINHA</strong>
+
+        <p>
+          Em alguns veículos, a ventoinha de arrefecimento pode
+          entrar em funcionamento mesmo quando o motor não está
+          a trabalhar. Mantenha as mãos e ferramentas afastadas.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.19 Checklist de inspecção</h2>
+
+      <ul>
+
+        <li>☐ Veículo identificado;</li>
+
+        <li>☐ Manual técnico consultado;</li>
+
+        <li>☐ Entrada de ar verificada;</li>
+
+        <li>☐ Filtro de ar inspeccionado;</li>
+
+        <li>☐ Caixa do filtro verificada;</li>
+
+        <li>☐ Condutas inspeccionadas;</li>
+
+        <li>☐ Abraçadeiras verificadas;</li>
+
+        <li>☐ Fugas procuradas;</li>
+
+        <li>☐ Sensores inspeccionados;</li>
+
+        <li>☐ Corpo de borboleta verificado;</li>
+
+        <li>☐ Colector inspeccionado;</li>
+
+        <li>☐ Turbo verificado quando equipado;</li>
+
+        <li>☐ Intercooler verificado quando equipado;</li>
+
+        <li>☐ Sistema de ventilação do cárter verificado;</li>
+
+        <li>☐ Diagnóstico realizado quando necessário;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>8.20 Conclusão</h2>
+
+      <p>
+        O sistema de admissão de ar desempenha um papel fundamental
+        no funcionamento do motor. O fornecimento adequado de ar,
+        a filtragem e o controlo correcto do fluxo contribuem para
+        o desempenho e funcionamento eficiente do motor.
+      </p>
+
+      <p>
+        O diagnóstico deve ser realizado de forma sistemática,
+        verificando primeiro as condições básicas e utilizando
+        testes adequados antes de substituir componentes.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Automotive Service Excellence (ASE).
+          <em>ASE Automobile Study Guide</em>.
+        </p>
+
+        <p>
+          Bosch Mobility.
+          Documentação técnica sobre sistemas de admissão,
+          sensores e gestão do motor.
+        </p>
+
+        <p>
+          Para valores de pressão, caudal, limites de serviço,
+          procedimentos de limpeza, torque e especificações de
+          componentes, consultar sempre o manual de serviço oficial
+          do fabricante do veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+  </html>
