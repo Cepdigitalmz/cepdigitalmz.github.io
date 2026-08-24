@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 20 — Sistema eléctrico e electrónico | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .codigo {
+      background: #263238;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-family: monospace;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">⚡🚗</div>
+
+    <h2>Capítulo 20 — Sistema eléctrico e electrónico</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Fundamentos eléctricos, componentes,
+      diagnóstico, manutenção e segurança.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.1 Introdução</h2>
+
+    <p>
+      O sistema eléctrico e electrónico é responsável por alimentar,
+      controlar e monitorizar numerosos sistemas do automóvel.
+      Inclui desde circuitos básicos de iluminação até sistemas
+      electrónicos responsáveis pela gestão do motor, segurança,
+      conforto e comunicação entre módulos.
+    </p>
+
+    <p>
+      O diagnóstico correcto exige conhecimento de tensão, corrente,
+      resistência, continuidade, circuitos eléctricos e utilização
+      adequada de instrumentos de medição.
+    </p>
+
+    <div class="info">
+      <strong>📌 Regra fundamental:</strong>
+      <p>
+        Uma falha eléctrica deve ser diagnosticada através de medições
+        e testes sistemáticos. Não se deve substituir componentes
+        apenas porque apresentam um código de falha.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.2 Grandezas eléctricas fundamentais</h2>
+
+    <h3>Tensão eléctrica</h3>
+
+    <p>
+      A tensão representa a diferença de potencial eléctrico entre
+      dois pontos de um circuito e é medida em volts (V).
+    </p>
+
+    <h3>Corrente eléctrica</h3>
+
+    <p>
+      A corrente representa o fluxo de carga eléctrica e é medida
+      em amperes (A).
+    </p>
+
+    <h3>Resistência eléctrica</h3>
+
+    <p>
+      A resistência representa a oposição à passagem da corrente
+      eléctrica e é medida em ohms (Ω).
+    </p>
+
+    <div class="info">
+      <strong>Lei de Ohm:</strong>
+      <p>
+        V = I × R
+      </p>
+      <p>
+        Onde V é a tensão, I é a corrente e R é a resistência.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.3 Principais componentes eléctricos</h2>
+
+    <ul>
+      <li>Bateria;</li>
+      <li>Alternador;</li>
+      <li>Fusíveis;</li>
+      <li>Relés;</li>
+      <li>Interruptores;</li>
+      <li>Cablagens;</li>
+      <li>Conectores;</li>
+      <li>Lâmpadas e módulos de iluminação;</li>
+      <li>Motores eléctricos;</li>
+      <li>Sensores;</li>
+      <li>Actuadores;</li>
+      <li>Módulos electrónicos.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA ELÉCTRICO DO AUTOMÓVEL</strong>
+      <p>
+        Representar bateria, alternador, caixa de fusíveis,
+        módulos electrónicos, iluminação, sensores, actuadores
+        e principais ligações eléctricas.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.4 Bateria</h2>
+
+    <p>
+      A bateria fornece energia eléctrica para diversos sistemas
+      do veículo e desempenha um papel fundamental durante o arranque.
+    </p>
+
+    <h3>Inspecção:</h3>
+
+    <ul>
+      <li>Estado físico da bateria;</li>
+      <li>Terminais;</li>
+      <li>Cabos;</li>
+      <li>Fixação;</li>
+      <li>Sinais de corrosão;</li>
+      <li>Estado de carga.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Os procedimentos de teste e carregamento devem respeitar o
+        tipo de bateria e as instruções do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.5 Alternador e sistema de carregamento</h2>
+
+    <p>
+      O alternador produz energia eléctrica quando o motor está em
+      funcionamento e contribui para manter a bateria carregada,
+      além de alimentar os consumidores eléctricos conforme as
+      condições do sistema.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Correia de accionamento;</li>
+      <li>Ligações eléctricas;</li>
+      <li>Terminais;</li>
+      <li>Estado da bateria;</li>
+      <li>Sinais de falha no sistema de carregamento.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.6 Fusíveis</h2>
+
+    <p>
+      Os fusíveis protegem circuitos contra condições de corrente
+      excessiva, dentro dos limites para os quais foram projectados.
+    </p>
+
+    <h3>Diagnóstico:</h3>
+
+    <div class="procedimento">
+      <ol>
+        <li>Desligar o circuito quando necessário;</li>
+        <li>Identificar o fusível correcto;</li>
+        <li>Consultar o esquema do veículo;</li>
+        <li>Verificar o fusível;</li>
+        <li>Investigar a causa caso esteja queimado;</li>
+        <li>Substituir apenas pelo tipo e valor especificados.</li>
+      </ol>
+    </div>
+
+    <div class="perigo">
+      <strong>🚨 NUNCA FAZER:</strong>
+      <p>
+        Nunca substituir um fusível por outro de capacidade superior
+        nem fazer uma ligação directa para contornar a protecção.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.7 Relés</h2>
+
+    <p>
+      Um relé permite controlar uma carga eléctrica através de um
+      circuito de comando.
+    </p>
+
+    <h3>Exemplos de aplicação:</h3>
+
+    <ul>
+      <li>Ventiladores;</li>
+      <li>Iluminação;</li>
+      <li>Bombas;</li>
+      <li>Sistemas de alimentação;</li>
+      <li>Outros consumidores eléctricos.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.8 Cablagens e conectores</h2>
+
+    <p>
+      Cabos e conectores permitem a ligação eléctrica entre os vários
+      componentes do veículo.
+    </p>
+
+    <h3>Inspeccionar:</h3>
+
+    <ul>
+      <li>Fios partidos;</li>
+      <li>Isolamento danificado;</li>
+      <li>Corrosão;</li>
+      <li>Humidade;</li>
+      <li>Terminais soltos;</li>
+      <li>Conectores mal encaixados;</li>
+      <li>Reparações anteriores inadequadas.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.9 Multímetro</h2>
+
+    <p>
+      O multímetro é uma das principais ferramentas para diagnóstico
+      eléctrico.
+    </p>
+
+    <h3>Pode ser utilizado para medir, conforme o equipamento:</h3>
+
+    <ul>
+      <li>Tensão;</li>
+      <li>Resistência;</li>
+      <li>Continuidade;</li>
+      <li>Corrente.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Seleccionar sempre a função, escala e ligação das pontas
+        de prova correctamente antes da medição.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.10 Medição de tensão</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Seleccionar tensão adequada;</li>
+        <li>Escolher corrente contínua ou alternada conforme o circuito;</li>
+        <li>Ligar correctamente as pontas de prova;</li>
+        <li>Colocar o instrumento nos pontos indicados pelo procedimento;</li>
+        <li>Registar o valor;</li>
+        <li>Comparar com a especificação do fabricante.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.11 Teste de continuidade</h2>
+
+    <p>
+      O teste de continuidade pode ajudar a verificar se existe uma
+      ligação eléctrica entre dois pontos.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 ATENÇÃO:</strong>
+      <p>
+        Nunca efectuar um teste de continuidade num circuito energizado
+        se o fabricante do instrumento não permitir esse procedimento.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.12 Queda de tensão</h2>
+
+    <p>
+      O teste de queda de tensão pode ajudar a identificar resistência
+      indesejada em cabos, conexões ou ligações durante o funcionamento
+      de um circuito.
+    </p>
+
+    <p>
+      Este método é particularmente útil quando uma medição de
+      continuidade parece normal, mas o circuito apresenta problemas
+      quando está sob carga.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.13 Sistema de iluminação</h2>
+
+    <h3>Componentes possíveis:</h3>
+
+    <ul>
+      <li>Faróis;</li>
+      <li>Luzes de presença;</li>
+      <li>Luzes de travão;</li>
+      <li>Indicadores de direcção;</li>
+      <li>Luzes de marcha-atrás;</li>
+      <li>Iluminação interior;</li>
+      <li>Módulos electrónicos de controlo.</li>
+    </ul>
+
+    <h3>Diagnóstico:</h3>
+
+    <ol>
+      <li>Verificar lâmpada ou módulo;</li>
+      <li>Verificar fusível;</li>
+      <li>Verificar alimentação;</li>
+      <li>Verificar massa;</li>
+      <li>Verificar conectores;</li>
+      <li>Verificar comando.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.14 Sensores</h2>
+
+    <p>
+      Sensores fornecem informações aos módulos electrónicos para
+      permitir o controlo e monitorização dos sistemas do veículo.
+    </p>
+
+    <h3>Exemplos:</h3>
+
+    <ul>
+      <li>Sensor de temperatura;</li>
+      <li>Sensor de posição;</li>
+      <li>Sensor de velocidade;</li>
+      <li>Sensor de pressão;</li>
+      <li>Sensor de oxigénio;</li>
+      <li>Sensor de rotação;</li>
+      <li>Outros sensores específicos do veículo.</li>
+    </ul>
+
+    <div class="info">
+      <strong>📌 Importante:</strong>
+      <p>
+        Um código associado a um sensor não significa necessariamente
+        que o sensor esteja avariado. É necessário verificar o circuito,
+        alimentação, massa, sinal e condições indicadas pelo fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.15 Actuadores</h2>
+
+    <p>
+      Os actuadores executam uma acção comandada por um sistema
+      electrónico ou eléctrico.
+    </p>
+
+    <h3>Exemplos:</h3>
+
+    <ul>
+      <li>Motores eléctricos;</li>
+      <li>Electroválvulas;</li>
+      <li>Relés;</li>
+      <li>Injectores;</li>
+      <li>Actuadores de controlo de ar;</li>
+      <li>Outros dispositivos específicos.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.16 Módulos electrónicos</h2>
+
+    <p>
+      Os veículos modernos podem possuir diversos módulos electrónicos
+      responsáveis pelo controlo de diferentes funções.
+    </p>
+
+    <p>
+      A comunicação entre módulos pode ocorrer através de redes
+      específicas do veículo, como CAN, dependendo da arquitectura.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ DIAGRAMA — REDE ELECTRÓNICA DO AUTOMÓVEL</strong>
+      <p>
+        Mostrar vários módulos ligados por uma rede de comunicação:
+        módulo do motor, ABS, airbag, carroçaria e painel de instrumentos.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.17 Diagnóstico de uma falha eléctrica</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Confirmar o sintoma;</li>
+        <li>Consultar a documentação técnica;</li>
+        <li>Identificar o circuito;</li>
+        <li>Verificar fusíveis;</li>
+        <li>Verificar alimentação;</li>
+        <li>Verificar massas;</li>
+        <li>Verificar conectores;</li>
+        <li>Verificar cablagem;</li>
+        <li>Medir sinais;</li>
+        <li>Comparar os resultados com as especificações;</li>
+        <li>Reparar a causa;</li>
+        <li>Confirmar o funcionamento.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.18 Código de avaria não significa peça avariada</h2>
+
+    <p>
+      Os sistemas electrónicos podem detectar uma condição fora do
+      esperado e registar um código de diagnóstico.
+    </p>
+
+    <p>
+      O código deve ser interpretado como uma indicação para iniciar
+      o diagnóstico, e não como uma ordem automática para substituir
+      determinado componente.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.19 Esquemas eléctricos</h2>
+
+    <p>
+      Os esquemas eléctricos permitem compreender a ligação entre
+      componentes e identificar os pontos onde devem ser realizadas
+      medições.
+    </p>
+
+    <h3>Um esquema pode apresentar:</h3>
+
+    <ul>
+      <li>Fontes de alimentação;</li>
+      <li>Massas;</li>
+      <li>Fusíveis;</li>
+      <li>Relés;</li>
+      <li>Conectores;</li>
+      <li>Cablagens;</li>
+      <li>Sensores;</li>
+      <li>Actuadores;</li>
+      <li>Módulos de controlo.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.20 Diagnóstico de circuito aberto</h2>
+
+    <p>
+      Um circuito aberto ocorre quando existe uma interrupção no
+      caminho eléctrico.
+    </p>
+
+    <h3>Possíveis causas:</h3>
+
+    <ul>
+      <li>Fio partido;</li>
+      <li>Terminal solto;</li>
+      <li>Conector danificado;</li>
+      <li>Fusível aberto;</li>
+      <li>Ligação interrompida.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.21 Diagnóstico de curto-circuito</h2>
+
+    <p>
+      Um curto-circuito pode ocorrer quando uma ligação eléctrica
+      indesejada cria um caminho diferente do previsto pelo circuito.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 SEGURANÇA</strong>
+      <p>
+        Nunca substituir um fusível queimado por um fusível de maior
+        capacidade para tentar manter o circuito em funcionamento.
+        A causa da sobrecorrente deve ser investigada.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.22 Manutenção preventiva eléctrica</h2>
+
+    <ul>
+      <li>Inspeccionar a bateria;</li>
+      <li>Verificar terminais;</li>
+      <li>Verificar cabos;</li>
+      <li>Inspeccionar conectores;</li>
+      <li>Verificar iluminação;</li>
+      <li>Verificar fusíveis quando necessário;</li>
+      <li>Observar sinais de corrosão;</li>
+      <li>Verificar o sistema de carregamento;</li>
+      <li>Consultar os intervalos definidos pelo fabricante.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.23 Erros comuns</h2>
+
+    <ul>
+      <li>Trocar peças sem efectuar medições;</li>
+      <li>Ignorar massas eléctricas;</li>
+      <li>Utilizar fusíveis incorrectos;</li>
+      <li>Testar circuitos de forma inadequada;</li>
+      <li>Ignorar conectores corroídos;</li>
+      <li>Confundir código de falha com diagnóstico final;</li>
+      <li>Não consultar o esquema eléctrico;</li>
+      <li>Não verificar a reparação depois do serviço.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.24 Segurança eléctrica</h2>
+
+    <div class="perigo">
+      <strong>🚨 REGRAS DE SEGURANÇA</strong>
+
+      <ul>
+        <li>Utilizar ferramentas adequadas;</li>
+        <li>Evitar curto-circuitos acidentais;</li>
+        <li>Utilizar protecção ocular quando necessário;</li>
+        <li>Desligar a alimentação quando o procedimento exigir;</li>
+        <li>Respeitar as instruções do fabricante;</li>
+        <li>Ter atenção a sistemas de alta tensão em veículos híbridos e eléctricos;</li>
+        <li>Não trabalhar em sistemas de alta tensão sem formação e equipamento apropriados.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.25 Checklist de diagnóstico eléctrico</h2>
+
+    <ul>
+      <li>☐ Sintoma confirmado;</li>
+      <li>☐ Esquema eléctrico consultado;</li>
+      <li>☐ Fusíveis verificados;</li>
+      <li>☐ Alimentação verificada;</li>
+      <li>☐ Massas verificadas;</li>
+      <li>☐ Conectores inspeccionados;</li>
+      <li>☐ Cablagem inspeccionada;</li>
+      <li>☐ Tensão medida;</li>
+      <li>☐ Continuidade verificada quando apropriado;</li>
+      <li>☐ Queda de tensão avaliada quando necessário;</li>
+      <li>☐ Código de diagnóstico interpretado;</li>
+      <li>☐ Causa identificada;</li>
+      <li>☐ Reparação realizada;</li>
+      <li>☐ Funcionamento confirmado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>20.26 Conclusão</h2>
+
+    <p>
+      O sistema eléctrico e electrónico tornou-se uma parte essencial
+      do automóvel moderno. O diagnóstico exige método, conhecimento
+      dos circuitos e utilização correcta dos instrumentos de medição.
+    </p>
+
+    <p>
+      A regra principal é diagnosticar antes de substituir. Sempre que
+      forem necessários valores específicos, esquemas, pinagens,
+      procedimentos ou testes, deve ser consultada a documentação
+      técnica correspondente ao modelo e ano do veículo.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas eléctricos,
+        electrónicos e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — normas e referências técnicas relacionadas
+        com veículos e sistemas eléctricos e electrónicos.
+      </p>
+
+      <p>
+        Para esquemas eléctricos, pinagens, valores de teste, torques
+        e procedimentos específicos, consultar sempre o manual de
+        serviço oficial do fabricante.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+</html>
