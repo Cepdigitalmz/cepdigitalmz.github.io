@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 23 — Diagnóstico de avarias e scanner OBD | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .codigo {
+      background: #263238;
+      color: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccd8d4;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #e8f1ee;
+      color: #064d3b;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🔎🚗💻</div>
+
+    <h2>Capítulo 23 — Diagnóstico de avarias e scanner OBD</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Métodos de diagnóstico, leitura de códigos,
+      utilização do scanner OBD e confirmação de avarias.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.1 Introdução ao diagnóstico automóvel</h2>
+
+    <p>
+      O diagnóstico automóvel é o processo sistemático utilizado para
+      identificar a causa de uma falha ou comportamento anormal do veículo.
+    </p>
+
+    <p>
+      Um diagnóstico correcto deve partir do sintoma, recolher informações,
+      realizar testes e comparar os resultados com as especificações
+      técnicas aplicáveis.
+    </p>
+
+    <div class="info">
+      <strong>📌 Regra principal:</strong>
+      <p>
+        Um código de avaria não deve ser tratado automaticamente como
+        prova de que determinado componente está avariado.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.2 Tipos de diagnóstico</h2>
+
+    <ul>
+      <li>Diagnóstico visual;</li>
+      <li>Diagnóstico mecânico;</li>
+      <li>Diagnóstico eléctrico;</li>
+      <li>Diagnóstico electrónico;</li>
+      <li>Diagnóstico através de dados do fabricante;</li>
+      <li>Diagnóstico através de scanner.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.3 Processo de diagnóstico</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Identificar o veículo;</li>
+        <li>Confirmar o sintoma;</li>
+        <li>Recolher informações do condutor;</li>
+        <li>Realizar uma inspecção visual;</li>
+        <li>Verificar condições básicas;</li>
+        <li>Consultar documentação técnica;</li>
+        <li>Realizar testes;</li>
+        <li>Interpretar os resultados;</li>
+        <li>Identificar a causa;</li>
+        <li>Reparar;</li>
+        <li>Realizar teste final.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.4 O que é OBD?</h2>
+
+    <p>
+      OBD significa <strong>On-Board Diagnostics</strong>, ou diagnóstico
+      a bordo. É um sistema que permite monitorizar determinadas funções
+      e detectar condições de funcionamento fora dos parâmetros previstos.
+    </p>
+
+    <p>
+      A implementação concreta e as funções disponíveis dependem do
+      veículo, mercado, ano e fabricante.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.5 Conector de diagnóstico</h2>
+
+    <p>
+      Os veículos equipados com sistemas de diagnóstico compatíveis
+      possuem uma interface através da qual uma ferramenta de diagnóstico
+      pode comunicar com os sistemas electrónicos suportados.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — CONECTOR DE DIAGNÓSTICO</strong>
+      <p>
+        Mostrar a localização do conector no habitáculo e uma vista
+        aproximada do conector, identificando os terminais de forma
+        didáctica.
+      </p>
+    </div>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        A localização e a configuração exacta devem ser confirmadas
+        para cada veículo.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.6 Scanner automóvel</h2>
+
+    <p>
+      O scanner é uma ferramenta electrónica utilizada para comunicar
+      com módulos de controlo compatíveis e obter informações de diagnóstico.
+    </p>
+
+    <h3>Dependendo do equipamento e do veículo, pode permitir:</h3>
+
+    <ul>
+      <li>Ler códigos de avaria;</li>
+      <li>Apagar códigos após a reparação apropriada;</li>
+      <li>Consultar dados em tempo real;</li>
+      <li>Visualizar informações de determinados módulos;</li>
+      <li>Executar alguns testes activos;</li>
+      <li>Realizar funções especiais em equipamentos compatíveis.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.7 Códigos de diagnóstico</h2>
+
+    <p>
+      Os códigos de diagnóstico são utilizados para representar
+      determinadas condições detectadas pelo sistema.
+    </p>
+
+    <p>
+      Os códigos podem apresentar diferentes categorias e interpretações,
+      sendo necessário consultar a documentação adequada.
+    </p>
+
+    <div class="info">
+      <strong>📌 Exemplo didáctico:</strong>
+
+      <div class="codigo">
+        P0XXX — exemplo de formato de código
+      </div>
+
+      <p>
+        O exemplo acima demonstra apenas o formato. A interpretação
+        concreta deve ser confirmada através da documentação técnica
+        aplicável.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.8 Categorias gerais de códigos</h2>
+
+    <table>
+
+      <tr>
+        <th>Prefixo</th>
+        <th>Área geral</th>
+      </tr>
+
+      <tr>
+        <td>P</td>
+        <td>Powertrain — motor e transmissão</td>
+      </tr>
+
+      <tr>
+        <td>B</td>
+        <td>Body — carroçaria e sistemas relacionados</td>
+      </tr>
+
+      <tr>
+        <td>C</td>
+        <td>Chassis — chassis e sistemas relacionados</td>
+      </tr>
+
+      <tr>
+        <td>U</td>
+        <td>Comunicação entre módulos</td>
+      </tr>
+
+    </table>
+
+    <p>
+      A utilização e interpretação dos códigos deve ser confirmada
+      através das normas e informações específicas do veículo.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.9 Leitura de códigos</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Identificar correctamente o veículo;</li>
+        <li>Ligar a ferramenta ao conector;</li>
+        <li>Ligar a ignição conforme as instruções;</li>
+        <li>Seleccionar o veículo ou permitir a identificação automática;</li>
+        <li>Realizar a leitura dos módulos disponíveis;</li>
+        <li>Registar os códigos encontrados;</li>
+        <li>Consultar a descrição e os dados associados;</li>
+        <li>Continuar o diagnóstico.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.10 Código presente não significa componente avariado</h2>
+
+    <p>
+      Um código pode indicar que um determinado circuito ou parâmetro
+      apresentou uma condição fora do esperado.
+    </p>
+
+    <p>
+      A causa pode estar no próprio componente, na alimentação, na massa,
+      na cablagem, no conector, noutro componente relacionado ou nas
+      condições de funcionamento.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 Erro grave:</strong>
+      <p>
+        Não substituir automaticamente um sensor apenas porque o scanner
+        apresentou um código relacionado com esse sensor.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.11 Dados em tempo real</h2>
+
+    <p>
+      Algumas ferramentas permitem visualizar parâmetros fornecidos
+      pelos módulos enquanto o veículo está ligado ou durante determinadas
+      condições de funcionamento.
+    </p>
+
+    <h3>Exemplos de parâmetros:</h3>
+
+    <ul>
+      <li>Temperatura;</li>
+      <li>Velocidade;</li>
+      <li>Rotação do motor;</li>
+      <li>Posição de determinados componentes;</li>
+      <li>Pressões;</li>
+      <li>Valores calculados pelo módulo.</li>
+    </ul>
+
+    <p>
+      Os valores considerados normais dependem do veículo, das condições
+      de funcionamento e das especificações do fabricante.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.12 Freeze Frame — dados congelados</h2>
+
+    <p>
+      Alguns sistemas armazenam informações das condições existentes
+      no momento em que uma determinada falha foi registada.
+    </p>
+
+    <p>
+      Esses dados podem ajudar o técnico a reproduzir as condições
+      relacionadas com a falha.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.13 Luz de avaria do motor</h2>
+
+    <p>
+      A luz de avaria do motor, quando presente, pode indicar que o
+      sistema de controlo detectou uma condição que requer diagnóstico.
+    </p>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        A gravidade da situação depende do veículo, da luz apresentada,
+        do comportamento do motor e das instruções do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.14 Diagnóstico de falha eléctrica</h2>
+
+    <p>
+      O scanner pode indicar uma falha electrónica, mas os testes
+      eléctricos continuam a ser necessários.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Consultar o código;</li>
+        <li>Consultar o esquema eléctrico;</li>
+        <li>Verificar alimentação;</li>
+        <li>Verificar massa;</li>
+        <li>Verificar conectores;</li>
+        <li>Verificar cablagem;</li>
+        <li>Medir sinais;</li>
+        <li>Comparar com especificações;</li>
+        <li>Reparar a causa.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.15 Diagnóstico de falha mecânica</h2>
+
+    <p>
+      Nem todas as falhas do veículo podem ser resolvidas através
+      do scanner.
+    </p>
+
+    <p>
+      Problemas de compressão, desgaste mecânico, folgas, fugas,
+      danos físicos e outras falhas podem exigir testes mecânicos.
+    </p>
+
+    <h3>Ferramentas possíveis:</h3>
+
+    <ul>
+      <li>Manómetro de compressão;</li>
+      <li>Teste de fuga de cilindro;</li>
+      <li>Manómetro de pressão;</li>
+      <li>Multímetro;</li>
+      <li>Vacuum gauge, quando apropriado;</li>
+      <li>Ferramentas específicas do fabricante.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.16 Diagnóstico visual</h2>
+
+    <p>
+      Antes de utilizar equipamentos complexos, deve ser realizada
+      uma inspecção visual.
+    </p>
+
+    <ul>
+      <li>Fios danificados;</li>
+      <li>Conectores soltos;</li>
+      <li>Fugas;</li>
+      <li>Peças partidas;</li>
+      <li>Correias danificadas;</li>
+      <li>Mangueiras danificadas;</li>
+      <li>Corrosão;</li>
+      <li>Peças instaladas incorrectamente.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.17 Testes activos</h2>
+
+    <p>
+      Algumas ferramentas de diagnóstico permitem comandar determinados
+      actuadores para verificar a resposta de um sistema.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 Atenção:</strong>
+      <p>
+        Testes activos devem ser realizados apenas quando suportados
+        pelo veículo e de acordo com o procedimento técnico apropriado.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.18 Apagar códigos de avaria</h2>
+
+    <p>
+      Apagar um código não significa que a avaria foi reparada.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Identificar a causa;</li>
+        <li>Realizar a reparação;</li>
+        <li>Confirmar o correcto funcionamento;</li>
+        <li>Apagar os códigos quando apropriado;</li>
+        <li>Realizar novo diagnóstico;</li>
+        <li>Confirmar que a falha não regressa.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.19 Diagnóstico após a reparação</h2>
+
+    <p>
+      Depois de reparar uma avaria, é necessário confirmar se o problema
+      foi realmente resolvido.
+    </p>
+
+    <ol>
+      <li>Verificar se todos os componentes foram instalados correctamente;</li>
+      <li>Verificar conectores;</li>
+      <li>Ligar o veículo;</li>
+      <li>Verificar luzes de aviso;</li>
+      <li>Realizar nova leitura quando apropriado;</li>
+      <li>Realizar teste de funcionamento;</li>
+      <li>Confirmar o resultado.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.20 Exemplo de diagnóstico</h2>
+
+    <div class="procedimento">
+
+      <p><strong>Sintoma:</strong> veículo apresenta luz de avaria.</p>
+
+      <ol>
+        <li>Confirmar a luz;</li>
+        <li>Realizar inspecção visual;</li>
+        <li>Conectar o scanner;</li>
+        <li>Ler os códigos;</li>
+        <li>Registar os dados;</li>
+        <li>Consultar documentação;</li>
+        <li>Testar o circuito relacionado;</li>
+        <li>Determinar a causa;</li>
+        <li>Reparar;</li>
+        <li>Confirmar o funcionamento.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.21 Erros comuns no uso do scanner</h2>
+
+    <ul>
+      <li>Interpretar o código como diagnóstico final;</li>
+      <li>Apagar códigos sem investigar;</li>
+      <li>Não identificar correctamente o veículo;</li>
+      <li>Ignorar dados em tempo real;</li>
+      <li>Não consultar o fabricante;</li>
+      <li>Substituir peças sem teste;</li>
+      <li>Não realizar teste final.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.22 Segurança no diagnóstico electrónico</h2>
+
+    <div class="perigo">
+
+      <strong>🚨 REGRAS DE SEGURANÇA</strong>
+
+      <ul>
+        <li>Utilizar equipamento apropriado;</li>
+        <li>Seguir as instruções do scanner;</li>
+        <li>Não provocar curto-circuitos;</li>
+        <li>Não efectuar ligações improvisadas;</li>
+        <li>Ter atenção a sistemas de airbag;</li>
+        <li>Ter atenção a veículos híbridos e eléctricos;</li>
+        <li>Não trabalhar em sistemas de alta tensão sem formação adequada.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.23 Checklist de diagnóstico</h2>
+
+    <ul>
+      <li>☐ Veículo correctamente identificado;</li>
+      <li>☐ Sintoma confirmado;</li>
+      <li>☐ Inspecção visual realizada;</li>
+      <li>☐ Scanner ligado correctamente;</li>
+      <li>☐ Códigos registados;</li>
+      <li>☐ Dados disponíveis analisados;</li>
+      <li>☐ Documentação técnica consultada;</li>
+      <li>☐ Testes realizados;</li>
+      <li>☐ Causa identificada;</li>
+      <li>☐ Reparação efectuada;</li>
+      <li>☐ Códigos tratados correctamente;</li>
+      <li>☐ Teste final realizado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>23.24 Conclusão</h2>
+
+    <p>
+      O scanner OBD é uma ferramenta importante para o diagnóstico
+      dos automóveis modernos, mas deve ser utilizado como parte de
+      um processo completo de diagnóstico.
+    </p>
+
+    <p>
+      A combinação entre observação, conhecimentos de mecânica,
+      medições eléctricas, documentação técnica e diagnóstico electrónico
+      permite aumentar a precisão da reparação e evitar a substituição
+      desnecessária de componentes.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre diagnóstico,
+        electrónica automóvel e sistemas de controlo.
+      </p>
+
+      <p>
+        SAE International — normas e referências técnicas relacionadas
+        com diagnóstico e sistemas automóveis.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de formação e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Para códigos específicos, procedimentos, valores de teste,
+        pinagens e funções de diagnóstico, consultar sempre a documentação
+        oficial do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>CEP Digital — Manuais práticos de manutenção e reparação</p>
+  <p>Volume 3 — Mecânica de Automóveis</p>
+
+</footer>
+
+</body>
+  </html>
