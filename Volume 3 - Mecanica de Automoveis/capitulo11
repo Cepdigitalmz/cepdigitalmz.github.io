@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 11 — Sistema de transmissão | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="icone">
+        ⚙️
+      </div>
+
+      <h2>
+        Capítulo 11 — Sistema de transmissão
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Embraiagem, caixa de velocidades,
+        transmissão e diagnóstico.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.1 Introdução</h2>
+
+      <p>
+        O sistema de transmissão transfere a potência produzida pelo
+        motor para as rodas motrizes, permitindo que o veículo se
+        desloque em diferentes condições.
+      </p>
+
+      <p>
+        A configuração da transmissão depende do projecto do veículo.
+        Pode incluir transmissão manual, automática, automatizada,
+        continuamente variável (CVT) ou outras arquitecturas.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          A transmissão não serve apenas para transmitir movimento.
+          Também permite adequar o binário e a velocidade de rotação
+          às diferentes condições de condução.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.2 Funções da transmissão</h2>
+
+      <ul>
+
+        <li>Transmitir potência do motor para as rodas;</li>
+
+        <li>Modificar a relação entre velocidade e binário;</li>
+
+        <li>Permitir o movimento em marcha-atrás;</li>
+
+        <li>Permitir a separação temporária entre motor e transmissão;</li>
+
+        <li>Distribuir o movimento para as rodas motrizes;</li>
+
+        <li>Permitir o funcionamento do veículo em diferentes condições.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.3 Principais tipos de transmissão</h2>
+
+      <h3>Transmissão manual</h3>
+
+      <p>
+        Utiliza uma embraiagem accionada pelo condutor e uma caixa
+        de velocidades com relações seleccionáveis.
+      </p>
+
+      <h3>Transmissão automática</h3>
+
+      <p>
+        Realiza a selecção das relações de forma automática através
+        de sistemas hidráulicos, electrónicos e mecânicos.
+      </p>
+
+      <h3>Transmissão CVT</h3>
+
+      <p>
+        Utiliza uma relação continuamente variável dentro da faixa
+        de funcionamento prevista pelo fabricante.
+      </p>
+
+      <h3>Transmissão automatizada</h3>
+
+      <p>
+        Pode utilizar uma caixa de base semelhante à manual, mas
+        com accionamento automatizado da embraiagem e das mudanças.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.4 Componentes principais</h2>
+
+      <ul>
+
+        <li>Embraiagem;</li>
+
+        <li>Caixa de velocidades;</li>
+
+        <li>Conversor de binário, quando equipado;</li>
+
+        <li>Árvore de transmissão;</li>
+
+        <li>Juntas homocinéticas;</li>
+
+        <li>Diferencial;</li>
+
+        <li>Semieixos;</li>
+
+        <li>Engrenagens;</li>
+
+        <li>Rolamentos;</li>
+
+        <li>Fluidos específicos da transmissão;</li>
+
+        <li>Unidades de controlo electrónicas, quando existentes.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — SISTEMA DE TRANSMISSÃO</strong>
+
+        <p>
+          Inserir posteriormente uma vista explodida 3D mostrando:
+        </p>
+
+        <p>
+          motor → embraiagem/conversor → caixa → árvore/semieixos
+          → diferencial → rodas.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.5 Embraiagem</h2>
+
+      <p>
+        Nos sistemas manuais, a embraiagem permite ligar e desligar
+        temporariamente o motor da caixa de velocidades.
+      </p>
+
+      <h3>Principais componentes:</h3>
+
+      <ul>
+
+        <li>Disco de embraiagem;</li>
+
+        <li>Prato de pressão;</li>
+
+        <li>Volante do motor;</li>
+
+        <li>Rolamento de encosto;</li>
+
+        <li>Sistema de accionamento.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.6 Sintomas de problemas na embraiagem</h2>
+
+      <ul>
+
+        <li>Patinagem;</li>
+
+        <li>Dificuldade em seleccionar mudanças;</li>
+
+        <li>Ruídos;</li>
+
+        <li>Vibração ao arrancar;</li>
+
+        <li>Pedal anormalmente duro ou leve;</li>
+
+        <li>Cheiro de material de atrito queimado;</li>
+
+        <li>Dificuldade em transmitir potência.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Atenção:</strong>
+
+        <p>
+          Estes sintomas também podem estar relacionados com o sistema
+          hidráulico, accionamento da embraiagem ou outros componentes.
+          O diagnóstico deve identificar a causa antes da substituição.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.7 Caixa de velocidades manual</h2>
+
+      <p>
+        A caixa manual utiliza diferentes relações de engrenagens
+        para adaptar a rotação e o binário fornecidos às rodas.
+      </p>
+
+      <h3>Componentes principais:</h3>
+
+      <ul>
+
+        <li>Eixos;</li>
+
+        <li>Engrenagens;</li>
+
+        <li>Sincronizadores;</li>
+
+        <li>Rolamentos;</li>
+
+        <li>Garfo de selecção;</li>
+
+        <li>Selector;</li>
+
+        <li>Carcaça.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.8 Sincronizadores</h2>
+
+      <p>
+        Os sincronizadores ajudam a igualar as velocidades de
+        determinados componentes antes do engrenamento da relação,
+        facilitando a mudança de velocidade.
+      </p>
+
+      <h3>Sintomas possíveis de desgaste:</h3>
+
+      <ul>
+
+        <li>Dificuldade numa determinada mudança;</li>
+
+        <li>Ruído ao seleccionar uma mudança;</li>
+
+        <li>Engrenamento difícil;</li>
+
+        <li>Desengate da mudança em determinadas condições.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.9 Transmissão automática</h2>
+
+      <p>
+        A transmissão automática utiliza diferentes elementos para
+        seleccionar e transmitir as relações de forma automática.
+      </p>
+
+      <p>
+        Dependendo do projecto, pode possuir conversor de binário,
+        conjuntos planetários, embraiagens internas, solenóides,
+        bomba e unidade electrónica de controlo.
+      </p>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — TRANSMISSÃO AUTOMÁTICA</strong>
+
+        <p>
+          Inserir posteriormente uma vista 3D identificando:
+          conversor de binário, bomba, conjuntos planetários,
+          embraiagens e corpo de válvulas.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.10 Fluido da transmissão</h2>
+
+      <p>
+        O fluido da transmissão lubrifica, arrefece e, dependendo
+        do sistema, participa no funcionamento hidráulico de vários
+        componentes.
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO</strong>
+
+        <p>
+          Nunca utilizar um fluido apenas porque possui a mesma
+          aparência ou viscosidade. A especificação correcta deve
+          ser confirmada na documentação do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.11 Árvores e semieixos</h2>
+
+      <p>
+        Os componentes de transmissão transportam o movimento da
+        caixa ou diferencial para as rodas.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Folgas;</li>
+
+        <li>Ruídos;</li>
+
+        <li>Vibrações;</li>
+
+        <li>Juntas;</li>
+
+        <li>Coifas;</li>
+
+        <li>Fugas de massa lubrificante;</li>
+
+        <li>Danos nos componentes.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.12 Juntas homocinéticas</h2>
+
+      <p>
+        As juntas homocinéticas permitem transmitir o movimento
+        entre componentes que trabalham em ângulos variáveis.
+      </p>
+
+      <h3>Sinais possíveis de desgaste:</h3>
+
+      <ul>
+
+        <li>Estalos durante curvas;</li>
+
+        <li>Vibrações;</li>
+
+        <li>Folga excessiva;</li>
+
+        <li>Coifa danificada;</li>
+
+        <li>Perda de massa lubrificante.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.13 Diferencial</h2>
+
+      <p>
+        O diferencial permite que as rodas de um mesmo eixo possam
+        girar a velocidades diferentes durante uma curva.
+      </p>
+
+      <p>
+        Em veículos com diferentes configurações de tracção podem
+        existir diferenciais adicionais.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Ruídos;</li>
+
+        <li>Fugas;</li>
+
+        <li>Folgas;</li>
+
+        <li>Estado do lubrificante;</li>
+
+        <li>Funcionamento durante a condução.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.14 Diagnóstico da transmissão</h2>
+
+      <ol>
+
+        <li>Identificar correctamente o veículo;</li>
+
+        <li>Confirmar o sintoma;</li>
+
+        <li>Consultar o histórico de manutenção;</li>
+
+        <li>Verificar fugas;</li>
+
+        <li>Verificar o nível e condição do fluido quando aplicável;</li>
+
+        <li>Realizar inspecção visual;</li>
+
+        <li>Verificar ruídos e vibrações;</li>
+
+        <li>Realizar teste de condução quando seguro;</li>
+
+        <li>Consultar códigos electrónicos quando aplicável;</li>
+
+        <li>Comparar os resultados com as especificações;</li>
+
+        <li>Determinar a causa;</li>
+
+        <li>Executar a reparação;</li>
+
+        <li>Realizar teste final.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.15 Sintomas e possíveis causas</h2>
+
+      <ul>
+
+        <li>
+          <strong>Ruído:</strong>
+          pode estar relacionado com rolamentos, engrenagens,
+          nível de fluido ou outros componentes.
+        </li>
+
+        <li>
+          <strong>Vibração:</strong>
+          pode estar relacionada com semieixos, juntas, árvores,
+          rodas ou outros sistemas.
+        </li>
+
+        <li>
+          <strong>Dificuldade de engrenamento:</strong>
+          pode estar relacionada com embraiagem, selector,
+          sincronizadores ou outros componentes.
+        </li>
+
+        <li>
+          <strong>Patinagem:</strong>
+          pode indicar problemas na embraiagem ou transmissão,
+          dependendo do sistema.
+        </li>
+
+        <li>
+          <strong>Fuga de fluido:</strong>
+          pode resultar de vedantes, juntas, carcaças ou ligações.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.16 Manutenção preventiva</h2>
+
+      <ul>
+
+        <li>Verificar fugas;</li>
+
+        <li>Verificar o estado dos componentes;</li>
+
+        <li>Controlar o fluido conforme o plano do fabricante;</li>
+
+        <li>Substituir o fluido quando especificado;</li>
+
+        <li>Inspeccionar coifas das juntas;</li>
+
+        <li>Verificar semieixos;</li>
+
+        <li>Verificar suportes da transmissão;</li>
+
+        <li>Realizar diagnóstico electrónico quando necessário.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.17 Segurança durante a manutenção</h2>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO</strong>
+
+        <p>
+          Os componentes da transmissão podem ser pesados.
+          Utilizar equipamento de elevação adequado e nunca colocar
+          partes do corpo sob componentes que não estejam devidamente
+          apoiados.
+        </p>
+
+      </div>
+
+      <ul>
+
+        <li>Desligar o motor;</li>
+
+        <li>Imobilizar correctamente o veículo;</li>
+
+        <li>Utilizar cavaletes adequados;</li>
+
+        <li>Utilizar equipamento de elevação apropriado;</li>
+
+        <li>Utilizar ferramentas correctas;</li>
+
+        <li>Evitar contacto com fluidos quentes;</li>
+
+        <li>Seguir os procedimentos do fabricante.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.18 Erros comuns</h2>
+
+      <ul>
+
+        <li>Utilizar fluido incorrecto;</li>
+
+        <li>Ignorar pequenas fugas;</li>
+
+        <li>Substituir uma peça sem diagnóstico;</li>
+
+        <li>Não verificar coifas das juntas;</li>
+
+        <li>Não respeitar o torque especificado;</li>
+
+        <li>Montar componentes sem limpeza adequada;</li>
+
+        <li>Não realizar teste final;</li>
+
+        <li>Ignorar ruídos ou vibrações persistentes.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.19 Checklist da transmissão</h2>
+
+      <ul>
+
+        <li>☐ Veículo identificado;</li>
+
+        <li>☐ Manual técnico consultado;</li>
+
+        <li>☐ Tipo de transmissão identificado;</li>
+
+        <li>☐ Fugas verificadas;</li>
+
+        <li>☐ Fluido verificado quando aplicável;</li>
+
+        <li>☐ Embraiagem verificada quando aplicável;</li>
+
+        <li>☐ Caixa de velocidades verificada;</li>
+
+        <li>☐ Semieixos inspeccionados;</li>
+
+        <li>☐ Juntas homocinéticas verificadas;</li>
+
+        <li>☐ Coifas inspeccionadas;</li>
+
+        <li>☐ Diferencial verificado;</li>
+
+        <li>☐ Suportes inspeccionados;</li>
+
+        <li>☐ Diagnóstico electrónico realizado quando necessário;</li>
+
+        <li>☐ Reparação concluída;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>11.20 Conclusão</h2>
+
+      <p>
+        O sistema de transmissão é responsável por transferir a
+        potência do motor para as rodas e adaptar essa potência
+        às condições de funcionamento do veículo.
+      </p>
+
+      <p>
+        Uma manutenção adequada exige identificação correcta do
+        sistema, utilização dos fluidos especificados, diagnóstico
+        sistemático e cumprimento dos procedimentos do fabricante.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Bosch Mobility — documentação técnica sobre sistemas de
+          transmissão, embraiagem e componentes automóveis.
+        </p>
+
+        <p>
+          Automotive Service Excellence (ASE) —
+          materiais técnicos de estudo e diagnóstico automóvel.
+        </p>
+
+        <p>
+          Para capacidades de fluido, tipo de lubrificante, torques,
+          folgas, procedimentos de desmontagem e limites de desgaste,
+          consultar sempre o manual de serviço oficial do fabricante
+          do veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
