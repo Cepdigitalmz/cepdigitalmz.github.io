@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manual Prático de Mecânica — Automóveis | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    nav {
+      background: #086044;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background: #0b7957;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .capa {
+      background: white;
+      border-radius: 18px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .capa .carro {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .capa h2 {
+      color: #064d3b;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .capa h3 {
+      color: #555;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .capitulo {
+      background: white;
+      border: 1px solid #d9e2df;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 12px 0;
+      transition: 0.2s;
+    }
+
+    .capitulo:hover {
+      background: #f5faf8;
+      transform: translateY(-1px);
+    }
+
+    .capitulo a {
+      text-decoration: none;
+      color: #064d3b;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .capitulo p {
+      margin-top: 7px;
+      color: #555;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      .capa h2 {
+        font-size: 25px;
+      }
+
+      .capitulo a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">🏠 Início</a>
+    <a href="#indice">📚 Índice</a>
+  </nav>
+
+  <main class="container">
+
+    <a class="voltar" href="../index.html">
+      ← Voltar ao CEP Digital
+    </a>
+
+    <div class="capa" id="inicio">
+
+      <div class="carro">🚗</div>
+
+      <h2>Manual Prático de Mecânica</h2>
+
+      <h3>Volume 3</h3>
+
+      <p>
+        <strong>Mecânica geral de automóveis</strong>
+      </p>
+
+      <p>
+        Manual prático de aprendizagem,
+        manutenção, diagnóstico e reparação.
+      </p>
+
+    </div>
+
+
+    <section id="indice">
+
+      <h2>📚 Índice do Manual</h2>
+
+
+      <div class="capitulo">
+        <a href="capitulo01.html">
+          📖 Capítulo 1 — Conhecendo o automóvel
+        </a>
+        <p>Introdução ao automóvel e aos seus principais sistemas.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo02.html">
+          📖 Capítulo 2 — Identificação dos principais componentes
+        </a>
+        <p>Localização e identificação dos principais componentes.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo03.html">
+          📖 Capítulo 3 — Ferramentas e equipamentos
+        </a>
+        <p>Ferramentas e equipamentos utilizados na manutenção.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo04.html">
+          📖 Capítulo 4 — Segurança na manutenção automóvel
+        </a>
+        <p>Regras de segurança durante os trabalhos de manutenção.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo05.html">
+          📖 Capítulo 5 — Manutenção preventiva automóvel
+        </a>
+        <p>Inspecções e cuidados preventivos.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo06.html">
+          📖 Capítulo 6 — Motor
+        </a>
+        <p>Princípios de funcionamento, manutenção e reparação do motor.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo07.html">
+          📖 Capítulo 7 — Sistema de combustível
+        </a>
+        <p>Alimentação de combustível e componentes relacionados.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo08.html">
+          📖 Capítulo 8 — Sistema de admissão de ar
+        </a>
+        <p>Entrada e filtragem do ar para o motor.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo09.html">
+          📖 Capítulo 9 — Sistema de travagem
+        </a>
+        <p>Componentes, manutenção e verificação dos travões.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo10.html">
+          📖 Capítulo 10 — Rodas e pneus
+        </a>
+        <p>Inspecção, manutenção e segurança das rodas e pneus.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo11.html">
+          📖 Capítulo 11 — Transmissão
+        </a>
+        <p>Embraiagem, caixa de velocidades e transmissão.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo12.html">
+          📖 Capítulo 12 — Sistema de suspensão
+        </a>
+        <p>Suspensão dianteira e traseira.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo13.html">
+          📖 Capítulo 13 — Sistema de direcção
+        </a>
+        <p>Componentes e funcionamento do sistema de direcção.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo14.html">
+          📖 Capítulo 14 — Sistema de travagem e assistência
+        </a>
+        <p>Elementos de assistência e controlo do sistema de travagem.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo15.html">
+          📖 Capítulo 15 — Sistema de arrefecimento
+        </a>
+        <p>Arrefecimento do motor e controlo da temperatura.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo16.html">
+          📖 Capítulo 16 — Sistema de lubrificação do motor
+        </a>
+        <p>Óleo, filtro e circulação do lubrificante.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo17.html">
+          📖 Capítulo 17 — Sistema de escape
+        </a>
+        <p>Escape dos gases e componentes do sistema.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo18.html">
+          📖 Capítulo 18 — Sistema de direcção e geometria
+        </a>
+        <p>Direcção, alinhamento e comportamento direccional.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo19.html">
+          📖 Capítulo 19 — Sistema de suspensão e amortecimento
+        </a>
+        <p>Funcionamento, inspecção e manutenção da suspensão.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo20.html">
+          📖 Capítulo 20 — Sistema eléctrico e electrónico
+        </a>
+        <p>Bateria, carregamento, iluminação e sistemas electrónicos.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo21.html">
+          📖 Capítulo 21 — Sistema de arranque
+        </a>
+        <p>Motor de arranque, circuito eléctrico e diagnóstico.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo22.html">
+          📖 Capítulo 22 — Sistemas de segurança e equipamentos auxiliares
+        </a>
+        <p>Principais sistemas auxiliares e equipamentos de segurança.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo23.html">
+          📖 Capítulo 23 — Diagnóstico de avarias e scanner OBD
+        </a>
+        <p>Diagnóstico mecânico, eléctrico e electrónico.</p>
+      </div>
+
+
+      <div class="capitulo">
+        <a href="capitulo24.html">
+          📖 Capítulo 24 — Plano de manutenção e verificação final
+        </a>
+        <p>Plano geral de manutenção e verificação final do automóvel.</p>
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>CEP Digital — Manuais práticos de manutenção e reparação</p>
+    <p>Volume 3 — Mecânica de Automóveis</p>
+  </footer>
+
+</body>
+  </html>
