@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 9 — Sistema de travagem | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .travagem-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="travagem-icon">
+        🛑
+      </div>
+
+      <h2>
+        Capítulo 9 — Sistema de travagem
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Funcionamento, componentes, manutenção,
+        diagnóstico e segurança.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.1 Introdução</h2>
+
+      <p>
+        O sistema de travagem é um dos sistemas de segurança mais
+        importantes do automóvel. A sua função principal é reduzir
+        a velocidade do veículo ou fazê-lo parar de forma controlada.
+      </p>
+
+      <p>
+        O sistema também permite manter o veículo imobilizado quando
+        estacionado, através do travão de estacionamento.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          Qualquer problema que possa comprometer a capacidade de
+          travagem deve ser tratado como uma questão de segurança
+          e não apenas como uma falha mecânica comum.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.2 Funções do sistema de travagem</h2>
+
+      <ul>
+
+        <li>Reduzir a velocidade do veículo;</li>
+
+        <li>Parar o veículo;</li>
+
+        <li>Manter o veículo parado;</li>
+
+        <li>Distribuir a força de travagem pelas rodas;</li>
+
+        <li>Manter estabilidade durante a travagem;</li>
+
+        <li>Evitar, através dos sistemas electrónicos, o bloqueio das rodas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.3 Principais componentes</h2>
+
+      <p>
+        Dependendo do veículo, o sistema pode incluir:
+      </p>
+
+      <ul>
+
+        <li>Pedal de travão;</li>
+
+        <li>Servofreio;</li>
+
+        <li>Cilindro mestre;</li>
+
+        <li>Reservatório do fluido;</li>
+
+        <li>Tubagens rígidas;</li>
+
+        <li>Flexíveis de travão;</li>
+
+        <li>Pinças;</li>
+
+        <li>Pastilhas;</li>
+
+        <li>Discos;</li>
+
+        <li>Tambores;</li>
+
+        <li>Sapatas;</li>
+
+        <li>Travão de estacionamento;</li>
+
+        <li>Sistema ABS;</li>
+
+        <li>Sensores de velocidade das rodas;</li>
+
+        <li>Unidade hidráulica e electrónica do ABS.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — SISTEMA DE TRAVAGEM</strong>
+
+        <p>
+          Inserir posteriormente uma ilustração 3D mostrando
+          pedal → servofreio → cilindro mestre → circuito hidráulico
+          → pinça → pastilha → disco.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.4 Pedal de travão</h2>
+
+      <p>
+        O pedal é o comando utilizado pelo condutor para solicitar
+        a travagem.
+      </p>
+
+      <p>
+        Quando pressionado, transmite força para o sistema de
+        assistência e para o circuito hidráulico ou electrónico,
+        conforme a arquitectura do veículo.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Curso do pedal;</li>
+
+        <li>Altura do pedal;</li>
+
+        <li>Resistência anormal;</li>
+
+        <li>Ruídos;</li>
+
+        <li>Retorno do pedal.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.5 Servofreio</h2>
+
+      <p>
+        O servofreio ajuda a aumentar a força aplicada pelo condutor
+        ao pedal, facilitando a aplicação dos travões.
+      </p>
+
+      <p>
+        Dependendo do veículo, a assistência pode utilizar vácuo
+        ou sistemas eléctricos e hidráulicos.
+      </p>
+
+      <div class="alerta">
+
+        <strong>📌 Atenção:</strong>
+
+        <p>
+          Um problema no sistema de assistência pode alterar
+          significativamente o esforço necessário para travar.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.6 Cilindro mestre</h2>
+
+      <p>
+        O cilindro mestre transforma a força aplicada no pedal em
+        pressão hidráulica no circuito de travagem.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Estado do reservatório;</li>
+
+        <li>Vedantes;</li>
+
+        <li>Ligações hidráulicas;</li>
+
+        <li>Funcionamento do pedal.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.7 Fluido de travão</h2>
+
+      <p>
+        O fluido transmite a pressão hidráulica através do circuito
+        de travagem.
+      </p>
+
+      <p>
+        O tipo correcto de fluido depende do veículo e deve ser
+        confirmado na documentação do fabricante.
+      </p>
+
+      <div class="perigo">
+
+        <strong>⚠️ ATENÇÃO</strong>
+
+        <p>
+          Nunca misturar fluidos ou utilizar um produto apenas porque
+          possui uma aparência semelhante. Utilizar exclusivamente
+          a especificação indicada pelo fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.8 Discos de travão</h2>
+
+      <p>
+        O disco é o componente rotativo contra o qual as pastilhas
+        aplicam força para produzir a desaceleração.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Espessura;</li>
+
+        <li>Desgaste;</li>
+
+        <li>Riscos profundos;</li>
+
+        <li>Fissuras;</li>
+
+        <li>Cor anormal causada por sobreaquecimento;</li>
+
+        <li>Empeno ou variação dimensional;</li>
+
+        <li>Corrosão excessiva.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          O limite mínimo de espessura não é igual para todos os
+          veículos. Deve ser consultado o valor especificado pelo
+          fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.9 Pastilhas de travão</h2>
+
+      <p>
+        As pastilhas pressionam o disco através da pinça e produzem
+        a força de atrito necessária para a travagem.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Espessura do material de atrito;</li>
+
+        <li>Desgaste uniforme;</li>
+
+        <li>Contaminação por óleo ou fluido;</li>
+
+        <li>Danos;</li>
+
+        <li>Fixação;</li>
+
+        <li>Indicador de desgaste, quando existente.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.10 Pinça de travão</h2>
+
+      <p>
+        A pinça aplica as pastilhas contra o disco.
+      </p>
+
+      <p>
+        Dependendo da construção, pode possuir um ou mais pistões
+        e mecanismos específicos.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Pistão;</li>
+
+        <li>Vedantes;</li>
+
+        <li>Guias;</li>
+
+        <li>Fixações;</li>
+
+        <li>Movimento correcto;</li>
+
+        <li>Estado das pastilhas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.11 Sistema de travão de tambor</h2>
+
+      <p>
+        Alguns veículos utilizam tambores de travão, especialmente
+        no eixo traseiro.
+      </p>
+
+      <p>
+        O conjunto normalmente inclui tambor, sapatas, cilindro de
+        roda, molas e mecanismos de ajuste.
+      </p>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — TRAVÃO DE TAMBOR</strong>
+
+        <p>
+          Inserir posteriormente uma vista explodida 3D identificando
+          tambor, sapatas, cilindro, molas, regulador e placa de apoio.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.12 Travão de estacionamento</h2>
+
+      <p>
+        O travão de estacionamento mantém o veículo imobilizado
+        quando estacionado.
+      </p>
+
+      <p>
+        Pode utilizar cabos mecânicos, mecanismos integrados nas
+        pinças ou accionamento eléctrico, dependendo do veículo.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Funcionamento;</li>
+
+        <li>Curso;</li>
+
+        <li>Cabos e mecanismos;</li>
+
+        <li>Actuadores eléctricos, quando existentes;</li>
+
+        <li>Estado das pastilhas ou sapatas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.13 Sistema ABS</h2>
+
+      <p>
+        O ABS (Anti-lock Braking System) ajuda a impedir o bloqueio
+        das rodas durante determinadas situações de travagem.
+      </p>
+
+      <p>
+        O sistema utiliza sensores de velocidade das rodas e uma
+        unidade de controlo que regula a pressão de travagem.
+      </p>
+
+      <h3>Componentes principais:</h3>
+
+      <ul>
+
+        <li>Sensores de velocidade;</li>
+
+        <li>Unidade de controlo;</li>
+
+        <li>Unidade hidráulica;</li>
+
+        <li>Válvulas;</li>
+
+        <li>Cablagem;</li>
+
+        <li>Lâmpada de advertência.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.14 Sintomas de problemas no ABS</h2>
+
+      <ul>
+
+        <li>Luz ABS acesa;</li>
+
+        <li>Falhas registadas na unidade de controlo;</li>
+
+        <li>Intervenção anormal do ABS;</li>
+
+        <li>Perda de funções electrónicas de assistência;</li>
+
+        <li>Problemas de leitura dos sensores.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Diagnóstico:</strong>
+
+        <p>
+          Um código de falha do ABS deve ser interpretado de acordo
+          com a documentação técnica. O código não significa
+          necessariamente que o sensor indicado seja a única causa.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.15 Tubagens e flexíveis</h2>
+
+      <p>
+        As tubagens e os flexíveis transportam o fluido de travão
+        entre os componentes do sistema.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Corrosão;</li>
+
+        <li>Rachaduras;</li>
+
+        <li>Bolhas;</li>
+
+        <li>Torções;</li>
+
+        <li>Fixações;</li>
+
+        <li>Contacto com componentes móveis.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.16 Diagnóstico básico do sistema</h2>
+
+      <p>
+        O diagnóstico deve começar por uma avaliação completa do
+        sintoma e da condição do veículo.
+      </p>
+
+      <ol>
+
+        <li>Confirmar o problema relatado;</li>
+
+        <li>Consultar o histórico de manutenção;</li>
+
+        <li>Realizar inspecção visual;</li>
+
+        <li>Verificar o nível e condição do fluido;</li>
+
+        <li>Inspeccionar discos e pastilhas;</li>
+
+        <li>Verificar tambores e sapatas quando existentes;</li>
+
+        <li>Verificar fugas;</li>
+
+        <li>Verificar pedal;</li>
+
+        <li>Verificar travão de estacionamento;</li>
+
+        <li>Consultar o sistema ABS quando aplicável;</li>
+
+        <li>Realizar os testes necessários;</li>
+
+        <li>Comparar os resultados com as especificações;</li>
+
+        <li>Reparar a causa;</li>
+
+        <li>Realizar teste final.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.17 Sintomas comuns e possíveis causas</h2>
+
+      <ul>
+
+        <li>
+          <strong>Pedal baixo:</strong>
+          pode estar relacionado com diferentes condições hidráulicas
+          ou mecânicas e requer diagnóstico.
+        </li>
+
+        <li>
+          <strong>Pedal muito duro:</strong>
+          pode estar relacionado com o sistema de assistência.
+        </li>
+
+        <li>
+          <strong>Veículo puxa para um lado:</strong>
+          pode estar relacionado com travagem desigual, pneus,
+          suspensão ou alinhamento.
+        </li>
+
+        <li>
+          <strong>Vibração durante a travagem:</strong>
+          pode ter diversas causas e deve ser investigada.
+        </li>
+
+        <li>
+          <strong>Ruído:</strong>
+          pode resultar de desgaste, contaminação ou outras condições.
+        </li>
+
+        <li>
+          <strong>Luz ABS:</strong>
+          requer diagnóstico do sistema electrónico.
+        </li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>💡 Nota:</strong>
+
+        <p>
+          Um mesmo sintoma pode ter várias causas. Nunca substituir
+          componentes apenas com base no sintoma.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.18 Manutenção preventiva</h2>
+
+      <ul>
+
+        <li>Inspeccionar pastilhas;</li>
+
+        <li>Inspeccionar discos;</li>
+
+        <li>Inspeccionar tambores quando existentes;</li>
+
+        <li>Verificar nível e condição do fluido;</li>
+
+        <li>Verificar fugas;</li>
+
+        <li>Inspeccionar flexíveis;</li>
+
+        <li>Verificar travão de estacionamento;</li>
+
+        <li>Verificar o ABS quando houver indicação de falha;</li>
+
+        <li>Substituir componentes conforme o estado e especificação;</li>
+
+        <li>Realizar manutenção conforme o plano do fabricante.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.19 Procedimento geral após reparação</h2>
+
+      <div class="procedimento">
+
+        <ol>
+
+          <li>Confirmar que todos os componentes estão correctamente instalados;</li>
+
+          <li>Verificar todas as ligações;</li>
+
+          <li>Confirmar o nível correcto do fluido;</li>
+
+          <li>Realizar purga quando o procedimento exigir;</li>
+
+          <li>Verificar fugas;</li>
+
+          <li>Verificar o funcionamento do pedal;</li>
+
+          <li>Apagar ou verificar códigos de diagnóstico quando aplicável;</li>
+
+          <li>Realizar teste controlado;</li>
+
+          <li>Confirmar o funcionamento do sistema.</li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.20 Segurança</h2>
+
+      <div class="perigo">
+
+        <strong>🚨 SISTEMA CRÍTICO DE SEGURANÇA</strong>
+
+        <p>
+          Nunca colocar um veículo em circulação quando houver dúvida
+          sobre a capacidade de travagem.
+        </p>
+
+      </div>
+
+      <ul>
+
+        <li>Utilizar cavaletes adequados ao levantar o veículo;</li>
+
+        <li>Nunca trabalhar apenas com o macaco;</li>
+
+        <li>Utilizar equipamento de protecção adequado;</li>
+
+        <li>Evitar contacto do fluido com a pele e os olhos;</li>
+
+        <li>Não contaminar discos ou pastilhas com óleo ou massa;</li>
+
+        <li>Utilizar ferramentas adequadas;</li>
+
+        <li>Respeitar os torques especificados;</li>
+
+        <li>Realizar teste final antes de entregar o veículo.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.21 Erros comuns</h2>
+
+      <ul>
+
+        <li>Substituir apenas uma pastilha;</li>
+
+        <li>Ignorar desgaste desigual;</li>
+
+        <li>Montar componentes contaminados;</li>
+
+        <li>Não verificar fugas;</li>
+
+        <li>Não verificar o estado do disco;</li>
+
+        <li>Ignorar a luz ABS;</li>
+
+        <li>Utilizar fluido incorrecto;</li>
+
+        <li>Não respeitar o torque de montagem;</li>
+
+        <li>Não realizar teste final.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.22 Checklist do sistema de travagem</h2>
+
+      <ul>
+
+        <li>☐ Veículo identificado;</li>
+
+        <li>☐ Manual técnico consultado;</li>
+
+        <li>☐ Pedal verificado;</li>
+
+        <li>☐ Fluido verificado;</li>
+
+        <li>☐ Fugas verificadas;</li>
+
+        <li>☐ Pastilhas inspeccionadas;</li>
+
+        <li>☐ Discos inspeccionados;</li>
+
+        <li>☐ Tambores verificados quando existentes;</li>
+
+        <li>☐ Sapatas verificadas quando existentes;</li>
+
+        <li>☐ Pinças verificadas;</li>
+
+        <li>☐ Flexíveis inspeccionados;</li>
+
+        <li>☐ Tubagens inspeccionadas;</li>
+
+        <li>☐ Travão de estacionamento verificado;</li>
+
+        <li>☐ Sistema ABS verificado quando aplicável;</li>
+
+        <li>☐ Reparação realizada conforme especificação;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>9.23 Conclusão</h2>
+
+      <p>
+        O sistema de travagem é essencial para a segurança do veículo.
+        A sua manutenção deve ser realizada com rigor e de acordo com
+        as especificações técnicas aplicáveis.
+      </p>
+
+      <p>
+        O diagnóstico deve considerar todos os componentes relacionados
+        e não apenas o elemento que apresenta o sintoma.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Automotive Service Excellence (ASE).
+          <em>ASE Automobile Study Guide</em>.
+        </p>
+
+        <p>
+          Bosch Mobility.
+          Documentação técnica sobre sistemas de travagem,
+          ABS e componentes de travagem.
+        </p>
+
+        <p>
+          Para espessura mínima de discos e pastilhas, torque,
+          tipo de fluido, procedimentos de purga e limites de
+          desgaste, consultar sempre o manual de serviço oficial
+          do fabricante do veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+                                                   </html>
