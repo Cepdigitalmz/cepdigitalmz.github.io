@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 10 — Rodas e pneus | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="icone">
+        🛞
+      </div>
+
+      <h2>
+        Capítulo 10 — Rodas e pneus
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Identificação, inspecção, manutenção,
+        diagnóstico e segurança.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.1 Introdução</h2>
+
+      <p>
+        As rodas e os pneus são componentes fundamentais para a
+        segurança, estabilidade, travagem e controlo do automóvel.
+      </p>
+
+      <p>
+        Os pneus constituem o ponto de contacto entre o veículo
+        e a estrada. Por isso, o seu estado deve ser verificado
+        regularmente.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          Um pneu pode parecer visualmente em boas condições e,
+          ainda assim, apresentar problemas de pressão, desgaste,
+          danos internos ou envelhecimento. A inspecção deve ser
+          completa.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.2 Funções das rodas e pneus</h2>
+
+      <ul>
+
+        <li>Suportar o peso do veículo;</li>
+
+        <li>Transmitir forças de tracção e travagem;</li>
+
+        <li>Permitir a direcção do veículo;</li>
+
+        <li>Absorver parte das irregularidades da estrada;</li>
+
+        <li>Contribuir para a estabilidade;</li>
+
+        <li>Garantir contacto adequado com a estrada.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.3 Principais componentes</h2>
+
+      <ul>
+
+        <li>Pneu;</li>
+
+        <li>Jante;</li>
+
+        <li>Válvula;</li>
+
+        <li>Cubo da roda;</li>
+
+        <li>Rolamento da roda;</li>
+
+        <li>Porcas ou parafusos de roda;</li>
+
+        <li>Sensores TPMS, quando equipados.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — CONJUNTO DA RODA</strong>
+
+        <p>
+          Inserir posteriormente uma vista explodida 3D mostrando:
+        </p>
+
+        <p>
+          pneu → jante → válvula → cubo → rolamento →
+          fixadores da roda.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.4 Identificação de um pneu</h2>
+
+      <p>
+        As informações gravadas na lateral do pneu permitem
+        identificar dimensões e características importantes.
+      </p>
+
+      <p>
+        Um exemplo comum de marcação é:
+      </p>
+
+      <div class="procedimento">
+
+        <strong>205/55 R16 91V</strong>
+
+        <ul>
+
+          <li><strong>205</strong> — largura nominal do pneu em milímetros;</li>
+
+          <li><strong>55</strong> — relação de aspecto;</li>
+
+          <li><strong>R</strong> — construção radial;</li>
+
+          <li><strong>16</strong> — diâmetro nominal da jante em polegadas;</li>
+
+          <li><strong>91</strong> — índice de carga;</li>
+
+          <li><strong>V</strong> — símbolo de velocidade.</li>
+
+        </ul>
+
+      </div>
+
+      <div class="alerta">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          A dimensão correcta deve ser confirmada na documentação
+          do veículo. Não se deve escolher um pneu apenas pela
+          aparência ou pelo tamanho da jante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.5 Pressão dos pneus</h2>
+
+      <p>
+        A pressão correcta é essencial para o comportamento do
+        veículo e para o desgaste adequado do pneu.
+      </p>
+
+      <h3>Uma pressão incorrecta pode contribuir para:</h3>
+
+      <ul>
+
+        <li>Desgaste irregular;</li>
+
+        <li>Alteração da estabilidade;</li>
+
+        <li>Aumento da resistência ao rolamento;</li>
+
+        <li>Alteração do comportamento durante a travagem;</li>
+
+        <li>Aquecimento anormal do pneu.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>📌 Onde encontrar a pressão correcta?</strong>
+
+        <p>
+          A pressão recomendada deve ser consultada na informação
+          fornecida pelo fabricante do veículo, normalmente em
+          etiqueta própria ou no manual do proprietário.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.6 Verificação da pressão</h2>
+
+      <ol>
+
+        <li>Confirmar a pressão recomendada;</li>
+
+        <li>Utilizar um manómetro adequado;</li>
+
+        <li>Verificar os pneus preferencialmente conforme a condição
+            indicada pelo fabricante;</li>
+
+        <li>Medir a pressão de cada pneu;</li>
+
+        <li>Ajustar quando necessário;</li>
+
+        <li>Verificar novamente;</li>
+
+        <li>Recolocar correctamente as tampas das válvulas.</li>
+
+      </ol>
+
+      <div class="alerta">
+
+        <strong>⚠️ Atenção:</strong>
+
+        <p>
+          Não utilizar automaticamente a pressão máxima indicada na
+          parede lateral do pneu como sendo a pressão recomendada
+          para utilização normal. São informações diferentes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.7 Inspecção visual dos pneus</h2>
+
+      <p>
+        Antes de utilizar o veículo, deve-se observar o estado
+        geral dos pneus.
+      </p>
+
+      <h3>Procurar:</h3>
+
+      <ul>
+
+        <li>Cortes;</li>
+
+        <li>Fissuras;</li>
+
+        <li>Protuberâncias;</li>
+
+        <li>Pregos ou outros objectos;</li>
+
+        <li>Desgaste irregular;</li>
+
+        <li>Desgaste excessivo;</li>
+
+        <li>Deformações;</li>
+
+        <li>Danos no flanco.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO</strong>
+
+        <p>
+          Uma protuberância ou deformação anormal no flanco pode
+          indicar dano estrutural. Não continuar a utilizar o pneu
+          sem avaliação adequada.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.8 Profundidade do piso</h2>
+
+      <p>
+        O piso do pneu possui sulcos destinados, entre outras
+        funções, a ajudar na evacuação de água.
+      </p>
+
+      <p>
+        O desgaste deve ser acompanhado através dos indicadores
+        existentes no próprio pneu e, quando necessário, através
+        de um medidor de profundidade.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Desgaste uniforme;</li>
+
+        <li>Indicadores de desgaste;</li>
+
+        <li>Diferenças entre pneus do mesmo eixo;</li>
+
+        <li>Desgaste nos ombros;</li>
+
+        <li>Desgaste no centro.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.9 Desgaste irregular</h2>
+
+      <p>
+        O padrão de desgaste pode fornecer pistas para o diagnóstico
+        de problemas de pressão, alinhamento, suspensão ou outros
+        componentes.
+      </p>
+
+      <h3>Exemplos:</h3>
+
+      <ul>
+
+        <li>
+          <strong>Desgaste no centro:</strong>
+          pode estar relacionado com pressão excessiva, dependendo
+          das condições e do tipo de pneu.
+        </li>
+
+        <li>
+          <strong>Desgaste nos dois ombros:</strong>
+          pode estar relacionado com pressão insuficiente.
+        </li>
+
+        <li>
+          <strong>Desgaste num só lado:</strong>
+          pode indicar problemas de geometria/alinhamento ou outros
+          problemas do veículo.
+        </li>
+
+        <li>
+          <strong>Desgaste em padrões irregulares:</strong>
+          pode estar relacionado com equilíbrio, suspensão,
+          alinhamento ou outros factores.
+        </li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>💡 Diagnóstico:</strong>
+
+        <p>
+          O padrão do desgaste é apenas uma pista. É necessário
+          verificar o veículo antes de determinar a causa.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.10 Jantes</h2>
+
+      <p>
+        A jante suporta o pneu e liga o conjunto ao cubo da roda.
+      </p>
+
+      <h3>Inspeccionar:</h3>
+
+      <ul>
+
+        <li>Fissuras;</li>
+
+        <li>Deformações;</li>
+
+        <li>Corrosão;</li>
+
+        <li>Danos no aro;</li>
+
+        <li>Assentamento do pneu;</li>
+
+        <li>Furos de fixação;</li>
+
+        <li>Superfície de contacto com o cubo.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.11 Parafusos e porcas das rodas</h2>
+
+      <p>
+        Os elementos de fixação devem manter a roda correctamente
+        presa ao cubo.
+      </p>
+
+      <div class="procedimento">
+
+        <h3>Durante a montagem:</h3>
+
+        <ol>
+
+          <li>Limpar adequadamente as superfícies de contacto;</li>
+
+          <li>Posicionar correctamente a roda;</li>
+
+          <li>Instalar os fixadores manualmente;</li>
+
+          <li>Apertar inicialmente em sequência apropriada;</li>
+
+          <li>Baixar o veículo conforme o procedimento;</li>
+
+          <li>Aplicar o torque especificado pelo fabricante
+              utilizando uma chave dinamométrica.</li>
+
+        </ol>
+
+      </div>
+
+      <div class="perigo">
+
+        <strong>🚨 IMPORTANTE</strong>
+
+        <p>
+          O torque de aperto não deve ser adivinhado. Utilizar sempre
+          o valor especificado para aquele veículo, jante e fixador.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.12 Equilíbrio das rodas</h2>
+
+      <p>
+        O equilíbrio adequado ajuda a reduzir vibrações durante
+        o movimento do veículo.
+      </p>
+
+      <p>
+        Quando existe vibração relacionada com a velocidade,
+        deve-se investigar o conjunto roda/pneu e também outros
+        componentes que possam produzir sintomas semelhantes.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.13 Alinhamento das rodas</h2>
+
+      <p>
+        A geometria das rodas influencia o comportamento do veículo,
+        o desgaste dos pneus e a estabilidade direccional.
+      </p>
+
+      <p>
+        Entre os principais ângulos de geometria encontram-se:
+      </p>
+
+      <ul>
+
+        <li>Convergência (toe);</li>
+
+        <li>Camber;</li>
+
+        <li>Caster.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — GEOMETRIA DA DIRECÇÃO</strong>
+
+        <p>
+          Inserir posteriormente uma ilustração 3D explicando
+          toe, camber e caster.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.14 Rotação dos pneus</h2>
+
+      <p>
+        Alguns veículos permitem a rotação dos pneus para ajudar
+        a controlar diferenças de desgaste.
+      </p>
+
+      <p>
+        A sequência de rotação depende do tipo de pneu, sistema de
+        tracção e recomendação do fabricante.
+      </p>
+
+      <div class="alerta">
+
+        <strong>📌 Atenção:</strong>
+
+        <p>
+          Pneus direccionais e algumas configurações específicas
+          não devem ser trocados de posição de qualquer maneira.
+          Seguir sempre as marcações e recomendações aplicáveis.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.15 Sistema TPMS</h2>
+
+      <p>
+        Alguns veículos estão equipados com TPMS (Tyre Pressure
+        Monitoring System), sistema destinado a monitorizar a
+        pressão dos pneus.
+      </p>
+
+      <p>
+        Dependendo do projecto, o sistema pode utilizar sensores
+        instalados nas rodas ou calcular alterações indirectamente
+        através dos sensores de velocidade das rodas.
+      </p>
+
+      <h3>Quando a luz TPMS acende:</h3>
+
+      <ol>
+
+        <li>Verificar a pressão dos pneus;</li>
+
+        <li>Inspeccionar possíveis danos;</li>
+
+        <li>Corrigir a pressão conforme especificação;</li>
+
+        <li>Realizar o procedimento de reinicialização quando exigido;</li>
+
+        <li>Se a luz continuar acesa, realizar diagnóstico.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.16 Rolamento da roda</h2>
+
+      <p>
+        O rolamento permite que a roda gire com baixo atrito.
+      </p>
+
+      <h3>Sinais possíveis de problema:</h3>
+
+      <ul>
+
+        <li>Ruído crescente com a velocidade;</li>
+
+        <li>Folga anormal;</li>
+
+        <li>Vibração;</li>
+
+        <li>Ruído durante curvas, dependendo da falha.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Diagnóstico:</strong>
+
+        <p>
+          Ruídos provenientes da zona das rodas podem ter várias
+          origens. Não substituir um rolamento sem confirmar a causa.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.17 Procedimento de remoção da roda</h2>
+
+      <div class="procedimento">
+
+        <ol>
+
+          <li>Estacionar o veículo numa superfície segura;</li>
+
+          <li>Aplicar o travão de estacionamento;</li>
+
+          <li>Seleccionar a posição adequada da transmissão;</li>
+
+          <li>Afrouxar os fixadores antes de levantar o veículo,
+              quando apropriado;</li>
+
+          <li>Levantar o veículo nos pontos de elevação indicados;</li>
+
+          <li>Instalar cavaletes adequados;</li>
+
+          <li>Remover os fixadores;</li>
+
+          <li>Retirar a roda cuidadosamente.</li>
+
+        </ol>
+
+      </div>
+
+      <div class="perigo">
+
+        <strong>🚨 SEGURANÇA</strong>
+
+        <p>
+          Nunca trabalhar debaixo de um veículo sustentado apenas
+          pelo macaco. Utilizar suportes/cavaletes adequados.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.18 Procedimento de montagem da roda</h2>
+
+      <ol>
+
+        <li>Limpar a superfície de contacto conforme apropriado;</li>
+
+        <li>Posicionar correctamente a roda;</li>
+
+        <li>Instalar os fixadores;</li>
+
+        <li>Apertar inicialmente à mão;</li>
+
+        <li>Aplicar o aperto inicial em sequência cruzada quando aplicável;</li>
+
+        <li>Baixar o veículo de acordo com o procedimento;</li>
+
+        <li>Aplicar o torque especificado pelo fabricante;</li>
+
+        <li>Verificar a pressão do pneu;</li>
+
+        <li>Confirmar que a roda está correctamente instalada.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.19 Diagnóstico de vibração</h2>
+
+      <p>
+        Uma vibração durante a condução pode ter diversas causas.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Equilíbrio da roda;</li>
+
+        <li>Estado do pneu;</li>
+
+        <li>Deformação da jante;</li>
+
+        <li>Fixação da roda;</li>
+
+        <li>Rolamento;</li>
+
+        <li>Componentes da suspensão;</li>
+
+        <li>Componentes da direcção;</li>
+
+        <li>Alinhamento.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.20 Segurança dos pneus</h2>
+
+      <div class="perigo">
+
+        <strong>🚨 NUNCA IGNORAR:</strong>
+
+        <ul>
+
+          <li>Pneu com bolha;</li>
+
+          <li>Fissura profunda;</li>
+
+          <li>Dano estrutural;</li>
+
+          <li>Desgaste excessivo;</li>
+
+          <li>Pneu com pressão anormal;</li>
+
+          <li>Objecto penetrado que possa causar perda de pressão.</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.21 Erros comuns</h2>
+
+      <ul>
+
+        <li>Usar pressão incorrecta;</li>
+
+        <li>Ignorar desgaste irregular;</li>
+
+        <li>Não verificar a válvula;</li>
+
+        <li>Utilizar pneus incompatíveis;</li>
+
+        <li>Não respeitar o sentido de rotação;</li>
+
+        <li>Apertar os parafusos sem torque especificado;</li>
+
+        <li>Trabalhar sob o veículo apenas com o macaco;</li>
+
+        <li>Ignorar vibrações;</li>
+
+        <li>Continuar a utilizar um pneu danificado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.22 Checklist de rodas e pneus</h2>
+
+      <ul>
+
+        <li>☐ Pressão dos pneus verificada;</li>
+
+        <li>☐ Estado do piso verificado;</li>
+
+        <li>☐ Profundidade do piso verificada;</li>
+
+        <li>☐ Flancos inspeccionados;</li>
+
+        <li>☐ Cortes e fissuras verificados;</li>
+
+        <li>☐ Jantes inspeccionadas;</li>
+
+        <li>☐ Válvulas verificadas;</li>
+
+        <li>☐ Fixadores inspeccionados;</li>
+
+        <li>☐ Torque de aperto confirmado;</li>
+
+        <li>☐ Equilíbrio verificado quando necessário;</li>
+
+        <li>☐ Alinhamento verificado quando necessário;</li>
+
+        <li>☐ TPMS verificado quando equipado;</li>
+
+        <li>☐ Rolamentos verificados quando necessário;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>10.23 Conclusão</h2>
+
+      <p>
+        A manutenção correcta das rodas e pneus é essencial para
+        garantir contacto adequado com a estrada, estabilidade,
+        travagem e segurança.
+      </p>
+
+      <p>
+        A inspecção deve incluir pressão, desgaste, danos, fixação,
+        geometria e condição geral do conjunto.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Bosch Mobility — documentação técnica sobre sistemas
+          de rodas, pneus, sensores e sistemas de segurança.
+        </p>
+
+        <p>
+          Automotive Service Excellence (ASE) —
+          materiais de estudo e diagnóstico automóvel.
+        </p>
+
+        <p>
+          U.S. National Highway Traffic Safety Administration (NHTSA) —
+          informações de segurança relacionadas com pneus e veículos.
+        </p>
+
+        <p>
+          Para pressão, dimensões, índice de carga, velocidade,
+          torque dos fixadores e procedimentos específicos,
+          consultar sempre o manual do fabricante do veículo e
+          a informação oficial do pneu.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
