@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 16 — Sistema de lubrificação do motor | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🛢️</div>
+
+    <h2>Capítulo 16 — Sistema de lubrificação do motor</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Funcionamento, componentes, manutenção,
+      diagnóstico e segurança.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.1 Introdução</h2>
+
+    <p>
+      O sistema de lubrificação é responsável por fornecer óleo às
+      partes internas do motor que necessitam de lubrificação.
+      O óleo reduz o atrito e ajuda a controlar o desgaste e a
+      temperatura de diversos componentes.
+    </p>
+
+    <p>
+      Além da lubrificação, o óleo do motor também pode contribuir
+      para a limpeza interna, protecção contra corrosão e remoção
+      de calor, dependendo do projecto do motor e das características
+      do lubrificante.
+    </p>
+
+    <div class="info">
+      <strong>📌 Conceito fundamental:</strong>
+      <p>
+        A lubrificação correcta depende não apenas do nível de óleo,
+        mas também da especificação, viscosidade, qualidade e condição
+        do lubrificante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.2 Funções do óleo do motor</h2>
+
+    <ul>
+      <li>Reduzir o atrito entre superfícies móveis;</li>
+      <li>Reduzir o desgaste dos componentes;</li>
+      <li>Transportar calor;</li>
+      <li>Manter contaminantes em suspensão para serem removidos pelo filtro;</li>
+      <li>Ajudar na protecção contra corrosão;</li>
+      <li>Contribuir para a vedação entre determinados componentes;</li>
+      <li>Proteger componentes durante o funcionamento.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.3 Principais componentes</h2>
+
+    <ul>
+      <li>Cárter de óleo;</li>
+      <li>Bomba de óleo;</li>
+      <li>Pescador ou tubo de captação;</li>
+      <li>Filtro de óleo;</li>
+      <li>Galerias de lubrificação;</li>
+      <li>Válvulas de controlo de pressão, quando aplicáveis;</li>
+      <li>Sensor ou interruptor de pressão;</li>
+      <li>Vareta de nível, quando existente;</li>
+      <li>Tampão de enchimento;</li>
+      <li>Radiador ou permutador de calor do óleo, quando equipado.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — CIRCUITO DE LUBRIFICAÇÃO</strong>
+      <p>
+        Mostrar posteriormente o percurso:
+        cárter → pescador → bomba de óleo → filtro →
+        galerias → componentes internos → retorno ao cárter.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.4 Cárter</h2>
+
+    <p>
+      O cárter funciona como reservatório de óleo em muitos motores.
+      O óleo retorna para o cárter depois de circular pelo motor.
+    </p>
+
+    <h3>Inspecionar:</h3>
+
+    <ul>
+      <li>Fugas;</li>
+      <li>Danos ou deformações;</li>
+      <li>Estado da junta ou vedante;</li>
+      <li>Tampão de drenagem;</li>
+      <li>Rosca do tampão;</li>
+      <li>Presença de óleo ou sujidade acumulada.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.5 Bomba de óleo</h2>
+
+    <p>
+      A bomba de óleo cria o fluxo necessário para fazer circular
+      o lubrificante pelo sistema.
+    </p>
+
+    <p>
+      Existem diferentes tipos de bombas, dependendo do projecto
+      do motor.
+    </p>
+
+    <h3>Possíveis problemas:</h3>
+
+    <ul>
+      <li>Desgaste interno;</li>
+      <li>Problemas de accionamento;</li>
+      <li>Obstrução da captação;</li>
+      <li>Pressão de óleo insuficiente;</li>
+      <li>Fugas internas ou externas.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.6 Filtro de óleo</h2>
+
+    <p>
+      O filtro remove partículas e contaminantes presentes no óleo,
+      ajudando a proteger os componentes internos do motor.
+    </p>
+
+    <h3>Durante a substituição:</h3>
+
+    <ol>
+      <li>Confirmar o filtro correcto;</li>
+      <li>Remover o filtro antigo;</li>
+      <li>Verificar a superfície de montagem;</li>
+      <li>Confirmar o estado do vedante;</li>
+      <li>Instalar o novo filtro conforme o procedimento;</li>
+      <li>Aplicar o torque especificado quando aplicável;</li>
+      <li>Verificar fugas após o arranque.</li>
+    </ol>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        O método de instalação e o torque devem ser confirmados
+        na documentação técnica do fabricante ou nas instruções
+        do fabricante do filtro.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.7 Vareta de nível</h2>
+
+    <p>
+      Quando o motor possui vareta, ela permite verificar o nível
+      de óleo de acordo com o procedimento indicado pelo fabricante.
+    </p>
+
+    <h3>Procedimento geral:</h3>
+
+    <ol>
+      <li>Estacionar o veículo numa superfície adequada;</li>
+      <li>Seguir o procedimento do fabricante para medição;</li>
+      <li>Retirar a vareta;</li>
+      <li>Limpar a vareta;</li>
+      <li>Voltar a introduzi-la correctamente;</li>
+      <li>Retirar novamente;</li>
+      <li>Verificar o nível;</li>
+      <li>Adicionar óleo somente se necessário e conforme especificação.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.8 Escolha do óleo</h2>
+
+    <p>
+      O óleo deve ser escolhido de acordo com a especificação
+      estabelecida para o motor.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Viscosidade SAE;</li>
+      <li>Classificação de desempenho;</li>
+      <li>Normas exigidas pelo fabricante;</li>
+      <li>Tipo de motor;</li>
+      <li>Condições de utilização;</li>
+      <li>Intervalo de substituição.</li>
+    </ul>
+
+    <div class="perigo">
+      <strong>🚨 IMPORTANTE</strong>
+      <p>
+        Não escolher o óleo apenas pela viscosidade. A especificação
+        completa exigida pelo fabricante deve ser respeitada.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.9 Pressão do óleo</h2>
+
+    <p>
+      A pressão do óleo é um parâmetro importante para avaliar
+      o funcionamento do sistema de lubrificação.
+    </p>
+
+    <p>
+      Uma pressão demasiado baixa ou anormalmente elevada pode
+      indicar problemas que exigem diagnóstico.
+    </p>
+
+    <h3>Possíveis causas de pressão baixa:</h3>
+
+    <ul>
+      <li>Nível de óleo insuficiente;</li>
+      <li>Óleo inadequado;</li>
+      <li>Óleo degradado;</li>
+      <li>Filtro ou captação obstruídos;</li>
+      <li>Desgaste da bomba;</li>
+      <li>Desgaste interno do motor;</li>
+      <li>Problemas em válvulas de controlo.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.10 Luz de pressão do óleo</h2>
+
+    <p>
+      Uma luz de aviso de pressão do óleo acesa durante o funcionamento
+      do motor deve ser tratada como uma situação que necessita de
+      investigação imediata.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 NÃO IGNORAR</strong>
+      <p>
+        Continuar a utilizar o motor com pressão de óleo insuficiente
+        pode provocar danos graves nos componentes internos.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.11 Diagnóstico da pressão de óleo</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Confirmar o sintoma;</li>
+        <li>Verificar o nível do óleo;</li>
+        <li>Confirmar a especificação do óleo;</li>
+        <li>Inspeccionar possíveis fugas;</li>
+        <li>Verificar o sensor ou interruptor;</li>
+        <li>Utilizar equipamento de medição adequado quando necessário;</li>
+        <li>Comparar a pressão medida com a especificação do fabricante;</li>
+        <li>Investigar a causa se o valor estiver fora da especificação.</li>
+      </ol>
+    </div>
+
+    <div class="alerta">
+      <strong>⚠️ Nota técnica:</strong>
+      <p>
+        Não utilizar um valor universal de pressão de óleo.
+        A pressão correcta depende do motor e das condições
+        de funcionamento. Consultar sempre a documentação técnica.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.12 Contaminação do óleo</h2>
+
+    <p>
+      O óleo pode acumular partículas, combustível, água, líquido
+      de arrefecimento e outros contaminantes quando existe uma
+      condição anormal ou manutenção inadequada.
+    </p>
+
+    <h3>Observar:</h3>
+
+    <ul>
+      <li>Alteração anormal do aspecto;</li>
+      <li>Cheiro forte a combustível;</li>
+      <li>Presença de partículas;</li>
+      <li>Formação anormal de emulsão;</li>
+      <li>Aumento ou redução inexplicável do nível.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.13 Fugas de óleo</h2>
+
+    <p>
+      As fugas podem ocorrer em diferentes pontos do motor e devem
+      ser localizadas antes da reparação.
+    </p>
+
+    <h3>Pontos possíveis:</h3>
+
+    <ul>
+      <li>Junta do cárter;</li>
+      <li>Tampão de drenagem;</li>
+      <li>Filtro de óleo;</li>
+      <li>Retentores;</li>
+      <li>Juntas;</li>
+      <li>Tampa das válvulas;</li>
+      <li>Carcaças e permutadores;</li>
+      <li>Linhas externas de óleo, quando existentes.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.14 Substituição do óleo e filtro</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Consultar o manual do veículo;</li>
+        <li>Confirmar o óleo e filtro correctos;</li>
+        <li>Preparar recipiente adequado para o óleo usado;</li>
+        <li>Colocar o veículo de forma segura;</li>
+        <li>Drenar o óleo conforme o procedimento do fabricante;</li>
+        <li>Remover o filtro antigo;</li>
+        <li>Inspeccionar a área de montagem;</li>
+        <li>Instalar o filtro novo;</li>
+        <li>Instalar correctamente o tampão de drenagem;</li>
+        <li>Adicionar a quantidade e especificação correctas;</li>
+        <li>Verificar o nível;</li>
+        <li>Verificar fugas;</li>
+        <li>Realizar a verificação final.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.15 Capacidade de óleo</h2>
+
+    <p>
+      A quantidade de óleo varia de acordo com o motor, modelo,
+      filtro utilizado e procedimento de drenagem.
+    </p>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Não utilizar uma capacidade genérica. Consultar a documentação
+        oficial do fabricante e confirmar o nível através do método
+        especificado.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.16 Manutenção preventiva</h2>
+
+    <ul>
+      <li>Verificar regularmente o nível;</li>
+      <li>Utilizar o óleo especificado;</li>
+      <li>Substituir óleo e filtro nos intervalos previstos;</li>
+      <li>Inspeccionar fugas;</li>
+      <li>Observar luzes de aviso;</li>
+      <li>Investigar consumo excessivo;</li>
+      <li>Manter registos de manutenção.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.17 Consumo excessivo de óleo</h2>
+
+    <p>
+      Um aumento anormal do consumo de óleo deve ser investigado.
+    </p>
+
+    <h3>Possíveis áreas de investigação:</h3>
+
+    <ul>
+      <li>Fugas externas;</li>
+      <li>Ventilação do cárter;</li>
+      <li>Retentores;</li>
+      <li>Segmentos;</li>
+      <li>Guias e vedantes de válvulas;</li>
+      <li>Turboalimentador, quando equipado.</li>
+    </ul>
+
+    <p>
+      O diagnóstico deve seguir os procedimentos e limites definidos
+      para o motor específico.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.18 Erros comuns</h2>
+
+    <ul>
+      <li>Utilizar óleo de especificação incorrecta;</li>
+      <li>Exceder o nível máximo;</li>
+      <li>Trabalhar com nível abaixo do mínimo;</li>
+      <li>Ignorar a luz de pressão do óleo;</li>
+      <li>Instalar incorrectamente o filtro;</li>
+      <li>Não substituir o vedante quando necessário;</li>
+      <li>Não verificar fugas após a manutenção;</li>
+      <li>Não respeitar o intervalo de manutenção.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.19 Segurança e ambiente</h2>
+
+    <div class="perigo">
+      <strong>🚨 SEGURANÇA</strong>
+      <p>
+        O óleo usado pode estar quente. Utilizar equipamento de
+        protecção adequado e evitar contacto prolongado com a pele.
+      </p>
+    </div>
+
+    <p>
+      O óleo usado não deve ser lançado no solo, em cursos de água
+      ou no sistema comum de esgoto. Deve ser recolhido e encaminhado
+      para tratamento ou reciclagem através de um sistema apropriado.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.20 Checklist do sistema de lubrificação</h2>
+
+    <ul>
+      <li>☐ Nível do óleo verificado;</li>
+      <li>☐ Especificação confirmada;</li>
+      <li>☐ Estado do óleo observado;</li>
+      <li>☐ Fugas verificadas;</li>
+      <li>☐ Filtro inspeccionado/substituído;</li>
+      <li>☐ Tampão de drenagem verificado;</li>
+      <li>☐ Bomba de óleo considerada no diagnóstico;</li>
+      <li>☐ Pressão verificada quando necessário;</li>
+      <li>☐ Sensor/interruptor verificado quando necessário;</li>
+      <li>☐ Capacidade confirmada;</li>
+      <li>☐ Nível final confirmado;</li>
+      <li>☐ Fugas verificadas após manutenção;</li>
+      <li>☐ Óleo usado recolhido correctamente;</li>
+      <li>☐ Manutenção registada.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>16.21 Conclusão</h2>
+
+    <p>
+      O sistema de lubrificação é essencial para a protecção e
+      funcionamento adequado do motor. A manutenção correcta depende
+      da utilização do lubrificante adequado, do controlo do nível,
+      da substituição do filtro e da identificação rápida de problemas
+      de pressão ou fugas.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre motores,
+        lubrificação e componentes automóveis.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — normas e referências técnicas relacionadas
+        com classificação de viscosidade e lubrificantes automóveis.
+      </p>
+
+      <p>
+        Para viscosidade, especificação do óleo, capacidade, pressão,
+        intervalos de manutenção e torques, consultar sempre o manual
+        de serviço oficial do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+</html>
