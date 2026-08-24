@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 5 — Manutenção preventiva automóvel | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .manutencao-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="manutencao-icon">
+        🔧
+      </div>
+
+      <h2>
+        Capítulo 5 — Manutenção preventiva automóvel
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.1 Objectivo do capítulo</h2>
+
+      <p>
+        A manutenção preventiva consiste na realização planeada de
+        verificações, inspecções, ajustes, substituições e outros
+        serviços destinados a manter o veículo em condições adequadas
+        de funcionamento e segurança.
+      </p>
+
+      <p>
+        O objectivo não é apenas corrigir uma avaria depois de ela
+        acontecer, mas identificar sinais de desgaste ou problemas
+        antes que provoquem uma falha mais grave.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Princípio fundamental:</strong>
+
+        <p>
+          A manutenção deve seguir as recomendações técnicas do
+          fabricante, as condições reais de utilização do veículo
+          e os requisitos de segurança aplicáveis.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.2 Manutenção preventiva, correctiva e preditiva</h2>
+
+      <h3>Manutenção preventiva</h3>
+
+      <p>
+        É realizada antes da ocorrência de uma falha, com base em
+        intervalos de tempo, quilometragem, condições de utilização
+        ou outros critérios técnicos.
+      </p>
+
+      <h3>Manutenção correctiva</h3>
+
+      <p>
+        É realizada depois de uma falha ou quando um componente já
+        apresenta uma condição que exige reparação ou substituição.
+      </p>
+
+      <h3>Manutenção preditiva</h3>
+
+      <p>
+        Utiliza informações sobre o estado do componente para avaliar
+        a sua condição e apoiar a decisão sobre quando realizar uma
+        intervenção.
+      </p>
+
+      <div class="procedimento">
+
+        <strong>Exemplo:</strong>
+
+        <p>
+          Uma inspecção visual periódica pode identificar desgaste
+          de um pneu antes de ocorrer uma falha. Já uma análise de
+          vibração ou de outros parâmetros pode ajudar a identificar
+          alterações no funcionamento de determinados componentes.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.3 Manual do fabricante</h2>
+
+      <p>
+        O manual do proprietário e a documentação técnica do fabricante
+        devem ser considerados referências fundamentais para a manutenção
+        de cada veículo.
+      </p>
+
+      <p>
+        Os intervalos de manutenção, tipos de óleo, capacidades,
+        especificações de fluidos, folgas, torques de aperto e
+        procedimentos podem variar significativamente entre marcas,
+        modelos, motores e anos de fabrico.
+      </p>
+
+      <div class="perigo">
+
+        <strong>⚠️ ATENÇÃO</strong>
+
+        <p>
+          Não utilizar um valor genérico de torque, capacidade de
+          fluido ou intervalo de substituição quando o fabricante
+          fornece uma especificação própria para o veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.4 Plano de manutenção</h2>
+
+      <p>
+        Um plano de manutenção deve organizar as tarefas que precisam
+        de ser realizadas e permitir acompanhar o histórico do veículo.
+      </p>
+
+      <ol>
+
+        <li>Identificar marca, modelo e ano do veículo;</li>
+
+        <li>Identificar o motor e a versão;</li>
+
+        <li>Consultar a documentação técnica;</li>
+
+        <li>Registar a quilometragem actual;</li>
+
+        <li>Identificar as tarefas previstas;</li>
+
+        <li>Verificar o estado dos componentes;</li>
+
+        <li>Registar os serviços realizados;</li>
+
+        <li>Definir a próxima verificação de acordo com a documentação aplicável.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.5 Inspecção visual geral</h2>
+
+      <p>
+        A inspecção visual é uma das primeiras etapas de uma manutenção.
+        Pode revelar sinais de desgaste, fugas, danos ou componentes
+        fora da posição normal.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Fugas de óleo;</li>
+
+        <li>Fugas de combustível;</li>
+
+        <li>Fugas de líquido de arrefecimento;</li>
+
+        <li>Estado das mangueiras;</li>
+
+        <li>Estado das correias;</li>
+
+        <li>Cabos e conectores;</li>
+
+        <li>Pneus;</li>
+
+        <li>Componentes da suspensão;</li>
+
+        <li>Componentes dos travões;</li>
+
+        <li>Iluminação exterior.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.6 Verificação dos níveis de fluidos</h2>
+
+      <p>
+        Os fluidos desempenham funções importantes na lubrificação,
+        arrefecimento, transmissão de energia e funcionamento de
+        diversos sistemas.
+      </p>
+
+      <h3>Entre os principais estão:</h3>
+
+      <ul>
+
+        <li>Óleo do motor;</li>
+
+        <li>Líquido de arrefecimento;</li>
+
+        <li>Fluido de travões;</li>
+
+        <li>Fluido da direcção assistida, quando aplicável;</li>
+
+        <li>Fluido da transmissão, quando aplicável;</li>
+
+        <li>Líquido do limpa-vidros.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          O nível deve ser verificado segundo o procedimento indicado
+          pelo fabricante. Alguns sistemas exigem condições específicas
+          de temperatura ou posição do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.7 Óleo do motor</h2>
+
+      <p>
+        O óleo do motor reduz o atrito entre componentes móveis,
+        contribui para o controlo da temperatura e ajuda a manter
+        as superfícies internas protegidas contra desgaste.
+      </p>
+
+      <h3>Durante a manutenção verificar:</h3>
+
+      <ul>
+
+        <li>Nível do óleo;</li>
+
+        <li>Estado aparente do óleo;</li>
+
+        <li>Existência de fugas;</li>
+
+        <li>Estado do filtro;</li>
+
+        <li>Especificação recomendada pelo fabricante.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>⚠️ Nunca escolher o óleo apenas pela aparência.</strong>
+
+        <p>
+          A viscosidade e a especificação exigida devem ser confirmadas
+          na documentação do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.8 Sistema de arrefecimento</h2>
+
+      <p>
+        O sistema de arrefecimento ajuda a manter o motor dentro da
+        faixa de temperatura prevista para o seu funcionamento.
+      </p>
+
+      <ul>
+
+        <li>Verificar o nível do líquido;</li>
+
+        <li>Observar sinais de fuga;</li>
+
+        <li>Inspeccionar mangueiras;</li>
+
+        <li>Verificar o radiador;</li>
+
+        <li>Observar o estado das abraçadeiras;</li>
+
+        <li>Verificar sinais de sobreaquecimento.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🔥 PERIGO DE QUEIMADURA</strong>
+
+        <p>
+          Não abrir o sistema de arrefecimento enquanto estiver
+          quente e sob pressão. Seguir sempre o procedimento do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.9 Bateria e sistema de carregamento</h2>
+
+      <p>
+        A bateria fornece energia eléctrica para o arranque e para
+        vários sistemas do veículo, enquanto o sistema de carregamento
+        mantém a energia disponível durante o funcionamento.
+      </p>
+
+      <ul>
+
+        <li>Verificar o estado visual da bateria;</li>
+
+        <li>Verificar terminais e ligações;</li>
+
+        <li>Procurar sinais de corrosão;</li>
+
+        <li>Verificar fixação;</li>
+
+        <li>Testar a bateria quando necessário;</li>
+
+        <li>Investigar sinais de dificuldade no arranque.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.10 Correias e elementos de accionamento</h2>
+
+      <p>
+        Correias e outros elementos de accionamento devem ser
+        inspeccionados de acordo com as recomendações do fabricante.
+      </p>
+
+      <p>
+        Procurar sinais como desgaste, fissuras, contaminação,
+        danos, ruído anormal ou desalinhamento.
+      </p>
+
+      <div class="alerta">
+
+        <strong>⚠️ Atenção:</strong>
+
+        <p>
+          O aspecto exterior de uma correia não é, por si só,
+          suficiente para determinar a sua vida útil. Devem ser
+          seguidos os critérios e intervalos definidos pelo fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.11 Travões</h2>
+
+      <p>
+        O sistema de travagem é um dos principais sistemas de segurança
+        do veículo e deve receber atenção especial durante as inspecções.
+      </p>
+
+      <h3>Verificar, conforme o veículo:</h3>
+
+      <ul>
+
+        <li>Pastilhas;</li>
+
+        <li>Discos;</li>
+
+        <li>Tambores;</li>
+
+        <li>Sapatas;</li>
+
+        <li>Tubagens;</li>
+
+        <li>Mangueiras;</li>
+
+        <li>Fluido de travões;</li>
+
+        <li>Travão de estacionamento;</li>
+
+        <li>Sinais de fuga.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>🚨 IMPORTANTE</strong>
+
+        <p>
+          Qualquer anomalia que possa comprometer a capacidade de
+          travagem deve ser tratada como prioridade de segurança.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.12 Pneus e rodas</h2>
+
+      <p>
+        Os pneus são o principal ponto de contacto entre o veículo
+        e a estrada.
+      </p>
+
+      <ul>
+
+        <li>Verificar pressão;</li>
+
+        <li>Verificar desgaste do piso;</li>
+
+        <li>Procurar cortes e deformações;</li>
+
+        <li>Observar desgaste irregular;</li>
+
+        <li>Verificar a condição das válvulas;</li>
+
+        <li>Verificar a roda quanto a danos visíveis.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>📌 Pressão dos pneus:</strong>
+
+        <p>
+          Utilizar a pressão recomendada pelo fabricante do veículo,
+          normalmente indicada em documentação própria ou numa etiqueta
+          do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.13 Filtros</h2>
+
+      <p>
+        Diferentes filtros protegem os sistemas do veículo contra
+        contaminantes e impurezas.
+      </p>
+
+      <ul>
+
+        <li>Filtro de óleo;</li>
+
+        <li>Filtro de ar do motor;</li>
+
+        <li>Filtro de combustível;</li>
+
+        <li>Filtro do habitáculo;</li>
+
+        <li>Outros filtros específicos do veículo.</li>
+
+      </ul>
+
+      <p>
+        A necessidade de substituição deve seguir o plano de manutenção
+        e as condições de utilização recomendadas pelo fabricante.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.14 Iluminação e sinalização</h2>
+
+      <p>
+        Os sistemas de iluminação e sinalização permitem ao condutor
+        ver e ser visto e comunicam determinadas acções aos outros
+        utilizadores da via.
+      </p>
+
+      <ul>
+
+        <li>Faróis;</li>
+
+        <li>Luzes de presença;</li>
+
+        <li>Luzes de travagem;</li>
+
+        <li>Luzes indicadoras de mudança de direcção;</li>
+
+        <li>Luzes de marcha-atrás;</li>
+
+        <li>Luz de matrícula;</li>
+
+        <li>Outras luzes existentes no veículo.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.15 Suspensão e direcção</h2>
+
+      <p>
+        Durante a manutenção preventiva devem ser procurados sinais
+        de desgaste, folgas, fugas ou danos nos componentes da suspensão
+        e direcção.
+      </p>
+
+      <ul>
+
+        <li>Amortecedores;</li>
+
+        <li>Molas;</li>
+
+        <li>Braços de suspensão;</li>
+
+        <li>Buchas;</li>
+
+        <li>Rótulas;</li>
+
+        <li>Terminais de direcção;</li>
+
+        <li>Componentes de ligação.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.16 Correias, correntes e componentes temporizados</h2>
+
+      <p>
+        Alguns motores utilizam correia de distribuição e outros
+        utilizam corrente de distribuição. A manutenção destes sistemas
+        deve seguir rigorosamente as especificações do fabricante.
+      </p>
+
+      <p>
+        A falha de componentes de sincronização pode provocar danos
+        graves no motor em determinados projectos de motores.
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 NÃO IMPROVISAR</strong>
+
+        <p>
+          Nunca definir o intervalo de substituição ou o procedimento
+          de sincronização sem consultar a documentação específica
+          do motor.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.17 Diagnóstico durante a manutenção preventiva</h2>
+
+      <p>
+        A manutenção preventiva também deve observar sintomas que
+        possam indicar uma falha em desenvolvimento.
+      </p>
+
+      <h3>Exemplos:</h3>
+
+      <ul>
+
+        <li>Ruídos anormais;</li>
+
+        <li>Vibrações;</li>
+
+        <li>Dificuldade no arranque;</li>
+
+        <li>Consumo anormal de combustível;</li>
+
+        <li>Fumo anormal;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Sobreaquecimento;</li>
+
+        <li>Luzes de advertência no painel;</li>
+
+        <li>Fugas de fluidos.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.18 Registo do histórico de manutenção</h2>
+
+      <p>
+        O registo das intervenções permite acompanhar o histórico do
+        veículo e facilita a planificação das próximas operações.
+      </p>
+
+      <h3>Registar:</h3>
+
+      <ul>
+
+        <li>Data;</li>
+
+        <li>Quilometragem;</li>
+
+        <li>Serviço realizado;</li>
+
+        <li>Peças substituídas;</li>
+
+        <li>Fluidos utilizados;</li>
+
+        <li>Observações;</li>
+
+        <li>Próxima intervenção prevista.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.19 Checklist de manutenção preventiva</h2>
+
+      <ul>
+
+        <li>☐ Identificação do veículo confirmada;</li>
+
+        <li>☐ Quilometragem registada;</li>
+
+        <li>☐ Plano do fabricante consultado;</li>
+
+        <li>☐ Inspecção visual realizada;</li>
+
+        <li>☐ Níveis de fluidos verificados;</li>
+
+        <li>☐ Óleo e filtro avaliados;</li>
+
+        <li>☐ Sistema de arrefecimento verificado;</li>
+
+        <li>☐ Bateria inspeccionada;</li>
+
+        <li>☐ Correias verificadas;</li>
+
+        <li>☐ Travões inspeccionados;</li>
+
+        <li>☐ Pneus e rodas verificados;</li>
+
+        <li>☐ Iluminação verificada;</li>
+
+        <li>☐ Suspensão inspeccionada;</li>
+
+        <li>☐ Direcção verificada;</li>
+
+        <li>☐ Luzes de advertência observadas;</li>
+
+        <li>☐ Anomalias registadas;</li>
+
+        <li>☐ Serviço realizado registado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.20 Erros comuns na manutenção preventiva</h2>
+
+      <ul>
+
+        <li>
+          Ignorar o manual do fabricante.
+        </li>
+
+        <li>
+          Utilizar peças ou fluidos sem confirmar a especificação.
+        </li>
+
+        <li>
+          Adiar problemas identificados durante a inspecção.
+        </li>
+
+        <li>
+          Não registar os serviços realizados.
+        </li>
+
+        <li>
+          Utilizar intervalos genéricos para todos os veículos.
+        </li>
+
+        <li>
+          Não considerar as condições reais de utilização.
+        </li>
+
+        <li>
+          Substituir componentes sem confirmar a causa da falha.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>5.21 Conclusão</h2>
+
+      <p>
+        A manutenção preventiva é uma ferramenta essencial para
+        preservar a segurança, a fiabilidade e o desempenho do veículo.
+        O seu sucesso depende de inspecções sistemáticas, utilização
+        correcta de ferramentas e peças, registo das intervenções e,
+        principalmente, cumprimento das especificações do fabricante.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Health and Safety Executive (HSE).
+          <em>Health and safety in motor vehicle repair and associated
+          industries (HSG261)</em>.
+        </p>
+
+        <p>
+          National Highway Traffic Safety Administration (NHTSA).
+          <em>Tire Safety</em>.
+        </p>
+
+        <p>
+          International Organization for Standardization (ISO).
+          ISO 14224:2016 — Petroleum, petrochemical and natural gas
+          industries — Collection and exchange of reliability and
+          maintenance data for equipment.
+        </p>
+
+        <p>
+          Para intervalos, capacidades, torques, tipos de óleo,
+          folgas e procedimentos específicos, consultar sempre o
+          manual de serviço e as especificações oficiais do fabricante
+          do veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
