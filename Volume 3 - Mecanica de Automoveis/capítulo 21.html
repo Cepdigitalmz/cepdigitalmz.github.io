@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 21 — Sistema de arranque | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🔑⚙️🚗</div>
+
+    <h2>Capítulo 21 — Sistema de arranque</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Funcionamento, componentes, diagnóstico,
+      manutenção e reparação do sistema de arranque.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.1 Introdução</h2>
+
+    <p>
+      O sistema de arranque é responsável por fazer o motor de combustão
+      interna girar até que este consiga iniciar o seu próprio funcionamento.
+    </p>
+
+    <p>
+      O sistema utiliza energia eléctrica da bateria para accionar o
+      motor de arranque, que transmite movimento ao motor através do
+      mecanismo de engrenagem apropriado.
+    </p>
+
+    <div class="info">
+      <strong>📌 Conceito fundamental:</strong>
+      <p>
+        O sistema de arranque depende da bateria, dos cabos e massas,
+        do circuito de comando e do motor de arranque. Uma falha em
+        qualquer destes elementos pode impedir o arranque do motor.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.2 Principais componentes</h2>
+
+    <ul>
+      <li>Bateria;</li>
+      <li>Cabos positivo e negativo;</li>
+      <li>Ligações de massa;</li>
+      <li>Interruptor de ignição ou botão de arranque;</li>
+      <li>Relé de arranque, quando utilizado;</li>
+      <li>Solenoide;</li>
+      <li>Motor de arranque;</li>
+      <li>Engrenagem do motor de arranque;</li>
+      <li>Volante do motor ou cremalheira;</li>
+      <li>Módulos electrónicos e sistema de autorização de arranque.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA DE ARRANQUE</strong>
+      <p>
+        Mostrar bateria, cabos, solenoide, motor de arranque,
+        engrenagem e cremalheira do volante do motor,
+        com identificação numerada de cada componente.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.3 Funcionamento básico</h2>
+
+    <ol>
+      <li>O condutor solicita o arranque;</li>
+      <li>O circuito de comando é activado;</li>
+      <li>O solenoide recebe o comando;</li>
+      <li>O mecanismo de accionamento posiciona a engrenagem;</li>
+      <li>O motor eléctrico de arranque começa a girar;</li>
+      <li>A engrenagem transmite movimento ao motor;</li>
+      <li>O motor de combustão começa a funcionar;</li>
+      <li>O sistema de arranque é desligado.</li>
+    </ol>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.4 Bateria e arranque</h2>
+
+    <p>
+      Durante o arranque, o motor de arranque pode exigir uma corrente
+      elevada. Por isso, o estado da bateria e das ligações eléctricas
+      é essencial.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Estado da bateria;</li>
+      <li>Terminais;</li>
+      <li>Cabos;</li>
+      <li>Ligações de massa;</li>
+      <li>Fixação da bateria;</li>
+      <li>Estado de carga conforme o procedimento apropriado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.5 Sintomas de problemas no arranque</h2>
+
+    <ul>
+      <li>O motor não gira;</li>
+      <li>O motor gira lentamente;</li>
+      <li>Ouve-se apenas um clique;</li>
+      <li>O motor de arranque gira mas não engrena;</li>
+      <li>Ruído anormal durante o arranque;</li>
+      <li>Arranque intermitente;</li>
+      <li>O motor gira normalmente mas não entra em funcionamento.</li>
+    </ul>
+
+    <div class="info">
+      <strong>📌 Atenção:</strong>
+      <p>
+        Quando o motor gira normalmente mas não entra em funcionamento,
+        a causa pode estar no combustível, ignição, gestão electrónica,
+        compressão ou outro sistema. Nesse caso, o problema não é
+        necessariamente o motor de arranque.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.6 Diagnóstico: motor não gira</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Confirmar o sintoma;</li>
+        <li>Verificar o estado da bateria;</li>
+        <li>Inspeccionar os terminais;</li>
+        <li>Verificar cabos e massas;</li>
+        <li>Verificar fusíveis e relés quando aplicável;</li>
+        <li>Verificar o circuito de comando;</li>
+        <li>Verificar o solenoide;</li>
+        <li>Verificar a alimentação do motor de arranque;</li>
+        <li>Testar o motor de arranque;</li>
+        <li>Confirmar a causa antes da substituição.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.7 Diagnóstico: arranque lento</h2>
+
+    <p>
+      Um motor que gira lentamente pode apresentar problemas eléctricos
+      ou mecânicos.
+    </p>
+
+    <h3>Possíveis causas:</h3>
+
+    <ul>
+      <li>Bateria com carga insuficiente;</li>
+      <li>Bateria deteriorada;</li>
+      <li>Terminais corroídos;</li>
+      <li>Cabo com resistência excessiva;</li>
+      <li>Massa deficiente;</li>
+      <li>Motor de arranque desgastado;</li>
+      <li>Resistência mecânica anormal do motor.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.8 Clique ao tentar arrancar</h2>
+
+    <p>
+      Um clique durante a tentativa de arranque pode estar relacionado
+      com o circuito de comando ou com a alimentação de potência.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Bateria;</li>
+      <li>Terminais;</li>
+      <li>Cabos;</li>
+      <li>Massa;</li>
+      <li>Solenoide;</li>
+      <li>Motor de arranque;</li>
+      <li>Circuito de comando.</li>
+    </ul>
+
+    <div class="alerta">
+      <strong>⚠️ Não substituir imediatamente o motor de arranque.</strong>
+      <p>
+        Primeiro deve ser determinada a origem do problema através
+        de testes apropriados.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.9 Solenoide</h2>
+
+    <p>
+      O solenoide, dependendo do projecto do veículo, pode desempenhar
+      funções de comando eléctrico e accionamento mecânico do sistema
+      de engrenagem do motor de arranque.
+    </p>
+
+    <h3>Possíveis sintomas:</h3>
+
+    <ul>
+      <li>Clique sem rotação do motor;</li>
+      <li>Arranque intermitente;</li>
+      <li>Falha no accionamento;</li>
+      <li>Engrenagem incorrecta.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.10 Motor de arranque</h2>
+
+    <p>
+      O motor de arranque é um motor eléctrico concebido para fornecer
+      o torque necessário para fazer o motor de combustão girar durante
+      o arranque.
+    </p>
+
+    <h3>Componentes internos possíveis:</h3>
+
+    <ul>
+      <li>Induzido;</li>
+      <li>Escovas;</li>
+      <li>Comutador;</li>
+      <li>Rolamentos ou buchas;</li>
+      <li>Ímanes ou enrolamentos de campo;</li>
+      <li>Redutor, em determinados modelos;</li>
+      <li>Mecanismo de engrenagem;</li>
+      <li>Solenoide.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.11 Engrenagem e cremalheira</h2>
+
+    <p>
+      O motor de arranque transmite o movimento ao motor através de
+      uma engrenagem que engrena com a cremalheira associada ao
+      volante ou flexplate, conforme o projecto do veículo.
+    </p>
+
+    <h3>Inspeccionar:</h3>
+
+    <ul>
+      <li>Dentes danificados;</li>
+      <li>Desgaste excessivo;</li>
+      <li>Ruídos anormais;</li>
+      <li>Problemas de engrenagem;</li>
+      <li>Fixação do motor de arranque.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.12 Teste de tensão no circuito</h2>
+
+    <p>
+      A medição de tensão pode ajudar a determinar se a alimentação
+      chega correctamente ao sistema de arranque.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Consultar o esquema eléctrico;</li>
+        <li>Identificar os pontos de teste;</li>
+        <li>Utilizar um multímetro adequado;</li>
+        <li>Realizar a medição nas condições especificadas;</li>
+        <li>Comparar o resultado com os dados técnicos do fabricante.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.13 Queda de tensão</h2>
+
+    <p>
+      Uma queda de tensão excessiva num cabo ou ligação pode impedir
+      que o motor de arranque receba a energia necessária.
+    </p>
+
+    <h3>Pontos a investigar:</h3>
+
+    <ul>
+      <li>Terminal positivo;</li>
+      <li>Cabo positivo;</li>
+      <li>Ligações do solenoide;</li>
+      <li>Cabo negativo;</li>
+      <li>Ligações de massa;</li>
+      <li>Pontos de ligação à carroçaria e ao motor.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.14 Sistema de autorização de arranque</h2>
+
+    <p>
+      Em veículos modernos, o comando de arranque pode depender de
+      condições electrónicas e de segurança.
+    </p>
+
+    <p>
+      Dependendo do veículo, podem existir verificações relacionadas
+      com imobilizador, posição da transmissão, pedal de embraiagem,
+      pedal de travão ou outros sistemas.
+    </p>
+
+    <div class="info">
+      <strong>📌 Importante:</strong>
+      <p>
+        O circuito exacto varia conforme marca, modelo, ano e versão.
+        Deve ser utilizado o esquema eléctrico específico do veículo.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.15 Veículo automático</h2>
+
+    <p>
+      Em veículos com transmissão automática, o sistema pode exigir
+      que a transmissão esteja numa posição autorizada para o arranque,
+      de acordo com a arquitectura do fabricante.
+    </p>
+
+    <p>
+      Uma falha no circuito de autorização pode resultar numa situação
+      em que o motor de arranque não seja accionado.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.16 Veículo com transmissão manual</h2>
+
+    <p>
+      Alguns veículos utilizam um interruptor ou sensor associado ao
+      pedal da embraiagem para permitir o accionamento do arranque
+      somente quando determinadas condições são cumpridas.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.17 Remoção do motor de arranque</h2>
+
+    <p>
+      O procedimento varia conforme o veículo e a localização do
+      componente.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Consultar o manual de serviço;</li>
+        <li>Desligar a alimentação conforme especificado;</li>
+        <li>Elevar o veículo com segurança quando necessário;</li>
+        <li>Identificar e marcar as ligações;</li>
+        <li>Desligar os cabos;</li>
+        <li>Remover as fixações;</li>
+        <li>Retirar o motor de arranque;</li>
+        <li>Inspeccionar as superfícies de montagem.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.18 Instalação do motor de arranque</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Confirmar se o componente é o correcto;</li>
+        <li>Verificar a superfície de montagem;</li>
+        <li>Posicionar o motor de arranque;</li>
+        <li>Instalar as fixações;</li>
+        <li>Apertar segundo o torque especificado;</li>
+        <li>Ligar correctamente os cabos;</li>
+        <li>Confirmar o encaminhamento da cablagem;</li>
+        <li>Realizar o teste de funcionamento.</li>
+      </ol>
+    </div>
+
+    <div class="alerta">
+      <strong>⚠️ Atenção:</strong>
+      <p>
+        Os valores de torque devem ser retirados do manual de serviço
+        específico do veículo. Não utilizar um valor genérico quando
+        o fabricante fornecer uma especificação própria.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.19 Diagnóstico sistemático</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Identificar o sintoma;</li>
+        <li>Verificar se o motor gira;</li>
+        <li>Verificar bateria;</li>
+        <li>Verificar alimentação;</li>
+        <li>Verificar massas;</li>
+        <li>Verificar comando;</li>
+        <li>Verificar solenoide;</li>
+        <li>Verificar motor de arranque;</li>
+        <li>Verificar engrenagem;</li>
+        <li>Verificar autorização electrónica;</li>
+        <li>Reparar a causa;</li>
+        <li>Confirmar o funcionamento.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.20 Erros comuns</h2>
+
+    <ul>
+      <li>Substituir a bateria sem diagnóstico;</li>
+      <li>Substituir o motor de arranque sem testar cabos e massas;</li>
+      <li>Ignorar queda de tensão;</li>
+      <li>Não verificar o circuito de comando;</li>
+      <li>Confundir problema de arranque com problema de funcionamento do motor;</li>
+      <li>Não consultar o esquema eléctrico;</li>
+      <li>Não respeitar os torques do fabricante;</li>
+      <li>Trabalhar debaixo do veículo sem apoio adequado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.21 Segurança</h2>
+
+    <div class="perigo">
+      <strong>🚨 REGRAS DE SEGURANÇA</strong>
+
+      <ul>
+        <li>Desligar a alimentação quando o procedimento exigir;</li>
+        <li>Evitar curto-circuitos junto à bateria;</li>
+        <li>Utilizar ferramentas adequadas;</li>
+        <li>Fixar correctamente o veículo quando elevado;</li>
+        <li>Nunca trabalhar apenas com o macaco;</li>
+        <li>Manter cabos afastados de partes móveis e quentes;</li>
+        <li>Seguir sempre o procedimento do fabricante.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.22 Checklist do sistema de arranque</h2>
+
+    <ul>
+      <li>☐ Sintoma confirmado;</li>
+      <li>☐ Bateria verificada;</li>
+      <li>☐ Terminais verificados;</li>
+      <li>☐ Cabos verificados;</li>
+      <li>☐ Massas verificadas;</li>
+      <li>☐ Fusíveis verificados;</li>
+      <li>☐ Relés verificados quando aplicável;</li>
+      <li>☐ Circuito de comando verificado;</li>
+      <li>☐ Solenoide verificado;</li>
+      <li>☐ Motor de arranque testado;</li>
+      <li>☐ Engrenagem inspeccionada;</li>
+      <li>☐ Sistema de autorização verificado;</li>
+      <li>☐ Reparação realizada;</li>
+      <li>☐ Teste final realizado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>21.23 Conclusão</h2>
+
+    <p>
+      O sistema de arranque é fundamental para colocar o motor em
+      funcionamento. O diagnóstico deve começar pelo sintoma e avançar
+      de forma sistemática através da bateria, cabos, massas, circuito
+      de comando, solenoide e motor de arranque.
+    </p>
+
+    <p>
+      Os valores eléctricos, torques, procedimentos de desmontagem,
+      pinagens e especificações devem ser confirmados na documentação
+      técnica específica do fabricante.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas eléctricos,
+        baterias, arranque e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — referências e normas técnicas relacionadas
+        com sistemas eléctricos e veículos automóveis.
+      </p>
+
+      <p>
+        Para valores de tensão, corrente, torque, pinagens e procedimentos
+        específicos, consultar sempre o manual de serviço oficial do
+        fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+</html>
