@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 15 — Sistema de arrefecimento | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+
+  <section class="capa">
+
+    <div class="icone">🌡️</div>
+
+    <h2>Capítulo 15 — Sistema de arrefecimento</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Funcionamento, componentes, manutenção,
+      diagnóstico e segurança.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.1 Introdução</h2>
+
+    <p>
+      O sistema de arrefecimento tem como função controlar a
+      temperatura de funcionamento do motor, transferindo o calor
+      produzido durante o funcionamento para o ambiente.
+    </p>
+
+    <p>
+      O sistema deve manter o motor dentro da faixa de temperatura
+      prevista pelo fabricante. Temperatura excessivamente elevada
+      ou demasiado baixa pode afectar o funcionamento e a durabilidade
+      do motor.
+    </p>
+
+    <div class="info">
+
+      <strong>📌 Conceito fundamental:</strong>
+
+      <p>
+        O sistema de arrefecimento não serve simplesmente para
+        "arrefecer" o motor. Ele controla a temperatura de funcionamento
+        para que o motor opere nas condições previstas pelo fabricante.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.2 Funções do sistema de arrefecimento</h2>
+
+    <ul>
+
+      <li>Controlar a temperatura do motor;</li>
+
+      <li>Transferir calor do motor para o líquido de arrefecimento;</li>
+
+      <li>Transportar o calor até ao radiador;</li>
+
+      <li>Dissipar calor para o ambiente;</li>
+
+      <li>Ajudar o motor a atingir a temperatura de funcionamento;</li>
+
+      <li>Evitar sobreaquecimento;</li>
+
+      <li>Contribuir para o funcionamento adequado do motor.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.3 Principais componentes</h2>
+
+    <ul>
+
+      <li>Radiador;</li>
+
+      <li>Bomba de água;</li>
+
+      <li>Termóstato;</li>
+
+      <li>Ventoinha;</li>
+
+      <li>Líquido de arrefecimento;</li>
+
+      <li>Reservatório de expansão;</li>
+
+      <li>Tampão de pressão, quando aplicável;</li>
+
+      <li>Mangueiras;</li>
+
+      <li>Tubagens;</li>
+
+      <li>Sensor de temperatura;</li>
+
+      <li>Carcaça do termóstato;</li>
+
+      <li>Radiador de aquecimento do habitáculo;</li>
+
+      <li>Unidade de controlo, quando aplicável.</li>
+
+    </ul>
+
+    <div class="ilustracao">
+
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA DE ARREFECIMENTO</strong>
+
+      <p>
+        Mostrar posteriormente:
+      </p>
+
+      <p>
+        motor → bomba de água → termóstato →
+        radiador → mangueiras → reservatório →
+        ventoinha → retorno ao motor.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.4 Funcionamento básico</h2>
+
+    <p>
+      Durante o funcionamento do motor, o líquido de arrefecimento
+      circula através das passagens internas do motor, absorvendo
+      calor.
+    </p>
+
+    <p>
+      O líquido aquecido é conduzido para o radiador, onde o calor
+      é transferido para o ar. Depois de perder parte desse calor,
+      o líquido regressa ao circuito do motor.
+    </p>
+
+    <p>
+      O termóstato controla o circuito de circulação de acordo com
+      a temperatura prevista para o sistema.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.5 Radiador</h2>
+
+    <p>
+      O radiador é um permutador de calor. Recebe o líquido de
+      arrefecimento quente e transfere parte do calor para o ar.
+    </p>
+
+    <h3>Inspecionar:</h3>
+
+    <ul>
+
+      <li>Aletas;</li>
+
+      <li>Fugas;</li>
+
+      <li>Corrosão;</li>
+
+      <li>Obstruções externas;</li>
+
+      <li>Estado das ligações;</li>
+
+      <li>Mangueiras;</li>
+
+      <li>Fixações.</li>
+
+    </ul>
+
+    <div class="alerta">
+
+      <strong>⚠️ Atenção:</strong>
+
+      <p>
+        Aletas do radiador obstruídas por lama, poeira ou outros
+        materiais podem reduzir a capacidade de transferência de calor.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.6 Bomba de água</h2>
+
+    <p>
+      A bomba de água promove a circulação do líquido de arrefecimento
+      através do sistema.
+    </p>
+
+    <h3>Possíveis sinais de problema:</h3>
+
+    <ul>
+
+      <li>Fuga de líquido;</li>
+
+      <li>Ruído anormal;</li>
+
+      <li>Problemas de circulação;</li>
+
+      <li>Sobreaquecimento;</li>
+
+      <li>Folga anormal do eixo, quando aplicável.</li>
+
+    </ul>
+
+    <div class="info">
+
+      <strong>📌 Importante:</strong>
+
+      <p>
+        O método de diagnóstico e os limites aceitáveis devem ser
+        determinados conforme o fabricante e o tipo de bomba.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.7 Termóstato</h2>
+
+    <p>
+      O termóstato controla a circulação do líquido de arrefecimento
+      de acordo com a temperatura do motor.
+    </p>
+
+    <h3>Possíveis problemas:</h3>
+
+    <ul>
+
+      <li>Termóstato preso fechado;</li>
+
+      <li>Termóstato preso aberto;</li>
+
+      <li>Funcionamento irregular;</li>
+
+      <li>Fugas na carcaça;</li>
+
+      <li>Problemas no vedante.</li>
+
+    </ul>
+
+    <p>
+      Os valores exactos de abertura e funcionamento devem ser
+      confirmados na documentação técnica do fabricante.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.8 Ventoinha de arrefecimento</h2>
+
+    <p>
+      A ventoinha ajuda a aumentar o fluxo de ar através do radiador,
+      especialmente quando as condições de circulação do veículo
+      não fornecem fluxo de ar suficiente.
+    </p>
+
+    <h3>Tipos possíveis:</h3>
+
+    <ul>
+
+      <li>Ventoinha mecânica;</li>
+
+      <li>Ventoinha eléctrica;</li>
+
+      <li>Sistemas controlados electronicamente.</li>
+
+    </ul>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+
+      <li>Motor eléctrico;</li>
+
+      <li>Cablagem;</li>
+
+      <li>Fusíveis;</li>
+
+      <li>Relés, quando existentes;</li>
+
+      <li>Conectores;</li>
+
+      <li>Comando electrónico.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.9 Líquido de arrefecimento</h2>
+
+    <p>
+      O líquido de arrefecimento transporta calor e fornece protecção
+      contra corrosão e, dependendo da formulação, contra congelamento.
+    </p>
+
+    <p>
+      Deve ser utilizado o produto e a concentração especificados
+      pelo fabricante.
+    </p>
+
+    <div class="perigo">
+
+      <strong>🚨 ATENÇÃO</strong>
+
+      <p>
+        Não abrir o sistema de arrefecimento quando estiver quente
+        e pressurizado. O líquido e o vapor podem provocar queimaduras
+        graves.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.10 Reservatório de expansão</h2>
+
+    <p>
+      O reservatório de expansão permite acomodar alterações de
+      volume do líquido de arrefecimento à medida que a temperatura
+      do sistema varia.
+    </p>
+
+    <h3>Inspecionar:</h3>
+
+    <ul>
+
+      <li>Nível;</li>
+
+      <li>Fugas;</li>
+
+      <li>Fissuras;</li>
+
+      <li>Estado das mangueiras;</li>
+
+      <li>Marcas de contaminação;</li>
+
+      <li>Tampão.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.11 Tampão de pressão</h2>
+
+    <p>
+      Em determinados sistemas, o tampão ajuda a controlar a pressão
+      do circuito.
+    </p>
+
+    <p>
+      Uma falha no tampão pode afectar o funcionamento do sistema
+      e provocar perda de líquido.
+    </p>
+
+    <div class="alerta">
+
+      <strong>⚠️ Nota técnica:</strong>
+
+      <p>
+        O valor de pressão e o método de teste devem ser obtidos
+        no manual de serviço específico do veículo.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.12 Mangueiras e tubagens</h2>
+
+    <p>
+      As mangueiras conduzem o líquido entre os diferentes componentes
+      do sistema.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+
+      <li>Fissuras;</li>
+
+      <li>Inchaço;</li>
+
+      <li>Endurecimento;</li>
+
+      <li>Amolecimento anormal;</li>
+
+      <li>Fugas;</li>
+
+      <li>Abrasão;</li>
+
+      <li>Abraçadeiras e ligações.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.13 Sensor de temperatura</h2>
+
+    <p>
+      O sensor de temperatura fornece informação ao sistema de
+      controlo do veículo para monitorizar a temperatura do motor.
+    </p>
+
+    <p>
+      Dependendo do projecto, essa informação pode ser utilizada
+      para controlar a injecção de combustível, a ventoinha,
+      indicadores e outras funções.
+    </p>
+
+    <h3>Diagnóstico:</h3>
+
+    <ul>
+
+      <li>Verificar códigos de avaria;</li>
+
+      <li>Inspeccionar conectores;</li>
+
+      <li>Verificar cablagem;</li>
+
+      <li>Comparar os dados do sensor com as especificações;</li>
+
+      <li>Utilizar equipamento de diagnóstico quando aplicável.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.14 Sinais de sobreaquecimento</h2>
+
+    <ul>
+
+      <li>Indicador de temperatura acima do normal;</li>
+
+      <li>Luz de aviso;</li>
+
+      <li>Vapor ou líquido a sair do compartimento do motor;</li>
+
+      <li>Perda de líquido;</li>
+
+      <li>Cheiro anormal;</li>
+
+      <li>Redução do desempenho;</li>
+
+      <li>Funcionamento irregular do motor.</li>
+
+    </ul>
+
+    <div class="perigo">
+
+      <strong>🚨 EM CASO DE SOBREAQUECIMENTO</strong>
+
+      <p>
+        Pare o veículo num local seguro e desligue o motor quando
+        apropriado. Não abra imediatamente o tampão de um sistema
+        quente e pressurizado.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.15 Diagnóstico de sobreaquecimento</h2>
+
+    <div class="procedimento">
+
+      <ol>
+
+        <li>Confirmar o sintoma;</li>
+
+        <li>Verificar o nível do líquido;</li>
+
+        <li>Procurar fugas;</li>
+
+        <li>Inspeccionar radiador e mangueiras;</li>
+
+        <li>Verificar funcionamento da ventoinha;</li>
+
+        <li>Verificar termóstato;</li>
+
+        <li>Verificar circulação do líquido;</li>
+
+        <li>Verificar bomba de água;</li>
+
+        <li>Verificar sensor de temperatura;</li>
+
+        <li>Verificar o sistema de controlo electrónico quando aplicável;</li>
+
+        <li>Investigar outras causas conforme o procedimento do fabricante.</li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.16 Diagnóstico de perda de líquido</h2>
+
+    <p>
+      Uma perda de líquido deve ser investigada mesmo quando a fuga
+      parece pequena.
+    </p>
+
+    <h3>Locais possíveis:</h3>
+
+    <ul>
+
+      <li>Radiador;</li>
+
+      <li>Mangueiras;</li>
+
+      <li>Abraçadeiras;</li>
+
+      <li>Bomba de água;</li>
+
+      <li>Carcaça do termóstato;</li>
+
+      <li>Reservatório;</li>
+
+      <li>Tampão;</li>
+
+      <li>Radiador de aquecimento;</li>
+
+      <li>Juntas ou componentes internos do motor.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.17 Teste de pressão</h2>
+
+    <p>
+      O teste de pressão pode ser utilizado para ajudar a localizar
+      fugas no sistema de arrefecimento.
+    </p>
+
+    <div class="alerta">
+
+      <strong>⚠️ Procedimento específico:</strong>
+
+      <p>
+        A pressão de teste não deve ser escolhida aleatoriamente.
+        Utilizar o valor e procedimento indicados pelo fabricante
+        e pelo equipamento de teste.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.18 Substituição do líquido de arrefecimento</h2>
+
+    <div class="procedimento">
+
+      <ol>
+
+        <li>Consultar o manual do veículo;</li>
+
+        <li>Deixar o sistema atingir uma condição segura para intervenção;</li>
+
+        <li>Preparar recipiente adequado;</li>
+
+        <li>Drenar o líquido conforme o procedimento indicado;</li>
+
+        <li>Inspeccionar o sistema;</li>
+
+        <li>Substituir componentes necessários;</li>
+
+        <li>Adicionar o líquido especificado;</li>
+
+        <li>Eliminar o ar do sistema conforme o procedimento do fabricante;</li>
+
+        <li>Verificar fugas;</li>
+
+        <li>Confirmar o nível;</li>
+
+        <li>Realizar teste final.</li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.19 Sangria do sistema</h2>
+
+    <p>
+      Alguns sistemas necessitam de procedimentos específicos para
+      remover bolsas de ar depois de uma intervenção.
+    </p>
+
+    <p>
+      A sequência pode variar conforme o projecto do veículo.
+      Portanto, deve ser seguido o procedimento oficial de serviço.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.20 Erros comuns</h2>
+
+    <ul>
+
+      <li>Abrir o sistema enquanto está quente e pressurizado;</li>
+
+      <li>Utilizar líquido incorrecto;</li>
+
+      <li>Misturar produtos incompatíveis;</li>
+
+      <li>Ignorar pequenas fugas;</li>
+
+      <li>Não verificar a ventoinha;</li>
+
+      <li>Substituir o termóstato sem diagnóstico;</li>
+
+      <li>Não eliminar correctamente o ar do sistema;</li>
+
+      <li>Não verificar o nível depois da intervenção;</li>
+
+      <li>Não procurar a causa de um sobreaquecimento recorrente.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.21 Checklist do sistema de arrefecimento</h2>
+
+    <ul>
+
+      <li>☐ Nível do líquido verificado;</li>
+
+      <li>☐ Estado do líquido verificado;</li>
+
+      <li>☐ Radiador inspeccionado;</li>
+
+      <li>☐ Mangueiras inspeccionadas;</li>
+
+      <li>☐ Reservatório inspeccionado;</li>
+
+      <li>☐ Tampão verificado;</li>
+
+      <li>☐ Termóstato verificado;</li>
+
+      <li>☐ Bomba de água verificada;</li>
+
+      <li>☐ Ventoinha verificada;</li>
+
+      <li>☐ Sensor de temperatura verificado;</li>
+
+      <li>☐ Fugas verificadas;</li>
+
+      <li>☐ Sistema de pressão testado quando necessário;</li>
+
+      <li>☐ Sangria realizada quando necessária;</li>
+
+      <li>☐ Líquido correcto utilizado;</li>
+
+      <li>☐ Teste final realizado.</li>
+
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>15.22 Conclusão</h2>
+
+    <p>
+      O sistema de arrefecimento é essencial para manter o motor
+      dentro da faixa de temperatura prevista pelo fabricante.
+    </p>
+
+    <p>
+      O diagnóstico de problemas deve começar pelos elementos mais
+      básicos, como nível, fugas, mangueiras e circulação, avançando
+      para testes específicos quando necessário.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas de
+        arrefecimento e componentes automóveis.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        Para capacidade do sistema, tipo e concentração do líquido,
+        temperatura de funcionamento, pressão, torques e procedimentos
+        de reparação, consultar sempre o manual de serviço oficial
+        do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+</html>
