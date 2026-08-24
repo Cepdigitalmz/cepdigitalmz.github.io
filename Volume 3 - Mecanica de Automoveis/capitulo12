@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 12 — Sistema de suspensão | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+    <section class="capa">
+
+      <div class="icone">🔧</div>
+
+      <h2>
+        Capítulo 12 — Sistema de suspensão
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Funcionamento, componentes, inspecção,
+        diagnóstico e manutenção.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.1 Introdução</h2>
+
+      <p>
+        O sistema de suspensão liga as rodas à estrutura do veículo
+        e permite controlar os movimentos das rodas relativamente
+        à carroçaria.
+      </p>
+
+      <p>
+        A suspensão contribui para o conforto, estabilidade,
+        comportamento em curva, controlo da carroçaria e manutenção
+        do contacto dos pneus com a estrada.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          A suspensão não deve ser analisada isoladamente. Pneus,
+          rodas, direcção, travões e geometria do veículo trabalham
+          em conjunto para garantir estabilidade e segurança.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.2 Funções do sistema de suspensão</h2>
+
+      <ul>
+
+        <li>Suportar a carroçaria e os componentes do veículo;</li>
+
+        <li>Controlar o movimento das rodas;</li>
+
+        <li>Absorver irregularidades da estrada;</li>
+
+        <li>Reduzir a transmissão de vibrações;</li>
+
+        <li>Manter o contacto adequado dos pneus com a estrada;</li>
+
+        <li>Contribuir para a estabilidade durante a travagem;</li>
+
+        <li>Contribuir para o controlo da carroçaria nas curvas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.3 Principais componentes</h2>
+
+      <ul>
+
+        <li>Molas;</li>
+
+        <li>Amortecedores;</li>
+
+        <li>Colunas de suspensão;</li>
+
+        <li>Braços de suspensão;</li>
+
+        <li>Rótulas;</li>
+
+        <li>Buchas;</li>
+
+        <li>Barras estabilizadoras;</li>
+
+        <li>Terminais e ligações da barra estabilizadora;</li>
+
+        <li>Rolamentos e cubos das rodas;</li>
+
+        <li>Batentes;</li>
+
+        <li>Apoios superiores;</li>
+
+        <li>Componentes de fixação.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>🖼️ ILUSTRAÇÃO — SISTEMA DE SUSPENSÃO</strong>
+
+        <p>
+          Inserir posteriormente uma vista explodida 3D identificando:
+        </p>
+
+        <p>
+          mola → amortecedor → braço → rótula → bucha →
+          barra estabilizadora → cubo → roda.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.4 Tipos de suspensão</h2>
+
+      <h3>Suspensão dependente</h3>
+
+      <p>
+        As rodas do mesmo eixo estão ligadas por uma estrutura que
+        influencia o movimento de uma roda sobre a outra.
+      </p>
+
+      <h3>Suspensão independente</h3>
+
+      <p>
+        Permite que cada roda tenha maior independência de movimento
+        relativamente à outra roda do mesmo eixo.
+      </p>
+
+      <h3>Suspensão semi-independente</h3>
+
+      <p>
+        Utiliza uma arquitectura intermédia, comum em determinadas
+        aplicações de veículos ligeiros.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.5 Molas</h2>
+
+      <p>
+        As molas armazenam energia quando a suspensão é comprimida
+        e ajudam a suportar a massa do veículo.
+      </p>
+
+      <h3>Tipos encontrados em automóveis:</h3>
+
+      <ul>
+
+        <li>Molas helicoidais;</li>
+
+        <li>Molas de lâminas;</li>
+
+        <li>Barras de torção;</li>
+
+        <li>Molas pneumáticas em determinados veículos.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>⚠️ Atenção:</strong>
+
+        <p>
+          Molas de suspensão podem armazenar uma quantidade
+          significativa de energia. A desmontagem deve utilizar
+          ferramentas e procedimentos apropriados.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.6 Amortecedores</h2>
+
+      <p>
+        O amortecedor controla principalmente a velocidade dos
+        movimentos da suspensão, ajudando a reduzir oscilações
+        provocadas pelas molas.
+      </p>
+
+      <p>
+        Um amortecedor não deve ser confundido com a mola: a mola
+        suporta a carga e armazena energia, enquanto o amortecedor
+        controla o movimento através da dissipação de energia.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.7 Sinais de possível problema no amortecedor</h2>
+
+      <ul>
+
+        <li>Oscilação excessiva da carroçaria;</li>
+
+        <li>Comportamento instável;</li>
+
+        <li>Desgaste irregular dos pneus;</li>
+
+        <li>Fuga de fluido no amortecedor;</li>
+
+        <li>Ruídos anormais;</li>
+
+        <li>Redução do controlo sobre irregularidades.</li>
+
+      </ul>
+
+      <div class="info">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          Uma fuga ou sintoma não deve ser avaliado isoladamente.
+          A confirmação deve considerar o estado de todo o conjunto
+          da suspensão.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.8 Braços de suspensão</h2>
+
+      <p>
+        Os braços de suspensão orientam o movimento da roda e
+        estabelecem a ligação entre o conjunto da roda e a estrutura
+        do veículo.
+      </p>
+
+      <h3>Verificar:</h3>
+
+      <ul>
+
+        <li>Deformações;</li>
+
+        <li>Corrosão;</li>
+
+        <li>Folgas;</li>
+
+        <li>Estado das buchas;</li>
+
+        <li>Estado das rótulas;</li>
+
+        <li>Fixações.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.9 Buchas</h2>
+
+      <p>
+        As buchas são elementos elastoméricos utilizados para permitir
+        determinado movimento controlado e reduzir vibrações entre
+        componentes.
+      </p>
+
+      <h3>Problemas possíveis:</h3>
+
+      <ul>
+
+        <li>Fissuras;</li>
+
+        <li>Deformação;</li>
+
+        <li>Desgaste;</li>
+
+        <li>Separação do material;</li>
+
+        <li>Folga anormal.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.10 Rótulas</h2>
+
+      <p>
+        As rótulas permitem movimentos angulares entre componentes
+        da suspensão e da direcção.
+      </p>
+
+      <p>
+        Uma rótula com folga excessiva pode comprometer a geometria
+        e o comportamento do veículo.
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO</strong>
+
+        <p>
+          Folgas excessivas em componentes que ligam a roda à
+          suspensão ou direcção podem representar risco de segurança.
+          Devem ser avaliadas e reparadas conforme o procedimento
+          técnico aplicável.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.11 Barra estabilizadora</h2>
+
+      <p>
+        A barra estabilizadora ajuda a controlar a diferença de
+        movimento entre os lados da suspensão, contribuindo para
+        o controlo da inclinação da carroçaria em curva.
+      </p>
+
+      <h3>Componentes relacionados:</h3>
+
+      <ul>
+
+        <li>Barra estabilizadora;</li>
+
+        <li>Buchas;</li>
+
+        <li>Bielas ou ligações;</li>
+
+        <li>Fixações.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.12 Inspecção visual da suspensão</h2>
+
+      <div class="procedimento">
+
+        <ol>
+
+          <li>Estacionar o veículo em local seguro;</li>
+
+          <li>Inspeccionar visualmente os componentes;</li>
+
+          <li>Procurar peças deformadas;</li>
+
+          <li>Verificar molas partidas ou danificadas;</li>
+
+          <li>Procurar fugas nos amortecedores;</li>
+
+          <li>Verificar buchas;</li>
+
+          <li>Verificar rótulas;</li>
+
+          <li>Verificar ligações da barra estabilizadora;</li>
+
+          <li>Verificar fixações;</li>
+
+          <li>Inspeccionar pneus e desgaste irregular.</li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.13 Diagnóstico de ruídos</h2>
+
+      <p>
+        Ruídos da suspensão podem aparecer durante passagem por
+        irregularidades, travagem, aceleração ou curvas.
+      </p>
+
+      <h3>Possíveis áreas de investigação:</h3>
+
+      <ul>
+
+        <li>Buchas;</li>
+
+        <li>Rótulas;</li>
+
+        <li>Amortecedores;</li>
+
+        <li>Apoios superiores;</li>
+
+        <li>Barras estabilizadoras;</li>
+
+        <li>Molas;</li>
+
+        <li>Fixações;</li>
+
+        <li>Componentes da direcção.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>💡 Diagnóstico:</strong>
+
+        <p>
+          Não substituir automaticamente a peça que parece ser a
+          origem do ruído. Confirmar a causa através de inspecção
+          e testes adequados.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.14 Diagnóstico de desgaste irregular dos pneus</h2>
+
+      <p>
+        A suspensão pode influenciar o desgaste dos pneus, mas o
+        diagnóstico deve considerar também pressão, alinhamento,
+        rodas, direcção e condições de utilização.
+      </p>
+
+      <ol>
+
+        <li>Inspeccionar o padrão de desgaste;</li>
+
+        <li>Verificar pressão;</li>
+
+        <li>Verificar geometria;</li>
+
+        <li>Inspeccionar componentes da suspensão;</li>
+
+        <li>Verificar rodas;</li>
+
+        <li>Realizar alinhamento quando indicado;</li>
+
+        <li>Confirmar o resultado após a reparação.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.15 Verificação de folgas</h2>
+
+      <p>
+        As folgas devem ser verificadas utilizando métodos e
+        ferramentas apropriados ao veículo.
+      </p>
+
+      <p>
+        Quando o fabricante especificar um limite de folga, esse
+        valor deve ser utilizado para determinar se o componente
+        está dentro ou fora das especificações.
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 IMPORTANTE</strong>
+
+        <p>
+          Não utilizar valores genéricos de folga para substituir
+          as especificações do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.16 Substituição de componentes</h2>
+
+      <p>
+        A substituição de componentes da suspensão deve seguir o
+        procedimento específico do fabricante.
+      </p>
+
+      <div class="procedimento">
+
+        <ol>
+
+          <li>Identificar correctamente o veículo;</li>
+
+          <li>Consultar o manual de serviço;</li>
+
+          <li>Preparar ferramentas adequadas;</li>
+
+          <li>Imobilizar e elevar o veículo correctamente;</li>
+
+          <li>Desmontar o componente conforme especificação;</li>
+
+          <li>Comparar a peça nova com a removida;</li>
+
+          <li>Instalar o novo componente;</li>
+
+          <li>Aplicar os torques especificados;</li>
+
+          <li>Realizar alinhamento quando necessário;</li>
+
+          <li>Realizar teste final.</li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.17 Segurança na desmontagem das molas</h2>
+
+      <div class="perigo">
+
+        <strong>🚨 PERIGO — ENERGIA ARMAZENADA</strong>
+
+        <p>
+          Uma mola comprimida pode libertar uma quantidade elevada
+          de energia. A utilização incorrecta de um compressor de
+          molas pode provocar ferimentos graves.
+        </p>
+
+        <p>
+          Utilizar equipamento apropriado e seguir rigorosamente
+          o procedimento de serviço do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.18 Teste após manutenção</h2>
+
+      <ol>
+
+        <li>Confirmar todas as fixações;</li>
+
+        <li>Verificar os torques aplicados;</li>
+
+        <li>Confirmar que não existem ferramentas esquecidas;</li>
+
+        <li>Verificar pneus e rodas;</li>
+
+        <li>Realizar alinhamento quando necessário;</li>
+
+        <li>Realizar teste de condução em condições seguras;</li>
+
+        <li>Verificar ruídos e comportamento;</li>
+
+        <li>Confirmar que o problema foi corrigido.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.19 Erros comuns</h2>
+
+      <ul>
+
+        <li>Substituir amortecedores sem diagnóstico;</li>
+
+        <li>Ignorar folgas nas rótulas;</li>
+
+        <li>Ignorar buchas danificadas;</li>
+
+        <li>Não verificar alinhamento;</li>
+
+        <li>Utilizar peças inadequadas;</li>
+
+        <li>Não respeitar torques de aperto;</li>
+
+        <li>Desmontar molas sem equipamento adequado;</li>
+
+        <li>Não realizar teste final.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.20 Checklist do sistema de suspensão</h2>
+
+      <ul>
+
+        <li>☐ Molas inspeccionadas;</li>
+
+        <li>☐ Amortecedores inspeccionados;</li>
+
+        <li>☐ Braços inspeccionados;</li>
+
+        <li>☐ Buchas verificadas;</li>
+
+        <li>☐ Rótulas verificadas;</li>
+
+        <li>☐ Barra estabilizadora verificada;</li>
+
+        <li>☐ Ligações verificadas;</li>
+
+        <li>☐ Apoios superiores verificados;</li>
+
+        <li>☐ Folgas verificadas;</li>
+
+        <li>☐ Pneus inspeccionados;</li>
+
+        <li>☐ Geometria verificada quando necessário;</li>
+
+        <li>☐ Torques confirmados;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>12.21 Conclusão</h2>
+
+      <p>
+        O sistema de suspensão é essencial para o comportamento,
+        estabilidade e segurança do automóvel.
+      </p>
+
+      <p>
+        O diagnóstico deve ser realizado de forma sistemática,
+        considerando os componentes da suspensão, rodas, pneus,
+        direcção e geometria do veículo.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Bosch Mobility — documentação técnica sobre sistemas
+          de chassis, suspensão, direcção e componentes automóveis.
+        </p>
+
+        <p>
+          Automotive Service Excellence (ASE) —
+          materiais técnicos de estudo e diagnóstico automóvel.
+        </p>
+
+        <p>
+          Para torques, folgas, limites de desgaste, procedimentos
+          de desmontagem e montagem, consultar sempre o manual de
+          serviço oficial do fabricante do veículo.
+        </p>
+
+      </div>
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
