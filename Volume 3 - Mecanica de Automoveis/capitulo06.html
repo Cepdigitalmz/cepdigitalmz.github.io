@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 6 — Motor | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .motor-icon {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CEP Digital</h1>
+    <p>Manuais práticos de manutenção e reparação</p>
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="motor-icon">
+        🔧
+      </div>
+
+      <h2>
+        Capítulo 6 — Motor
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+      <p>
+        Funcionamento, componentes, manutenção e diagnóstico básico.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.1 Introdução ao motor</h2>
+
+      <p>
+        O motor é o conjunto responsável por transformar energia
+        química do combustível em energia mecânica utilizada para
+        movimentar o veículo, nos motores de combustão interna.
+      </p>
+
+      <p>
+        O funcionamento do motor depende da coordenação entre vários
+        sistemas, incluindo alimentação de combustível, admissão de ar,
+        ignição ou injecção, lubrificação, arrefecimento, escape e
+        controlo electrónico.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Conceito fundamental:</strong>
+
+        <p>
+          Um diagnóstico correcto do motor deve considerar o conjunto
+          dos seus sistemas, e não apenas um componente isolado.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.2 Tipos gerais de motores</h2>
+
+      <p>
+        Os automóveis podem utilizar diferentes tipos de motores.
+        Entre os mais comuns encontram-se os motores de combustão
+        interna a gasolina e os motores Diesel.
+      </p>
+
+      <p>
+        Também existem veículos híbridos e eléctricos, que possuem
+        arquitecturas diferentes. Este capítulo concentra-se
+        principalmente nos motores de combustão interna.
+      </p>
+
+      <h3>Classificações comuns</h3>
+
+      <ul>
+
+        <li>Motor a gasolina;</li>
+
+        <li>Motor Diesel;</li>
+
+        <li>Motor de três, quatro, seis ou mais cilindros;</li>
+
+        <li>Motor em linha;</li>
+
+        <li>Motor em V;</li>
+
+        <li>Motor de aspiração natural;</li>
+
+        <li>Motor sobrealimentado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.3 Princípio dos quatro tempos</h2>
+
+      <p>
+        Muitos motores de combustão interna utilizam o ciclo de quatro
+        tempos. Durante o funcionamento, o pistão realiza quatro fases
+        principais.
+      </p>
+
+      <ol>
+
+        <li>
+          <strong>Admissão:</strong>
+          entrada da mistura ou do ar no cilindro.
+        </li>
+
+        <li>
+          <strong>Compressão:</strong>
+          o pistão comprime o conteúdo do cilindro.
+        </li>
+
+        <li>
+          <strong>Combustão e expansão:</strong>
+          a combustão produz pressão que empurra o pistão.
+        </li>
+
+        <li>
+          <strong>Escape:</strong>
+          os gases resultantes da combustão são expulsos.
+        </li>
+
+      </ol>
+
+      <div class="ilustracao">
+
+        <strong>
+          🖼️ ILUSTRAÇÃO — CICLO DE QUATRO TEMPOS
+        </strong>
+
+        <p>
+          Inserir posteriormente uma ilustração 3D mostrando
+          admissão, compressão, combustão/expansão e escape.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.4 Principais componentes do motor</h2>
+
+      <p>
+        O motor é constituído por numerosos componentes mecânicos.
+        Os principais incluem:
+      </p>
+
+      <ul>
+
+        <li>Bloco do motor;</li>
+
+        <li>Cabeçote;</li>
+
+        <li>Pistões;</li>
+
+        <li>Anéis dos pistões;</li>
+
+        <li>Bielas;</li>
+
+        <li>Virabrequim;</li>
+
+        <li>Árvore de cames;</li>
+
+        <li>Válvulas;</li>
+
+        <li>Molas das válvulas;</li>
+
+        <li>Volante do motor;</li>
+
+        <li>Cárter;</li>
+
+        <li>Juntas e vedantes.</li>
+
+      </ul>
+
+      <p>
+        A configuração exacta depende do projecto do motor.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.5 Bloco do motor</h2>
+
+      <p>
+        O bloco é uma das principais estruturas do motor. Nele podem
+        estar localizados os cilindros e diversos canais destinados
+        à circulação de óleo e líquido de arrefecimento.
+      </p>
+
+      <h3>Durante uma inspecção podem ser observados:</h3>
+
+      <ul>
+
+        <li>Fugas;</li>
+
+        <li>Rachaduras;</li>
+
+        <li>Danos nas superfícies de vedação;</li>
+
+        <li>Estado dos componentes internos;</li>
+
+        <li>Fixação dos componentes.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.6 Pistão, biela e virabrequim</h2>
+
+      <p>
+        O pistão desloca-se dentro do cilindro. A biela liga o pistão
+        ao virabrequim e transmite o movimento. O virabrequim transforma
+        o movimento alternativo do conjunto pistão-biela em movimento
+        rotativo.
+      </p>
+
+      <div class="procedimento">
+
+        <strong>Relação básica:</strong>
+
+        <p>
+          Combustão → movimento do pistão → biela → virabrequim →
+          rotação utilizada pelo sistema de transmissão.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.7 Cabeçote e válvulas</h2>
+
+      <p>
+        O cabeçote contém componentes importantes do sistema de
+        distribuição e participa da formação da câmara de combustão.
+      </p>
+
+      <p>
+        As válvulas controlam a entrada e saída dos gases do cilindro.
+        O comando das válvulas deve estar sincronizado com o movimento
+        do virabrequim.
+      </p>
+
+      <ul>
+
+        <li>Válvulas de admissão;</li>
+
+        <li>Válvulas de escape;</li>
+
+        <li>Molas;</li>
+
+        <li>Balancins, quando aplicável;</li>
+
+        <li>Árvore de cames;</li>
+
+        <li>Componentes de accionamento das válvulas.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.8 Sistema de distribuição</h2>
+
+      <p>
+        O sistema de distribuição sincroniza a abertura e o fecho das
+        válvulas com a posição dos pistões.
+      </p>
+
+      <p>
+        Dependendo do motor, o accionamento pode utilizar correia,
+        corrente ou outros mecanismos.
+      </p>
+
+      <div class="perigo">
+
+        <strong>🚨 ATENÇÃO</strong>
+
+        <p>
+          Os procedimentos de sincronização e os valores de montagem
+          devem ser obtidos na documentação específica do motor.
+          Um erro de sincronização pode provocar danos graves em
+          determinados motores.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.9 Sistema de lubrificação</h2>
+
+      <p>
+        O sistema de lubrificação distribui óleo pelos componentes
+        que necessitam de lubrificação e ajuda a reduzir atrito e
+        desgaste.
+      </p>
+
+      <h3>Componentes comuns:</h3>
+
+      <ul>
+
+        <li>Cárter;</li>
+
+        <li>Bomba de óleo;</li>
+
+        <li>Filtro de óleo;</li>
+
+        <li>Canais de lubrificação;</li>
+
+        <li>Válvulas de controlo;</li>
+
+        <li>Sensor ou interruptor de pressão, conforme o veículo.</li>
+
+      </ul>
+
+      <p>
+        A ASE inclui entre as tarefas de manutenção e diagnóstico
+        a verificação da pressão do óleo, fugas, bomba de óleo e
+        substituição do óleo e filtro segundo a especificação do
+        fabricante. 
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.10 Sistema de arrefecimento</h2>
+
+      <p>
+        O sistema de arrefecimento controla a temperatura de funcionamento
+        do motor.
+      </p>
+
+      <h3>Componentes comuns:</h3>
+
+      <ul>
+
+        <li>Radiador;</li>
+
+        <li>Bomba de água;</li>
+
+        <li>Termóstato;</li>
+
+        <li>Mangueiras;</li>
+
+        <li>Ventoinha;</li>
+
+        <li>Reservatório;</li>
+
+        <li>Tampa de pressão;</li>
+
+        <li>Líquido de arrefecimento.</li>
+
+      </ul>
+
+      <p>
+        A ASE recomenda, entre outras tarefas, inspeccionar e testar
+        radiador, termóstato, bomba, mangueiras, líquido de arrefecimento
+        e sistema de ventilação. 
+      </p>
+
+      <div class="perigo">
+
+        <strong>🔥 PERIGO DE QUEIMADURA</strong>
+
+        <p>
+          Não abrir um sistema de arrefecimento quente e pressurizado.
+          Seguir sempre o procedimento específico do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.11 Sistema de admissão de ar</h2>
+
+      <p>
+        O sistema de admissão fornece ao motor o ar necessário para
+        o processo de combustão.
+      </p>
+
+      <ul>
+
+        <li>Filtro de ar;</li>
+
+        <li>Condutas de admissão;</li>
+
+        <li>Corpo de borboleta, quando aplicável;</li>
+
+        <li>Sensor de fluxo ou pressão de ar, conforme o sistema;</li>
+
+        <li>Colector de admissão;</li>
+
+        <li>Turbo ou compressor, quando equipado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.12 Sistema de combustível</h2>
+
+      <p>
+        O sistema de combustível armazena, transporta, controla e
+        fornece combustível ao motor.
+      </p>
+
+      <p>
+        A configuração depende do tipo de motor e pode utilizar
+        diferentes sistemas de injecção.
+      </p>
+
+      <h3>Possíveis componentes:</h3>
+
+      <ul>
+
+        <li>Depósito;</li>
+
+        <li>Bomba de combustível;</li>
+
+        <li>Filtro;</li>
+
+        <li>Injectores;</li>
+
+        <li>Reguladores;</li>
+
+        <li>Linhas de combustível;</li>
+
+        <li>Sensores e actuadores.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.13 Sistema de ignição</h2>
+
+      <p>
+        Nos motores a gasolina, o sistema de ignição produz a faísca
+        necessária para iniciar a combustão da mistura no momento
+        determinado pelo sistema de controlo.
+      </p>
+
+      <ul>
+
+        <li>Velas de ignição;</li>
+
+        <li>Bobinas;</li>
+
+        <li>Cabos de ignição, quando existentes;</li>
+
+        <li>Sensores;</li>
+
+        <li>Módulos e unidade de controlo.</li>
+
+      </ul>
+
+      <p>
+        Motores Diesel utilizam um princípio de ignição diferente e
+        não dependem de uma faísca de ignição como os motores a gasolina.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.14 Sistema de escape</h2>
+
+      <p>
+        O sistema de escape conduz os gases resultantes da combustão
+        para fora do motor e inclui componentes destinados ao controlo
+        de ruído e emissões, conforme o veículo.
+      </p>
+
+      <ul>
+
+        <li>Colector de escape;</li>
+
+        <li>Tubagens;</li>
+
+        <li>Catalisador, quando equipado;</li>
+
+        <li>Filtro de partículas, quando equipado;</li>
+
+        <li>Silenciadores;</li>
+
+        <li>Sensores de oxigénio e outros sensores.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.15 Gestão electrónica do motor</h2>
+
+      <p>
+        Os veículos modernos utilizam unidades electrónicas de controlo
+        para monitorizar sensores e controlar diversos actuadores.
+      </p>
+
+      <p>
+        O diagnóstico pode envolver leitura de códigos de avaria,
+        análise de dados e testes eléctricos e mecânicos.
+      </p>
+
+      <p>
+        A ASE inclui a utilização de informação de serviço, equipamentos
+        de diagnóstico e procedimentos sistemáticos de diagnóstico entre
+        as competências do técnico automóvel. 
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.16 Sintomas comuns de problemas no motor</h2>
+
+      <ul>
+
+        <li>Dificuldade no arranque;</li>
+
+        <li>Motor não arranca;</li>
+
+        <li>Funcionamento irregular;</li>
+
+        <li>Perda de potência;</li>
+
+        <li>Consumo elevado de combustível;</li>
+
+        <li>Fumo anormal;</li>
+
+        <li>Ruídos anormais;</li>
+
+        <li>Vibração excessiva;</li>
+
+        <li>Sobreaquecimento;</li>
+
+        <li>Luz de avaria do motor;</li>
+
+        <li>Consumo anormal de óleo;</li>
+
+        <li>Fugas de óleo ou líquido de arrefecimento.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.17 Diagnóstico básico do motor</h2>
+
+      <p>
+        O diagnóstico deve seguir uma sequência lógica. Não se deve
+        substituir peças simplesmente porque um sintoma parece indicar
+        determinado componente.
+      </p>
+
+      <ol>
+
+        <li>Confirmar a reclamação ou sintoma;</li>
+
+        <li>Consultar o histórico do veículo;</li>
+
+        <li>Consultar a informação técnica;</li>
+
+        <li>Realizar uma inspecção visual;</li>
+
+        <li>Verificar fluidos e fugas;</li>
+
+        <li>Verificar bateria e alimentação eléctrica;</li>
+
+        <li>Realizar testes apropriados;</li>
+
+        <li>Ler códigos de diagnóstico quando aplicável;</li>
+
+        <li>Interpretar os resultados;</li>
+
+        <li>Identificar a causa provável;</li>
+
+        <li>Reparar de acordo com o procedimento técnico;</li>
+
+        <li>Testar novamente o veículo.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.18 Testes que podem ser utilizados</h2>
+
+      <p>
+        Dependendo do sintoma e do tipo de motor, podem ser utilizados
+        diferentes métodos de diagnóstico.
+      </p>
+
+      <ul>
+
+        <li>Teste de pressão de óleo;</li>
+
+        <li>Teste de pressão do sistema de arrefecimento;</li>
+
+        <li>Teste de compressão;</li>
+
+        <li>Teste de fuga dos cilindros;</li>
+
+        <li>Teste eléctrico;</li>
+
+        <li>Leitura de códigos de diagnóstico;</li>
+
+        <li>Análise de dados do sistema electrónico;</li>
+
+        <li>Inspecção visual;</li>
+
+        <li>Teste de funcionamento.</li>
+
+      </ul>
+
+      <div class="alerta">
+
+        <strong>📌 Importante:</strong>
+
+        <p>
+          Nem todos os testes são necessários em todos os veículos.
+          O teste deve ser escolhido de acordo com o sintoma e com
+          o procedimento de diagnóstico recomendado.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.19 Manutenção básica do motor</h2>
+
+      <p>
+        A manutenção preventiva do motor pode incluir, conforme o
+        veículo e o plano do fabricante:
+      </p>
+
+      <ul>
+
+        <li>Substituição do óleo;</li>
+
+        <li>Substituição do filtro de óleo;</li>
+
+        <li>Inspecção do sistema de arrefecimento;</li>
+
+        <li>Verificação de fugas;</li>
+
+        <li>Inspecção de correias e componentes de accionamento;</li>
+
+        <li>Substituição de filtros;</li>
+
+        <li>Inspecção de velas em motores que as utilizam;</li>
+
+        <li>Verificação de componentes do sistema de admissão;</li>
+
+        <li>Diagnóstico de luzes de advertência.</li>
+
+      </ul>
+
+      <div class="perigo">
+
+        <strong>⚠️ ATENÇÃO</strong>
+
+        <p>
+          Intervalos de manutenção, tipos de óleo, capacidades,
+          folgas e torques devem ser retirados da documentação
+          específica do fabricante.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.20 Erros comuns no diagnóstico do motor</h2>
+
+      <ul>
+
+        <li>
+          Substituir peças sem realizar testes.
+        </li>
+
+        <li>
+          Ignorar o histórico de manutenção.
+        </li>
+
+        <li>
+          Não consultar a informação técnica.
+        </li>
+
+        <li>
+          Ignorar fugas pequenas.
+        </li>
+
+        <li>
+          Utilizar óleo ou fluido sem confirmar a especificação.
+        </li>
+
+        <li>
+          Confundir um código de diagnóstico com a identificação
+          automática da peça defeituosa.
+        </li>
+
+        <li>
+          Não realizar o teste final depois da reparação.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.21 Checklist básico do motor</h2>
+
+      <ul>
+
+        <li>☐ Identificação do veículo confirmada;</li>
+
+        <li>☐ Manual técnico consultado;</li>
+
+        <li>☐ Histórico de manutenção verificado;</li>
+
+        <li>☐ Nível do óleo verificado;</li>
+
+        <li>☐ Estado do óleo avaliado;</li>
+
+        <li>☐ Fugas verificadas;</li>
+
+        <li>☐ Sistema de arrefecimento verificado;</li>
+
+        <li>☐ Mangueiras inspeccionadas;</li>
+
+        <li>☐ Correias inspeccionadas;</li>
+
+        <li>☐ Sistema de admissão verificado;</li>
+
+        <li>☐ Sistema de combustível avaliado;</li>
+
+        <li>☐ Sistema de ignição avaliado, quando aplicável;</li>
+
+        <li>☐ Sistema de escape inspeccionado;</li>
+
+        <li>☐ Luzes de advertência verificadas;</li>
+
+        <li>☐ Diagnóstico realizado quando necessário;</li>
+
+        <li>☐ Reparação realizada conforme especificação;</li>
+
+        <li>☐ Teste final realizado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>6.22 Conclusão</h2>
+
+      <p>
+        O motor é um dos conjuntos mais complexos do automóvel e o
+        seu funcionamento depende da interacção entre vários sistemas.
+        Por isso, a manutenção e o diagnóstico devem ser realizados
+        de forma sistemática.
+      </p>
+
+      <p>
+        O técnico deve identificar correctamente o veículo, consultar
+        a informação técnica aplicável, realizar testes adequados,
+        interpretar os resultados e efectuar a reparação segundo
+        os procedimentos e especificações do fabricante.
+      </p>
+
+      <div class="fonte">
+
+        <strong>📚 Referências técnicas</strong>
+
+        <p>
+          Automotive Service Excellence (ASE). (2025).
+          <em>ASE Automobile Study Guide</em>.
+        </p>
+
+        <p>
+          Skills England. (2024).
+          <em>Motor vehicle service and maintenance technician —
+          light vehicle</em>.
+        </p>
+
+        <p>
+          Para valores específicos de torque, folgas, capacidades,
+          pressões, sincronização e procedimentos de desmontagem,
+          consultar sempre o manual de serviço oficial do fabricante
+          correspondente ao veículo.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+</html>
