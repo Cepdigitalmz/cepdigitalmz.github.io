@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 2 — Identificação dos principais componentes | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .carro {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .seguranca {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 12px 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .botao-voltar {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 7px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>CEP Digital</h1>
+
+    <p>
+      Manuais práticos de manutenção e reparação
+    </p>
+
+  </header>
+
+
+  <main class="container">
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao índice
+    </a>
+
+
+    <section class="capa">
+
+      <div class="carro">
+        🚗
+      </div>
+
+      <h2>
+        Capítulo 2 — Identificação dos principais componentes
+      </h2>
+
+      <p>
+        Volume 3 — Mecânica de Automóveis
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.1 Objectivo do capítulo</h2>
+
+      <p>
+        Antes de realizar qualquer manutenção ou reparação,
+        o mecânico deve conseguir identificar o veículo, localizar
+        os seus principais componentes e compreender a função
+        básica de cada sistema.
+      </p>
+
+      <p>
+        Uma identificação correcta reduz o risco de trabalhar
+        sobre o componente errado e facilita a consulta da
+        documentação técnica correspondente ao veículo.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.2 Identificação do veículo</h2>
+
+      <p>
+        A identificação deve começar pela confirmação da marca,
+        modelo, ano, versão e motorização do automóvel.
+      </p>
+
+      <p>
+        Quando disponível, o número de identificação do veículo
+        (VIN) constitui uma informação importante para distinguir
+        o veículo e consultar dados específicos.
+      </p>
+
+      <div class="info">
+
+        <strong>📌 Informação técnica:</strong>
+
+        <p>
+          A NHTSA descreve o VIN como um número de identificação
+          de 17 caracteres que contém informações específicas
+          sobre o veículo. A agência disponibiliza também uma
+          ferramenta de consulta do VIN. 
+        </p>
+
+      </div>
+
+      <div class="ilustracao">
+
+        <strong>
+          🖼️ ILUSTRAÇÃO — LOCALIZAÇÃO DO VIN
+        </strong>
+
+        <p>
+          Inserir posteriormente uma ilustração mostrando,
+          conforme o veículo, os locais onde o VIN pode ser
+          encontrado.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.3 Informações que devem ser registadas</h2>
+
+      <p>
+        Antes de iniciar uma reparação importante, recomenda-se
+        registar as informações básicas do veículo.
+      </p>
+
+      <ol>
+
+        <li>Marca;</li>
+
+        <li>Modelo;</li>
+
+        <li>Ano;</li>
+
+        <li>Versão;</li>
+
+        <li>Tipo de motor;</li>
+
+        <li>Cilindrada, quando aplicável;</li>
+
+        <li>Tipo de combustível;</li>
+
+        <li>Tipo de transmissão;</li>
+
+        <li>VIN;</li>
+
+        <li>Quilometragem;</li>
+
+        <li>Histórico de manutenção disponível.</li>
+
+      </ol>
+
+      <div class="alerta">
+
+        <strong>⚠️ Atenção:</strong>
+
+        <p>
+          Não assumir que dois automóveis com o mesmo nome comercial
+          possuem exactamente os mesmos componentes ou especificações.
+          A configuração pode variar conforme o ano, versão, mercado
+          e motorização.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.4 Motor</h2>
+
+      <p>
+        O motor é um dos principais conjuntos do automóvel.
+        É responsável pela produção de energia mecânica nos
+        veículos equipados com motores de combustão interna.
+      </p>
+
+      <p>
+        Dependendo do tipo de motor, podem ser encontrados componentes
+        como bloco, cabeça do motor, sistema de admissão, sistema
+        de combustível, sistema de lubrificação, sistema de
+        arrefecimento e sistema de escape.
+      </p>
+
+      <div class="ilustracao">
+
+        <strong>
+          🖼️ ILUSTRAÇÃO — MOTOR IDENTIFICADO
+        </strong>
+
+        <p>
+          Mostrar posteriormente uma vista do motor com os
+          principais componentes numerados.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.5 Sistema de combustível</h2>
+
+      <p>
+        O sistema de combustível armazena, conduz e fornece
+        combustível ao motor, de acordo com a configuração
+        específica do veículo.
+      </p>
+
+      <p>
+        Dependendo do projecto, pode incluir tanque, bomba,
+        filtros, linhas de combustível, injectores e outros
+        componentes.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.6 Sistema de admissão de ar</h2>
+
+      <p>
+        O sistema de admissão conduz o ar necessário para o
+        funcionamento do motor.
+      </p>
+
+      <ul>
+
+        <li>Entrada de ar;</li>
+
+        <li>Filtro de ar;</li>
+
+        <li>Condutas;</li>
+
+        <li>Corpo de aceleração, quando aplicável;</li>
+
+        <li>Sensores associados;</li>
+
+        <li>Colector de admissão.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.7 Sistema de arrefecimento</h2>
+
+      <p>
+        O sistema de arrefecimento controla a temperatura de
+        funcionamento do motor e ajuda a evitar o sobreaquecimento.
+      </p>
+
+      <ul>
+
+        <li>Radiador;</li>
+
+        <li>Bomba de líquido de arrefecimento;</li>
+
+        <li>Termóstato;</li>
+
+        <li>Mangueiras;</li>
+
+        <li>Ventilador;</li>
+
+        <li>Depósito de expansão, quando equipado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.8 Sistema de lubrificação</h2>
+
+      <p>
+        O sistema de lubrificação fornece óleo às partes internas
+        do motor que necessitam de lubrificação e ajuda na redução
+        do atrito e do desgaste.
+      </p>
+
+      <p>
+        Os componentes exactos dependem do projecto do motor,
+        podendo incluir cárter, bomba de óleo, filtro e canais
+        internos de lubrificação.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.9 Sistema de transmissão</h2>
+
+      <p>
+        A transmissão conduz a potência produzida pelo motor
+        para as rodas motrizes.
+      </p>
+
+      <ul>
+
+        <li>Embraiagem, quando aplicável;</li>
+
+        <li>Caixa de velocidades;</li>
+
+        <li>Árvore de transmissão, quando aplicável;</li>
+
+        <li>Diferencial;</li>
+
+        <li>Semi-eixos;</li>
+
+        <li>Juntas de transmissão.</li>
+
+      </ul>
+
+      <div class="ilustracao">
+
+        <strong>
+          🖼️ ILUSTRAÇÃO — TRANSMISSÃO
+        </strong>
+
+        <p>
+          Inserir posteriormente uma vista explodida ou esquema
+          simplificado do sistema de transmissão.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.10 Sistema de travagem</h2>
+
+      <p>
+        O sistema de travagem permite controlar a velocidade
+        e parar o veículo.
+      </p>
+
+      <ul>
+
+        <li>Pedal de travão;</li>
+
+        <li>Cilindro principal;</li>
+
+        <li>Linhas e mangueiras;</li>
+
+        <li>Pinças, quando aplicável;</li>
+
+        <li>Pastilhas;</li>
+
+        <li>Discos;</li>
+
+        <li>Tambores e calços, quando aplicável;</li>
+
+        <li>Sistemas electrónicos de assistência, quando equipados.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.11 Sistema de suspensão</h2>
+
+      <p>
+        A suspensão permite o movimento controlado das rodas
+        relativamente à carroçaria e contribui para a estabilidade
+        e conforto do veículo.
+      </p>
+
+      <ul>
+
+        <li>Molas;</li>
+
+        <li>Amortecedores;</li>
+
+        <li>Braços de suspensão;</li>
+
+        <li>Casquilhos;</li>
+
+        <li>Barras estabilizadoras;</li>
+
+        <li>Juntas e articulações.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.12 Sistema de direcção</h2>
+
+      <p>
+        O sistema de direcção permite ao condutor controlar
+        a trajectória do automóvel.
+      </p>
+
+      <p>
+        Dependendo do veículo, pode existir assistência hidráulica,
+        eléctrica ou outro sistema de assistência.
+      </p>
+
+      <ul>
+
+        <li>Volante;</li>
+
+        <li>Coluna de direcção;</li>
+
+        <li>Mecanismo de direcção;</li>
+
+        <li>Barras de direcção;</li>
+
+        <li>Terminais;</li>
+
+        <li>Sistema de assistência, quando equipado.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.13 Rodas e pneus</h2>
+
+      <p>
+        As rodas e os pneus constituem a ligação física do veículo
+        com a superfície da estrada.
+      </p>
+
+      <p>
+        Durante a inspecção devem ser observados o estado dos pneus,
+        desgaste, danos visíveis e condições das rodas.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.14 Sistema eléctrico e electrónico</h2>
+
+      <p>
+        Os veículos modernos utilizam sistemas eléctricos e
+        electrónicos para alimentação, arranque, iluminação,
+        controlo do motor, segurança e conforto.
+      </p>
+
+      <ul>
+
+        <li>Bateria;</li>
+
+        <li>Alternador ou sistema de carregamento;</li>
+
+        <li>Motor de arranque;</li>
+
+        <li>Fusíveis;</li>
+
+        <li>Relés;</li>
+
+        <li>Sensores;</li>
+
+        <li>Actuadores;</li>
+
+        <li>Unidades de controlo electrónico;</li>
+
+        <li>Cablagem.</li>
+
+      </ul>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.15 Carroçaria e estrutura</h2>
+
+      <p>
+        A carroçaria e a estrutura formam a parte física que
+        suporta e protege diversos componentes do veículo.
+      </p>
+
+      <p>
+        A identificação deve considerar portas, capô, tampa da
+        bagageira, guarda-lamas, estrutura, pontos de fixação
+        e outros elementos conforme o tipo de veículo.
+      </p>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.16 Identificação antes da desmontagem</h2>
+
+      <p>
+        Antes de remover qualquer componente, deve-se confirmar
+        a sua posição e ligação com os outros componentes.
+      </p>
+
+      <ol>
+
+        <li>Observar o componente;</li>
+
+        <li>Fotografar quando necessário;</li>
+
+        <li>Identificar conectores;</li>
+
+        <li>Identificar tubos e mangueiras;</li>
+
+        <li>Identificar fixadores;</li>
+
+        <li>Registar a posição das peças;</li>
+
+        <li>Consultar a documentação técnica;</li>
+
+        <li>Somente depois iniciar a desmontagem.</li>
+
+      </ol>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.17 Identificação através de documentação técnica</h2>
+
+      <p>
+        A identificação visual deve ser complementada pela
+        documentação técnica específica do veículo.
+      </p>
+
+      <p>
+        Diagramas, catálogos de peças, manuais de serviço e
+        informação técnica do fabricante podem ajudar a confirmar
+        o componente correcto antes de uma intervenção.
+      </p>
+
+      <div class="info">
+
+        <strong>📚 Fonte técnica:</strong>
+
+        <p>
+          A NHTSA salienta que as informações apresentadas pelo
+          seu descodificador de VIN são comunicadas pelo fabricante
+          e recomenda o contacto com o fabricante para questões
+          adicionais sobre os dados do veículo.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.18 Regra prática de identificação</h2>
+
+      <div class="alerta">
+
+        <strong>💡 Regra CEP Digital:</strong>
+
+        <p>
+          Antes de desmontar, identificar.
+          Antes de substituir, confirmar.
+          Antes de aplicar uma especificação, consultar a fonte.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.19 Segurança</h2>
+
+      <div class="seguranca">
+
+        <strong>⚠️ Segurança:</strong>
+
+        <ul>
+
+          <li>
+            Não iniciar uma desmontagem sem estabilizar o veículo.
+          </li>
+
+          <li>
+            Utilizar equipamento de protecção adequado.
+          </li>
+
+          <li>
+            Ter cuidado com componentes quentes.
+          </li>
+
+          <li>
+            Desligar fontes de energia quando o procedimento exigir.
+          </li>
+
+          <li>
+            Ter cuidado com combustível e outros fluidos.
+          </li>
+
+          <li>
+            Utilizar apoios adequados quando elevar o veículo.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <section>
+
+      <h2>2.20 Conclusão</h2>
+
+      <p>
+        A correcta identificação do veículo e dos seus componentes
+        é uma etapa fundamental da manutenção automóvel.
+      </p>
+
+      <p>
+        O mecânico deve combinar a observação visual com a
+        identificação do veículo e a consulta da documentação
+        técnica apropriada.
+      </p>
+
+      <div class="fonte">
+
+        <strong>Referência utilizada:</strong>
+
+        <p>
+          National Highway Traffic Safety Administration (NHTSA).
+          VIN Decoder e documentação técnica sobre Vehicle
+          Identification Number (VIN).
+        </p>
+
+        <p>
+          Fonte: NHTSA — U.S. Department of Transportation.
+        </p>
+
+      </div>
+
+
+      <a href="index.html" class="botao-voltar">
+        ↑ Voltar ao índice
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      CEP Digital — Manuais práticos de manutenção e reparação
+    </p>
+
+    <p>
+      Volume 3 — Mecânica de Automóveis
+    </p>
+
+  </footer>
+
+</body>
+  </html>
