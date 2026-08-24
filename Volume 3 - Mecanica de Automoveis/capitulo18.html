@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Capítulo 18 — Sistema de direcção e geometria | CEP Digital</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #263238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .voltar,
+    .botao {
+      display: inline-block;
+      background: #086044;
+      color: white;
+      text-decoration: none;
+      padding: 11px 17px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      color: #064d3b;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #d8e7e2;
+      padding-bottom: 8px;
+    }
+
+    section h3 {
+      color: #086044;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 25px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .capa {
+      text-align: center;
+    }
+
+    .icone {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      background: #e8f4ff;
+      border-left: 5px solid #1976d2;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .alerta {
+      background: #fff4d6;
+      border-left: 5px solid #e0a400;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .perigo {
+      background: #ffe8e8;
+      border-left: 5px solid #c62828;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .procedimento {
+      background: #f5faf8;
+      border-left: 5px solid #086044;
+      padding: 18px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .ilustracao {
+      background: #fafcfc;
+      border: 2px dashed #b7c9c3;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      margin: 20px 0;
+      color: #52635e;
+    }
+
+    .fonte {
+      background: #f1f5f3;
+      border-left: 4px solid #064d3b;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #064d3b;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CEP Digital</h1>
+  <p>Manuais práticos de manutenção e reparação</p>
+</header>
+
+<main class="container">
+
+  <a class="voltar" href="index.html">
+    ← Voltar ao índice
+  </a>
+
+  <section class="capa">
+
+    <div class="icone">🛞</div>
+
+    <h2>Capítulo 18 — Sistema de direcção e geometria</h2>
+
+    <p>Volume 3 — Mecânica de Automóveis</p>
+
+    <p>
+      Funcionamento, componentes, geometria,
+      diagnóstico, manutenção e segurança.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.1 Introdução</h2>
+
+    <p>
+      O sistema de direcção permite ao condutor controlar a trajectória
+      do veículo. O seu funcionamento depende da ligação correcta entre
+      volante, mecanismo de direcção, componentes de ligação e rodas
+      direccionais.
+    </p>
+
+    <p>
+      A geometria da direcção determina a posição relativa das rodas
+      e de vários componentes da suspensão e direcção. Uma geometria
+      incorrecta pode provocar desgaste irregular dos pneus,
+      instabilidade e comportamento anormal do veículo.
+    </p>
+
+    <div class="info">
+      <strong>📌 Conceito fundamental:</strong>
+      <p>
+        Direcção e geometria devem ser avaliadas em conjunto. Um
+        problema de alinhamento pode ser consequência de componentes
+        desgastados ou danificados e não apenas de uma necessidade
+        de alinhamento.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.2 Principais componentes do sistema de direcção</h2>
+
+    <ul>
+      <li>Volante;</li>
+      <li>Coluna de direcção;</li>
+      <li>Caixa de direcção ou cremalheira;</li>
+      <li>Barras de direcção;</li>
+      <li>Terminais de direcção;</li>
+      <li>Juntas e articulações;</li>
+      <li>Servoassistência hidráulica, quando equipada;</li>
+      <li>Sistema de assistência eléctrica, quando equipado;</li>
+      <li>Componentes electrónicos de controlo, quando aplicáveis.</li>
+    </ul>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO 3D — SISTEMA DE DIRECÇÃO</strong>
+      <p>
+        Mostrar o conjunto em vista explodida:
+        volante → coluna → mecanismo de direcção →
+        barras → terminais → manga de eixo → roda.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.3 Direcção mecânica</h2>
+
+    <p>
+      Nos sistemas de direcção mecânica, o movimento aplicado ao
+      volante é transmitido mecanicamente até às rodas direccionais.
+    </p>
+
+    <p>
+      O sistema pode utilizar diferentes mecanismos, sendo a
+      cremalheira e pinhão uma solução comum em automóveis.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.4 Direcção assistida hidráulica</h2>
+
+    <p>
+      Alguns veículos utilizam um sistema hidráulico para reduzir
+      o esforço necessário para movimentar a direcção.
+    </p>
+
+    <h3>Componentes possíveis:</h3>
+
+    <ul>
+      <li>Bomba hidráulica;</li>
+      <li>Reservatório;</li>
+      <li>Tubagens;</li>
+      <li>Fluido;</li>
+      <li>Caixa ou cremalheira assistida.</li>
+    </ul>
+
+    <h3>Problemas possíveis:</h3>
+
+    <ul>
+      <li>Fuga de fluido;</li>
+      <li>Ruído da bomba;</li>
+      <li>Direcção pesada;</li>
+      <li>Baixo nível de fluido;</li>
+      <li>Falha da bomba ou de outros componentes.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.5 Direcção assistida eléctrica</h2>
+
+    <p>
+      Sistemas de assistência eléctrica utilizam um motor eléctrico
+      e componentes electrónicos para auxiliar o movimento da direcção.
+    </p>
+
+    <p>
+      A arquitectura varia conforme o veículo. O motor de assistência
+      pode estar associado à coluna, ao mecanismo de direcção ou a
+      outro ponto do sistema.
+    </p>
+
+    <h3>Diagnóstico:</h3>
+
+    <ul>
+      <li>Verificar luzes de aviso;</li>
+      <li>Verificar alimentação eléctrica;</li>
+      <li>Inspeccionar conectores e cablagem;</li>
+      <li>Ler códigos de diagnóstico;</li>
+      <li>Consultar dados do sistema;</li>
+      <li>Seguir o procedimento do fabricante.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.6 Volante e coluna de direcção</h2>
+
+    <p>
+      A coluna transmite o movimento do volante para o mecanismo
+      de direcção e pode incorporar juntas que permitem alterações
+      de posição e movimento entre componentes.
+    </p>
+
+    <h3>Inspecionar:</h3>
+
+    <ul>
+      <li>Folgas anormais;</li>
+      <li>Ruídos;</li>
+      <li>Juntas;</li>
+      <li>Fixações;</li>
+      <li>Funcionamento do volante;</li>
+      <li>Componentes associados ao sistema de segurança.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.7 Terminais e barras de direcção</h2>
+
+    <p>
+      Estes componentes transmitem o movimento do mecanismo de
+      direcção para as rodas.
+    </p>
+
+    <h3>Sinais de desgaste:</h3>
+
+    <ul>
+      <li>Folga;</li>
+      <li>Ruído;</li>
+      <li>Vibração;</li>
+      <li>Desgaste irregular dos pneus;</li>
+      <li>Comportamento instável.</li>
+    </ul>
+
+    <div class="perigo">
+      <strong>🚨 SEGURANÇA</strong>
+      <p>
+        Componentes de direcção com folga significativa podem
+        comprometer o controlo do veículo. Não devem ser ignorados.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.8 O que é a geometria da direcção?</h2>
+
+    <p>
+      A geometria da direcção corresponde ao conjunto de ângulos e
+      relações geométricas que determinam a posição das rodas e dos
+      componentes de direcção e suspensão.
+    </p>
+
+    <p>
+      Os valores correctos são definidos pelo fabricante para cada
+      veículo.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.9 Convergência (Toe)</h2>
+
+    <p>
+      A convergência descreve a orientação das rodas quando observadas
+      de cima.
+    </p>
+
+    <p>
+      Dependendo da configuração, as partes dianteiras das rodas
+      podem estar ligeiramente mais próximas ou mais afastadas
+      entre si.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO — CONVERGÊNCIA</strong>
+      <p>
+        Mostrar uma vista superior de duas rodas e comparar
+        convergência e divergência.
+      </p>
+    </div>
+
+    <h3>Sintomas de geometria incorrecta:</h3>
+
+    <ul>
+      <li>Desgaste irregular dos pneus;</li>
+      <li>Veículo a puxar para um lado;</li>
+      <li>Volante desalinhado;</li>
+      <li>Instabilidade direccional.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.10 Cambagem (Camber)</h2>
+
+    <p>
+      A cambagem é o ângulo da roda em relação à vertical quando
+      observada pela frente ou por trás do veículo.
+    </p>
+
+    <p>
+      Pode ser positiva ou negativa, conforme a orientação da roda.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO — CAMBAGEM</strong>
+      <p>
+        Mostrar uma roda em posição neutra, cambagem positiva
+        e cambagem negativa.
+      </p>
+    </div>
+
+    <p>
+      Os valores admissíveis devem ser sempre comparados com os
+      dados específicos do fabricante.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.11 Caster</h2>
+
+    <p>
+      O caster corresponde ao ângulo do eixo de direcção observado
+      lateralmente.
+    </p>
+
+    <p>
+      Este parâmetro influencia a estabilidade direccional e a
+      tendência do volante para regressar à posição central.
+    </p>
+
+    <div class="ilustracao">
+      <strong>🖼️ ILUSTRAÇÃO — CASTER</strong>
+      <p>
+        Mostrar a inclinação do eixo de direcção numa vista lateral.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.12 Sintomas de desalinhamento</h2>
+
+    <ul>
+      <li>Volante fora do centro;</li>
+      <li>Veículo a puxar para um lado;</li>
+      <li>Desgaste irregular dos pneus;</li>
+      <li>Volante que não regressa correctamente;</li>
+      <li>Instabilidade;</li>
+      <li>Comportamento diferente em linha recta.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.13 Inspecção antes do alinhamento</h2>
+
+    <p>
+      Antes de realizar um alinhamento, é necessário verificar se
+      existem componentes danificados ou desgastados.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Verificar pneus;</li>
+        <li>Verificar pressão dos pneus;</li>
+        <li>Verificar rodas;</li>
+        <li>Verificar terminais de direcção;</li>
+        <li>Verificar barras;</li>
+        <li>Verificar rótulas;</li>
+        <li>Verificar componentes da suspensão;</li>
+        <li>Verificar folgas;</li>
+        <li>Verificar altura e condições relevantes do veículo;</li>
+        <li>Corrigir problemas mecânicos antes do alinhamento.</li>
+      </ol>
+    </div>
+
+    <div class="alerta">
+      <strong>⚠️ Regra importante:</strong>
+      <p>
+        Não utilizar o alinhamento das rodas para compensar componentes
+        de direcção ou suspensão que estejam danificados ou com folgas
+        fora dos limites.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.14 Alinhamento das rodas</h2>
+
+    <p>
+      O alinhamento deve ser realizado com equipamento apropriado
+      e seguindo as especificações do fabricante.
+    </p>
+
+    <div class="procedimento">
+      <ol>
+        <li>Preparar o veículo conforme as instruções do equipamento;</li>
+        <li>Confirmar pneus e pressões;</li>
+        <li>Montar correctamente os sensores ou alvos;</li>
+        <li>Compensar o equipamento quando necessário;</li>
+        <li>Medir os ângulos;</li>
+        <li>Comparar os resultados com as especificações;</li>
+        <li>Realizar os ajustes permitidos;</li>
+        <li>Confirmar os valores finais;</li>
+        <li>Centralizar o volante;</li>
+        <li>Realizar teste de estrada quando apropriado.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.15 Ajuste da convergência</h2>
+
+    <p>
+      Em muitos veículos, a convergência pode ser ajustada através
+      das barras de direcção.
+    </p>
+
+    <p>
+      O procedimento, sequência e torque dos elementos de fixação
+      devem ser determinados pelo manual de serviço específico.
+    </p>
+
+    <div class="perigo">
+      <strong>🚨 ATENÇÃO</strong>
+      <p>
+        Não utilizar valores universais de torque para componentes
+        de direcção. Consultar sempre a especificação do fabricante.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.16 Diagnóstico de volante desalinhado</h2>
+
+    <div class="procedimento">
+      <ol>
+        <li>Verificar pressão dos pneus;</li>
+        <li>Verificar desgaste dos pneus;</li>
+        <li>Verificar folgas na direcção;</li>
+        <li>Verificar suspensão;</li>
+        <li>Verificar alinhamento;</li>
+        <li>Confirmar centralização do volante;</li>
+        <li>Realizar teste de estrada em condições seguras.</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.17 Veículo a puxar para um lado</h2>
+
+    <p>
+      Um veículo que puxa para um lado pode apresentar várias causas,
+      portanto não se deve assumir imediatamente que o problema é
+      apenas o alinhamento.
+    </p>
+
+    <h3>Verificar:</h3>
+
+    <ul>
+      <li>Pressão dos pneus;</li>
+      <li>Desgaste dos pneus;</li>
+      <li>Condições da estrada;</li>
+      <li>Travões;</li>
+      <li>Suspensão;</li>
+      <li>Direcção;</li>
+      <li>Geometria das rodas.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.18 Diagnóstico de folgas</h2>
+
+    <p>
+      As folgas podem ser verificadas utilizando métodos apropriados
+      e equipamento adequado.
+    </p>
+
+    <p>
+      O diagnóstico deve identificar exactamente o componente que
+      apresenta desgaste antes da substituição.
+    </p>
+
+    <ul>
+      <li>Terminais;</li>
+      <li>Barras;</li>
+      <li>Rótulas;</li>
+      <li>Rolamentos;</li>
+      <li>Juntas;</li>
+      <li>Fixações da caixa de direcção.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.19 Direcção e pneus</h2>
+
+    <p>
+      O sistema de direcção e a geometria estão directamente
+      relacionados com o desgaste e o comportamento dos pneus.
+    </p>
+
+    <p>
+      Um padrão de desgaste irregular pode fornecer uma pista
+      importante para o diagnóstico, mas deve ser analisado em
+      conjunto com outros sintomas e medições.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.20 Erros comuns</h2>
+
+    <ul>
+      <li>Fazer alinhamento sem inspeccionar a suspensão;</li>
+      <li>Ignorar folgas nos terminais;</li>
+      <li>Não verificar a pressão dos pneus;</li>
+      <li>Utilizar valores de alinhamento de outro modelo;</li>
+      <li>Não centralizar correctamente o volante;</li>
+      <li>Substituir componentes sem confirmar a avaria;</li>
+      <li>Não realizar a verificação final;</li>
+      <li>Utilizar torques genéricos.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.21 Segurança</h2>
+
+    <div class="perigo">
+      <strong>🚨 SEGURANÇA CRÍTICA</strong>
+      <ul>
+        <li>Utilizar elevador ou cavaletes adequados;</li>
+        <li>Nunca trabalhar debaixo de um veículo sustentado apenas pelo macaco;</li>
+        <li>Não utilizar componentes de direcção danificados;</li>
+        <li>Respeitar os torques especificados;</li>
+        <li>Verificar a montagem antes do teste de estrada;</li>
+        <li>Realizar o teste de estrada em local seguro.</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.22 Checklist de direcção e geometria</h2>
+
+    <ul>
+      <li>☐ Pneus verificados;</li>
+      <li>☐ Pressão dos pneus verificada;</li>
+      <li>☐ Volante verificado;</li>
+      <li>☐ Coluna inspeccionada;</li>
+      <li>☐ Terminais verificados;</li>
+      <li>☐ Barras verificadas;</li>
+      <li>☐ Rótulas verificadas;</li>
+      <li>☐ Folgas verificadas;</li>
+      <li>☐ Sistema de assistência verificado;</li>
+      <li>☐ Geometria medida;</li>
+      <li>☐ Valores comparados com o fabricante;</li>
+      <li>☐ Ajustes realizados;</li>
+      <li>☐ Volante centralizado;</li>
+      <li>☐ Teste final realizado.</li>
+    </ul>
+
+  </section>
+
+
+  <section>
+
+    <h2>18.23 Conclusão</h2>
+
+    <p>
+      O sistema de direcção é fundamental para o controlo do veículo.
+      A segurança depende do bom estado dos seus componentes e da
+      correcta geometria das rodas.
+    </p>
+
+    <p>
+      O diagnóstico deve começar pela inspecção dos componentes
+      mecânicos e continuar com medições quando necessário. Os valores
+      de alinhamento e os procedimentos de reparação devem ser obtidos
+      na documentação técnica específica do veículo.
+    </p>
+
+    <div class="fonte">
+
+      <strong>📚 Referências técnicas</strong>
+
+      <p>
+        Bosch Mobility — documentação técnica sobre sistemas de
+        direcção, suspensão e alinhamento.
+      </p>
+
+      <p>
+        Automotive Service Excellence (ASE) —
+        materiais técnicos de estudo e diagnóstico automóvel.
+      </p>
+
+      <p>
+        SAE International — referências e normas técnicas relacionadas
+        com veículos e sistemas de direcção.
+      </p>
+
+      <p>
+        Para valores de convergência, cambagem, caster, procedimentos
+        de ajuste e torques, consultar sempre o manual de serviço
+        oficial do fabricante do veículo.
+      </p>
+
+    </div>
+
+    <a href="index.html" class="botao">
+      ↑ Voltar ao índice
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>
+    CEP Digital — Manuais práticos de manutenção e reparação
+  </p>
+
+  <p>
+    Volume 3 — Mecânica de Automóveis
+  </p>
+
+</footer>
+
+</body>
+</html>
